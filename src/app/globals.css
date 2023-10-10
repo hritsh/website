@@ -4,24 +4,62 @@
 
 :root {
   --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --background-rgb: 255, 255, 255;
+  --deepblue: #001A89;
+  --darkblue: #1D4374;
+  --blue: #5286C2;
+  --lightblue: #A1C4EE;
+  --fadedblue: #CCE1FC;
+  --orange: #EA4E13;
+  --lightorange: #FDC38B;
 }
-
+/* 
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
   }
-}
+} */
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background: rgb(var(--background-rgb));
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+header {
+  background-color: var(--deepblue);
+}
+
+nav {
+  background-color: var(--blue);
+  color: #fff;
+}
+
+ul li {
+  padding-left: 10px;
+}
+
+ul li:not(:last-child) {
+  padding-right: 10px;
+  border-right:solid 2px #000;
+}
+
+.left > *, .right > * {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.desc {
+  font-size: smaller;
+}
+
+.desc > *:not(:last-child) {
+  display: block;
+  margin-bottom: 1em; 
+} 
+
+img {
+  object-fit: cover;
 }
