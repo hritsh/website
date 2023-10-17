@@ -408,7 +408,7 @@ User Network
 Experience
 ========================================
 */
-.blog {
+.experience {
     display: grid;
     grid-auto-rows: auto;
     flex-direction: column;
@@ -417,8 +417,14 @@ Experience
     margin-bottom: 16px;
 }
 
-.blog p {
+.experience p {
     margin-top: 3px;
+}
+
+.experience h3 {
+    margin: 0;
+    font-size: 11pt;
+    font-weight: bold;
 }
 
 /*
