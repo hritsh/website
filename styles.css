@@ -131,6 +131,30 @@ p {
     color: #003399;
 }
 
+
+/*
+    ========================================
+    Images
+    ========================================
+    */
+
+    .profile-pic {
+        max-width: 100%;
+        height: auto;
+    }
+    
+    .online-status {
+        width: 100px;
+        vertical-align: bottom;
+        margin-top: 1em;
+        margin-left: -0.5em;
+    }
+    
+    .mood-image {
+        vertical-align: bottom;
+    }
+    
+    
 /*
   ========================================
   Page Content Container
@@ -154,36 +178,13 @@ p {
 }
 
 /*
-    ========================================
-    Images
-    ========================================
-    */
-
-.profile-pic {
-    max-width: 100%;
-    height: auto;
-}
-
-.online-status {
-    width: 100px;
-    vertical-align: bottom;
-    margin-top: 1em;
-    margin-left: -0.5em;
-}
-
-.mood-image {
-    vertical-align: bottom;
-}
-
-
-/*
 ========================================
 Profile Sidebar Column
 ========================================
 */
 .profile-sidebar {
     grid-area: sidebar;
-    width: auto;
+    max-width: 100%;
 }
 
 h1 {
@@ -451,14 +452,14 @@ Blurbs
 
 /*
 ========================================
-Friend Space
+Projects
 ========================================
 */
-.friends header {
+.projects header {
     margin-bottom: 6px;
 }
 
-.friends p:nth-of-type(1) {
+.projects p:nth-of-type(1) {
     margin-top: 0;
     margin-left: 15px;
 }
@@ -469,38 +470,36 @@ Friend Space
     font-size: 10pt;
 }
 
-.friend-pic-container {
-    display: grid;
-    grid-template-columns: repeat(4, 109px);
-    grid-template-rows: 160px 193px;
+.project-icons {
+	display: grid;
+	grid-template-columns: auto auto auto auto;
+	grid-gap: 10px;
+	margin-bottom: 30px;
+	justify-content: space-around;
 }
 
-.friend-pic-container figure {
-    margin: 0;
+@media screen and (max-width: 768px) {
+    .project-icons {
+        grid-template-columns: auto auto auto;
+    }
 }
 
-.friend-pic-container figcaption {
-    text-align: center;
+.project-icons div {
+	text-align: center;
+	line-height: 1.8em;
 }
 
-.friend-pic-container img {
-    display: block;
-    margin: auto;
+.project-icons div img {
+	display: block;
+	height: 80px;
+	width: 80px;
+	margin: auto;
+	border-radius: 5px;
+	border: 3px solid transparent;
 }
 
-.friends-list-link {
-    display: flex;
-    justify-content: flex-end;
-}
-
-.friends-list-link {
-    margin-top: 7px;
-    margin-right: 8px;
-    margin-bottom: 30px;
-}
-
-.friends-list-link a {
-    color: #cc0000;
+.project-icons div a:hover img {
+  border-color: #FFCE95;
 }
 
 
