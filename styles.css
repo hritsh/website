@@ -55,9 +55,9 @@ p {
   */
 .master-container {
     margin: auto;
-    width: 100%;
     background-color: white;
-    max-width: 90vw;
+    width: 90vw;
+    max-width: 900px;
 }
 
 /*
@@ -72,6 +72,14 @@ p {
     height: 100px;
     background-color: rgb(0, 51, 153);
     color: #ffffff;
+}
+
+.main-header-h1 {
+    font-size: 18pt;
+    margin: 0;
+    padding-left: 1em;
+    padding-top: 1em;
+    font-weight: bold;
 }
 
 .main-header ul {
@@ -135,7 +143,7 @@ p {
     grid-template-areas: "sidebar main";
     justify-items: center;
     max-width: 90vw;
-    padding: 0.5em;
+    padding: 1em;
 }
 
 @media screen and (max-width: 768px) {
@@ -152,9 +160,8 @@ p {
     */
 
 .profile-pic {
-    width: 100%;
+    max-width: 100%;
     height: auto;
-    object-fit: cover;
 }
 
 .online-status {
@@ -175,21 +182,22 @@ Profile Sidebar Column
 ========================================
 */
 .profile-sidebar {
-  grid-area: sidebar;
-  width: auto;
+    grid-area: sidebar;
+    width: auto;
 }
 
 h1 {
-  font-size: 14pt;
-  font-weight: bold;
-  margin-top: 15px;
-  margin-bottom: 0px;
+    grid-column: 1 / span 2;
+    font-size: 14pt;
+    font-weight: bold;
+    margin-top: 15px;
+    margin-bottom: 0px;
 }
 
 .profile-sidebar ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
 }
 
 /*
@@ -198,49 +206,52 @@ Profile Picture Container
 ========================================
 */
 .profile-picture-container {
-  display: grid;
-  grid-template-columns: 170px 115px;
-  grid-template-rows: 176px;
-  grid-column-gap: 15px;
-  margin-bottom: 12px;
+    display: grid;
+    grid-template-columns: auto 115px;
+    grid-template-rows: auto auto;
+    grid-column-gap: 15px;
+    width: fit-content;
+    margin: 0 auto;
+    margin-bottom: 1em;
+    min-height: 14em;
 }
 
 .profile-picture-container p {
-  margin: 0;
+    margin: 0;
 }
 
 .profile-pic {
-  grid-area: 1/1;
-  margin-top: 10px;
-  margin-bottom: 10px;
+    grid-area: 2/1;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    max-height: 14em;
 }
 
 .personal-msg {
-  grid-area: 1/2;
-  margin: 0;
+    grid-area: 2/2;
+    margin: 0;
 }
 
 .gender-age {
-  grid-area: 1/2;
+    grid-area: 2/2;
 }
 
 .gender-age li:first-child {
-  margin-top: 28px;
+    margin-top: 28px;
 }
 
 .last-login {
-  grid-area: 1/2;
-  align-self: end;
+    grid-area: 2/2;
+    align-self: end;
 }
 
 .last-login li:first-child {
-  margin-top: 15px;
+    margin-top: 15px;
 }
 
 .mood {
-  grid-area: 1/1;
-  justify-self: start;
-  align-self: end;
+    grid-area: 3/1;
+    margin-top: -2em;
 }
 
 /*
@@ -249,29 +260,29 @@ Contact Box
 ========================================
 */
 .contact-box {
-  border: 2px solid rgb(102, 153, 204);
-  height: auto;
-  width: auto;
-  margin-bottom: 24px;
+    border: 2px solid rgb(102, 153, 204);
+    height: auto;
+    width: auto;
+    margin-bottom: 24px;
 }
 
 .contact-box h2 {
-  color: white;
-  background-color: rgb(102, 153, 204);
-  height: 1.5rem;
-  padding-left: 1rem;
-  padding-top: 0.2rem;
+    color: white;
+    background-color: rgb(102, 153, 204);
+    height: 1.5rem;
+    padding-left: 1rem;
+    padding-top: 0.2rem;
 }
 
 .contact-box a {
     display: flex;
     align-items: center;
     text-decoration: none;
-  }
+}
 
 .contact-box svg {
     margin-right: 0.5em;
-  }
+}
 
 /*
 ========================================
@@ -279,25 +290,25 @@ MySpace URL
 ========================================
 */
 .myspace-url-box {
-  border: 1px solid rgb(102, 153, 204);
-  height: auto;
-  margin-bottom: 24px;
-  padding: 1.5em;
+    border: 1px solid rgb(102, 153, 204);
+    height: auto;
+    margin-bottom: 24px;
+    padding: 1.5em;
 }
 
 .myspace-url-box h3,
 .myspace-url-box p {
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
 }
 
 .myspace-url-box h3 {
-  font-size: 10pt;
-  padding-left: 2px;
+    font-size: 10pt;
+    padding-left: 2px;
 }
 
 .myspace-url-box p {
-  padding-left: 6px;
+    padding-left: 6px;
 }
 
 /*
@@ -306,36 +317,34 @@ Sidebar Table Class
 ========================================
 */
 .sidebar-table {
-  border: 2px solid rgb(102, 153, 204);
-  display: table;
-  border-collapse: separate;
-  border-spacing: 3px;
+    border: 2px solid rgb(102, 153, 204);
+    display: table;
+    border-collapse: separate;
+    border-spacing: 3px;
 }
 
 .sidebar-table-h2 {
-  background-color: rgb(102, 153, 204);
-  color: white;
-  text-align: left;
-  height: 1.5rem;
-  padding-left: 1rem;
-  padding-top: 0.2rem;
+    background-color: rgb(102, 153, 204);
+    color: white;
+    text-align: left;
+    height: 1.5rem;
+    padding-left: 1rem;
+    padding-top: 0.2rem;
 }
 
 .sidebar-table-header {
-  vertical-align: top;
-  text-align: left;
-  width: 107px;
-  background-color: rgb(177, 208, 240);
-  color: #336699;
-  padding: 3px;
-  font-weight: bold;
-  font-size: 10pt;
+    vertical-align: top;
+    text-align: left;
+    background-color: rgb(177, 208, 240);
+    color: #336699;
+    padding: 3px;
+    font-weight: bold;
+    font-size: 10pt;
 }
 
 .sidebar-table-data {
-  width: 184px;
-  background-color: rgb(213, 232, 251);
-  padding: 3px;
+    background-color: rgb(213, 232, 251);
+    padding: 3px;
 }
 
 /*
@@ -344,16 +353,16 @@ Interests
 ========================================
 */
 .interests p {
-  margin-top: 0;
+    margin-top: 0;
 }
 
 .interests p:only-child,
 .interests p:last-child {
-  margin-bottom: 0;
+    margin-bottom: 0;
 }
 
 .interests table {
-  margin-bottom: 13px;
+    margin-bottom: 13px;
 }
 
 /*
@@ -362,7 +371,7 @@ Main Column
 ========================================
 */
 main {
-  grid-area: main;
+    grid-area: main;
 }
 
 /*
@@ -371,18 +380,18 @@ User Network
 ========================================
 */
 .user-network {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  margin: auto;
-  height: 75px;
-  border: 2px solid black;
-  margin-top: 13px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: auto;
+    height: 75px;
+    border: 2px solid black;
+    margin-top: 13px;
 }
 
 .user-network h2 {
-  font-size: 12pt;
+    font-size: 12pt;
 }
 
 /*
@@ -391,16 +400,16 @@ Experience
 ========================================
 */
 .blog {
-  display: grid;
-  grid-auto-rows: auto;
-  flex-direction: column;
-  margin-top: 13px;
-  margin-left: 12px;
-  margin-bottom: 16px;
+    display: grid;
+    grid-auto-rows: auto;
+    flex-direction: column;
+    margin-top: 13px;
+    margin-left: 12px;
+    margin-bottom: 16px;
 }
 
 .blog p {
-  margin-top: 3px;
+    margin-top: 3px;
 }
 
 /*
@@ -409,35 +418,35 @@ Blurbs
 ========================================
 */
 .main-section-header {
-  background-color: #ffcc99;
-  padding-top: 3px;
-  padding-bottom: 3px;
-  margin-bottom: 8px;
+    background-color: #ffcc99;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    margin-bottom: 8px;
 }
 
 .main-section-h2 {
-  color: #FF6600;
-  margin-left: 20px;
+    color: #FF6600;
+    margin-left: 20px;
 }
 
 .blurbs h3 {
-  margin: 0;
-  color: #FF6600;
-  font-size: 11pt;
-  margin-left: 15px;
+    margin: 0;
+    color: #FF6600;
+    font-size: 11pt;
+    margin-left: 15px;
 }
 
 .blurbs p:nth-of-type(5) {
-  margin-bottom: 2em;
+    margin-bottom: 2em;
 }
 
 .blurbs p {
-  margin: 0 10px 15px 15px;
+    margin: 0 10px 15px 15px;
 }
 
 .info {
-  color: green;
-  font-weight: bold;
+    color: green;
+    font-weight: bold;
 }
 
 /*
@@ -446,52 +455,52 @@ Friend Space
 ========================================
 */
 .friends header {
-  margin-bottom: 6px;
+    margin-bottom: 6px;
 }
 
 .friends p:nth-of-type(1) {
-  margin-top: 0;
-  margin-left: 15px;
+    margin-top: 0;
+    margin-left: 15px;
 }
 
 .focus-highlight {
-  color: #cc0000;
-  font-weight: normal;
-  font-size: 10pt;
+    color: #cc0000;
+    font-weight: normal;
+    font-size: 10pt;
 }
 
 .friend-pic-container {
-  display: grid;
-  grid-template-columns: repeat(4, 109px);
-  grid-template-rows: 160px 193px;
+    display: grid;
+    grid-template-columns: repeat(4, 109px);
+    grid-template-rows: 160px 193px;
 }
 
 .friend-pic-container figure {
-  margin: 0;
+    margin: 0;
 }
 
 .friend-pic-container figcaption {
-  text-align: center;
+    text-align: center;
 }
 
 .friend-pic-container img {
-  display: block;
-  margin: auto;
+    display: block;
+    margin: auto;
 }
 
 .friends-list-link {
-  display: flex;
-  justify-content: flex-end;
+    display: flex;
+    justify-content: flex-end;
 }
 
 .friends-list-link {
-  margin-top: 7px;
-  margin-right: 8px;
-  margin-bottom: 30px;
+    margin-top: 7px;
+    margin-right: 8px;
+    margin-bottom: 30px;
 }
 
 .friends-list-link a {
-  color: #cc0000;
+    color: #cc0000;
 }
 
 
