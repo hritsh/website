@@ -5,6 +5,7 @@
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-rgb: 255, 255, 255;
+  --violet: #2A59B5;
   --deepblue: #001A89;
   --darkblue: #1D4374;
   --blue: #5286C2;
@@ -62,4 +63,31 @@ ul li:not(:last-child) {
 
 img {
   object-fit: cover;
+}
+
+.table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-bottom: 1rem;
+  border: 5px solid var(--blue);
+}
+
+.table th,
+.table td {
+  padding: 0.75rem;
+  vertical-align: top;
+  font-weight: bold;
+}
+
+.table th {
+  padding-block: 0.1rem;
+  font-size: larger;
+  text-align: left;
+  color: #fff;
+  background-color: var(--blue);
+}
+
+.table td {
+  color: var(--violet);
+  background-color: #fff;
 }
