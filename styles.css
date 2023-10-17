@@ -130,11 +130,12 @@ p {
   */
 .page-content-container {
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 1fr 1.5fr;
     grid-column-gap: 20px;
     grid-template-areas: "sidebar main";
     justify-items: center;
     max-width: 90vw;
+    padding: 0.5em;
 }
 
 @media screen and (max-width: 768px) {
@@ -175,7 +176,6 @@ Profile Sidebar Column
 */
 .profile-sidebar {
   grid-area: sidebar;
-  margin-left: 27px;
   width: auto;
 }
 
@@ -250,7 +250,7 @@ Contact Box
 */
 .contact-box {
   border: 2px solid rgb(102, 153, 204);
-  height: 149px;
+  height: auto;
   width: auto;
   margin-bottom: 24px;
 }
@@ -258,17 +258,20 @@ Contact Box
 .contact-box h2 {
   color: white;
   background-color: rgb(102, 153, 204);
-  height: 17px;
-  padding-left: 10px;
+  height: 1.5rem;
+  padding-left: 1rem;
+  padding-top: 0.2rem;
 }
 
-.contact-images {
-  display: grid;
-  grid-template-columns: 150px 150px;
-  margin: 0;
-  margin-top: 5px;
-  margin-left: 10px;
-}
+.contact-box a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+  }
+
+.contact-box svg {
+    margin-right: 0.5em;
+  }
 
 /*
 ========================================
@@ -277,10 +280,9 @@ MySpace URL
 */
 .myspace-url-box {
   border: 1px solid rgb(102, 153, 204);
-  height: 26px;
+  height: auto;
   margin-bottom: 24px;
-  padding: 22px;
-  padding-bottom: 44px;
+  padding: 1.5em;
 }
 
 .myspace-url-box h3,
@@ -314,9 +316,9 @@ Sidebar Table Class
   background-color: rgb(102, 153, 204);
   color: white;
   text-align: left;
-  height: 17px;
-  padding-left: 15px;
-  padding-top: 2px;
+  height: 1.5rem;
+  padding-left: 1rem;
+  padding-top: 0.2rem;
 }
 
 .sidebar-table-header {
@@ -372,7 +374,7 @@ User Network
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 433px;
+  width: 100%;
   margin: auto;
   height: 75px;
   border: 2px solid black;
@@ -385,12 +387,12 @@ User Network
 
 /*
 ========================================
-Blog
+Experience
 ========================================
 */
 .blog {
   display: grid;
-  grid-auto-rows: 29px;
+  grid-auto-rows: auto;
   flex-direction: column;
   margin-top: 13px;
   margin-left: 12px;
