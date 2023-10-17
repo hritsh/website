@@ -277,7 +277,7 @@ Contact Box
 .contact-box h2 {
     color: white;
     background-color: rgb(102, 153, 204);
-    height: 1.5rem;
+    height: 1.75rem;
     padding-left: 1rem;
     padding-top: 0.2rem;
 }
@@ -286,6 +286,7 @@ Contact Box
     display: flex;
     align-items: center;
     text-decoration: none;
+    padding: 0 1rem;
 }
 
 .contact-box svg {
@@ -469,6 +470,10 @@ Projects
 .projects p:nth-of-type(1) {
     margin-top: 0;
     margin-left: 15px;
+}
+
+.projects-list-link {
+    text-align: end;
 }
 
 .focus-highlight {
