@@ -3,6 +3,14 @@
 Global
 ========================================
 */
+
+:root {
+    --light-blue: rgb(102, 153, 204);
+    --dark-blue: #003399;
+    --primary-blue: #336699;
+    --faded-blue: rgb(177, 208, 240);
+}
+
 html {
     box-sizing: border-box;
 }
@@ -26,11 +34,11 @@ a {
 }
 
 a:link {
-    color: #003399;
+    color: var(--dark-blue)
 }
 
 a:visited {
-    color: #003399;
+    color: var(--dark-blue)
 }
 
 a:hover {
@@ -110,7 +118,7 @@ p {
     display: flex;
     align-items: center;
     margin-top: auto;
-    background-color: rgb(102, 153, 204);
+    background-color: var(--light-blue);
     height: auto;
 }
 
@@ -133,7 +141,7 @@ p {
 }
 
 .navbar a:hover {
-    color: #003399;
+    color: var(--dark-blue);
 }
 
 
@@ -276,7 +284,7 @@ Contact Box
 ========================================
 */
 .contact-box {
-    border: 2px solid rgb(102, 153, 204);
+    border: 2px solid var(--light-blue);
     height: auto;
     width: auto;
     margin-bottom: 24px;
@@ -284,7 +292,7 @@ Contact Box
 
 .contact-box h2 {
     color: white;
-    background-color: rgb(102, 153, 204);
+    background-color: var(--light-blue);
     height: 1.75rem;
     padding-left: 1rem;
     padding-top: 0.2rem;
@@ -307,7 +315,7 @@ MySpace URL
 ========================================
 */
 .myspace-url-box {
-    border: 1px solid rgb(102, 153, 204);
+    border: 1px solid var(--light-blue);
     height: auto;
     margin-bottom: 24px;
     padding: 1.5em;
@@ -334,14 +342,14 @@ Sidebar Table Class
 ========================================
 */
 .sidebar-table {
-    border: 2px solid rgb(102, 153, 204);
+    border: 2px solid var(--light-blue);
     display: table;
     border-collapse: separate;
     border-spacing: 3px;
 }
 
 .sidebar-table-h2 {
-    background-color: rgb(102, 153, 204);
+    background-color: var(--light-blue);
     color: white;
     text-align: left;
     height: 1.5rem;
@@ -352,8 +360,8 @@ Sidebar Table Class
 .sidebar-table-header {
     vertical-align: top;
     text-align: left;
-    background-color: rgb(177, 208, 240);
-    color: #336699;
+    background-color: var(--faded-blue);
+    color: var(--primary-blue);
     padding: 3px;
     font-weight: bold;
     font-size: 10pt;
