@@ -7,12 +7,6 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="styles.css">
     <title>My Profile | Myspace</title>
-    <style>
-        #lastfm .ant-list-header {
-            padding: 100px !important;
-        }
-    </style>
-
 </head>
 
 <body>
@@ -60,7 +54,7 @@
                         <li>Male</li>
                         <li>19 years old</li>
                         <li>Rochester, NY</li>
-                        <li>/ Dubai, UAE</li>
+                        <li>| Dubai, UAE</li>
                     </ul>
 
 
@@ -152,8 +146,10 @@
                 </section>
 
                 <!-- Last.fm -->
-                <embed id="lastfm" src="https://lastfm-recently-played.vercel.app/api?user=hritish" width="100%"
-                    type="image/svg+xml" />
+                <div id="lastfm">
+                    <embed src="https://lastfm-recently-played.vercel.app/api?user=hritish" width="100%"
+                        type="image/svg+xml" />
+                </div>
             </aside>
             <!-- Profile Side Bar Ends -->
 
@@ -171,7 +167,7 @@
                     <h3>Hritish's Latest Experience</h3>
                     </p>
                     <p><b>Software Engineer Intern at Unity Infotech:</b> Worked on full-stack development on a
-                        corporate banking app for a private bank in Dubai, and an online shopping app. <b>[May 2023 -
+                        corporate banking app for a private bank in Dubai, and an online grocery shopping app. <b>[May 2023 -
                             Aug 2023]</b></p>
                     <p><b>B.S. Computing & Information Technologies at RIT:</b> Minoring in Software
                         Engineering, Deans List Fall 2021 - Present <b>[Aug 2021 -
@@ -199,8 +195,10 @@
                             alt="CSS">
                         <img src="https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white"
                             alt="PHP">
-                        <img src="https://img.shields.io/badge/SQL-4479A1?style=for-the-badge&logo=sql&logoColor=white"
-                            alt="SQL">
+                        <img src="https://img.shields.io/badge/MySQL-00000F?style=for-the-badge&logo=mysql&logoColor=white"
+                            alt="MySQL">
+                        <img src="https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white"
+                            alt="MongoDB">
                         <img src="https://img.shields.io/badge/Shell_Script-4EAA25?style=for-the-badge&logo=gnu-bash&logoColor=white"
                             alt="Shell Script">
 
@@ -257,7 +255,62 @@
                     </header>
 
                     <h3>About me:</h3>
-                    <p><b>Nothing</b> to <span class="info">see here.</span></p>
+                    <p>Hello! My Name is Hritish and I'm a passionate software developer currently doing my Bachelors in
+                        Computing & IT at Rochester Institute of Technology. My interests are kinda all over the place,
+                        but I'm mostly
+                        interested in
+                        full-stack development and software engineering.</p>
+                    <p>
+                        I'm currently looking for an internship for Summer 2024, so if you're a recruiter or a hiring
+                        manager, please
+                        feel free to reach out to me at my email address <a
+                            href="mailto:hritish.mahajan@gmail.com">hritish.mahajan@gmail.com</a>
+                        or on <a href="https://linkedin.com/in/hritishmahajan">LinkedIn</a>.
+                    </p>
+                    <h3>About my Programming History:</h3>
+                    <p>
+                        I was always into computers and technology growing up, but I didn't really get into programming
+                        until I was 12 or 13. I started off with HTML when I found out I could change up stuff in
+                        websites
+                        using the Inspect Element tool in Chrome. Later on I made some questionable websites so I could
+                        share
+                        curated links to pirated games and music with my friends. (I am 100% joking here by the way, I
+                        swear.)
+                    </p>
+                    <p>
+                        I learnt C++ during the summer of 8th grade, Python in school in the 9th grade, and
+                        I've been hooked ever since.
+                        Making spam bots and other stuff to annoy people and break things, and ESPECIALLY automate my
+                        school work was fun, and then I wanted to make games and got into game development
+                        with Unity and C#, and then <em>at some point</em> I got an ESP32 and started playing around
+                        with Arduino C and then I got back into web and app development, so yeah all over the place.
+                    </p>
+                    <p>
+                        So I took up Computing & IT at RIT, since it's a pretty broad major and covered a lot of the
+                        stuff I was interested in and wanted to learn more about including web development, software
+                        engineering as well as Networking, Databases and System Administration. I'm currently in my
+                        junior year and expected to graduate in May 2025.
+                    </p>
+
+                    <h3>About this website:</h3>
+                    <p>
+                        This website is a recreation of one of the original MySpace profiles from like 2005. It's based
+                        off
+                        of <a href="https://web.archive.org/web/20060423020134/myspace.com/tom">the original MySpace
+                            profile</a> of Tom Anderson, the founder of MySpace.
+                    </p>
+                    <p>
+                        Full disclosure I was a toddler or something when MySpace was a thing, so this isn't out of
+                        nostalgia, but I've always been fascinated by the internet of the 2000s and
+                        the culture surrounding it, so I decided to make this website as a fun little project. It's
+                        <em>kind of</em> nostalgic even though it's not? If that makes any sense.
+                    </p>
+                    <p>
+                        I first started making it in Next.js and Tailwind, and was deploying it as a static site on
+                        Vercel, but i knew I was over-engineering it.
+                        So I decided to rewrite it in vanilla HTML and CSS to make it more authentic and to
+                        <em>kinda</em> get a better understanding of how websites were made back then.
+                    </p>
 
                     <h3>Who I'd like to meet:</h3>
                     <p>George Hotz and Kanye West (i have a lot of questions man).</p>
@@ -271,15 +324,23 @@
                     <p><b>Hritish has <span class="focus-highlight">8</span> Projects.</b></p>
 
                     <div class="project-icons">
-                        <div><a href="https://github.com/hritsh/spotistats">Spotistats<br><img src="public/projects/spotistats.svg" alt=""></a></div>
-                        <div><a href="https://github.com/hritsh/calorify-estore">Calorify<br><img src="public/projects/calorify.png" alt=""></a></div>
-                        <div><a href="https://github.com/hritsh/minima">Minima<br><img src="public/projects/minima.png" alt=""></a></div>
-                        <div><a href="https://github.com/hritsh/anon-chat">AnonChat<br><img src="public/projects/anonchat.png" alt=""></a></div>
-                        <div><a href="https://github.com/hritsh/emojify">Emojify<br><img src="public/projects/emojify.png" alt=""></a></div>
-                        <div><a href="https://github.com/hritsh/DiscordClassReminder">DiscordCR<br><img src="public/projects/discordcr2.png" alt=""></a></div>
-                        <div><a href="https://github.com/hritsh/discord-autosend">DiscordAutosend<br><img src="public/projects/discord_autosend.png" alt=""></a>
+                        <div><a href="https://github.com/hritsh/spotistats">Spotistats<br><img
+                                    src="public/projects/spotistats.svg" alt=""></a></div>
+                        <div><a href="https://github.com/hritsh/calorify-estore">Calorify<br><img
+                                    src="public/projects/calorify.png" alt=""></a></div>
+                        <div><a href="https://github.com/hritsh/minima">Minima<br><img src="public/projects/minima.png"
+                                    alt=""></a></div>
+                        <div><a href="https://github.com/hritsh/anon-chat">AnonChat<br><img
+                                    src="public/projects/anonchat.png" alt=""></a></div>
+                        <div><a href="https://github.com/hritsh/emojify">Emojify<br><img
+                                    src="public/projects/emojify.png" alt=""></a></div>
+                        <div><a href="https://github.com/hritsh/DiscordClassReminder">DiscordCR<br><img
+                                    src="public/projects/discordcr2.png" alt=""></a></div>
+                        <div><a href="https://github.com/hritsh/discord-autosend">DiscordAutosend<br><img
+                                    src="public/projects/discord_autosend.png" alt=""></a>
                         </div>
-                        <div><a href="https://github.com/hritsh/pylera-app">PyleraApp<br><img src="public/projects/pylera_app.png" alt=""></a></div>
+                        <div><a href="https://github.com/hritsh/pylera-app">PyleraApp<br><img
+                                    src="public/projects/pylera_app.png" alt=""></a></div>
                     </div>
 
                     <p class="projects-list-link"><a href="https://github.com/hritsh/">View All of Hritish's
