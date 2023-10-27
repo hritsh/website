@@ -524,7 +524,7 @@ Projects
 	line-height: 1.8em;
 }
 
-.project-icons div img {
+.project-icon {
 	display: block;
 	height: 80px;
 	width: 80px;

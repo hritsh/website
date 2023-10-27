@@ -349,35 +349,35 @@
                         <div><a href="https://github.com/hritsh/spotistats"
                                 aria-label="A React app that displays your most played Spotify artists and tracks over different time ranges with charts."
                                 aria-details="react vite spotify-api json chartjs ghactions">Spotistats<br><img
-                                    src="public/projects/spotistats.svg" alt="Spotistats"></a></div>
+                                    class="project-icon" src="public/projects/spotistats.svg" alt="Spotistats"></a></div>
                         <div><a href="https://github.com/hritsh/calorify-estore"
                                 aria-label="E-Store built with Java Spring Boot in the backend and Angular in the frontend for ordering food based on calorie intake, as well as inventory and sales."
                                 aria-details="java springboot angular json">Calorify<br><img
-                                    src="public/projects/calorify.png" alt="Calorify"></a></div>
+                                    class="project-icon" src="public/projects/calorify.png" alt="Calorify"></a></div>
                         <div><a href="https://github.com/hritsh/minima"
                                 aria-label="A post apocalyptic top-down RPG set in 2050 made with the Godot game engine. 3rd Place Winner @ HP Gaming Garage Hackathon 2022."
-                                aria-details="godot gdscript">Minima<br><img src="public/projects/minima.png"
+                                aria-details="godot gdscript">Minima<br><img class="project-icon" src="public/projects/minima.png"
                                     alt="Minima"></a></div>
                         <div><a href="https://github.com/hritsh/anon-chat"
                                 aria-label="Secure and Anonymous chat app made with React and Firebase where messages and rooms auto delete in an hour."
                                 aria-details="react firebase firestore">AnonChat<br><img
-                                    src="public/projects/anonchat.png" alt="AnonChat"></a></div>
+                                    class="project-icon" src="public/projects/anonchat.png" alt="AnonChat"></a></div>
                         <div><a href="https://github.com/hritsh/emojify"
                                 aria-label="Format & transform text with emoji and unicode symbols for social media or whatever. Built with Angular."
-                                aria-details="angular">Emojify<br><img src="public/projects/emojify.png"
+                                aria-details="angular">Emojify<br><img class="project-icon" src="public/projects/emojify.png"
                                     alt="Emojify"></a></div>
                         <div><a href="https://github.com/hritsh/DiscordClassReminder"
                                 aria-label="Discord.js bot that sends reminders for a class according to a class time table stored in a JSON file. Built with Node.js / Express.js running on Repl.it"
                                 aria-details="nodejs expressjs json replit">DiscordCR<br><img
-                                    src="public/projects/discordcr2.png" alt=""></a></div>
+                                    class="project-icon" src="public/projects/discordcr2.png" alt=""></a></div>
                         <div><a href="https://github.com/hritsh/discord-autosend"
                                 aria-label="A Python program that uses selenium to automate sending messages on Discord. Uses an automated browser instance to bypass Discord's anti-spam ToS. Frontend made with PyQt5."
                                 aria-details="python selenium qt">DiscordAutosend<br><img
-                                    src="public/projects/discord_autosend.png" alt=""></a>
+                                    class="project-icon" src="public/projects/discord_autosend.png" alt=""></a>
                         </div>
                         <div><a href="https://github.com/hritsh/pylera-app"
                                 aria-label="A Flutter App Made for Newbridge Pharmaceuticals to Provide Information and Schedule and Set Reminders for Pylera Dosages."
-                                aria-details="flutter dart">PyleraApp<br><img src="public/projects/pylera_app.png"
+                                aria-details="flutter dart">PyleraApp<br><img class="project-icon" src="public/projects/pylera_app.png"
                                     alt=""></a></div>
                     </div>
 
@@ -421,43 +421,45 @@
 
         const projectIcons = document.querySelectorAll('.project-icons div');
 
-        const tooltip = document.createElement('div');
-        tooltip.classList.add('tooltip');
-        document.body.appendChild(tooltip);
+projectIcons.forEach(icon => {
+    const tooltip = document.createElement('div');
+    tooltip.classList.add('tooltip');
+    icon.appendChild(tooltip);
 
-        projectIcons.forEach(icon => {
-            icon.addEventListener('mouseover', function (event) {
-                // Get the first child 'a' element
-                const linkElement = this.querySelector('a');
-                const link = linkElement.getAttribute('aria-label');
-                const icons = linkElement.getAttribute('aria-details').split(' ');
+    icon.addEventListener('mouseover', function (event) {
+        // Get the first child 'a' element
+        const linkElement = this.querySelector('a');
+        const link = linkElement.getAttribute('aria-label');
+        const icons = linkElement.getAttribute('aria-details').split(' ');
 
-                tooltip.innerText = link;
+        tooltip.innerText = link;
 
-                var logos = document.createElement('div');
-                logos.classList.add('logos');
-                icons.forEach(logo => {
-                    var img = document.createElement('img');
-                    img.src = badges[logo];
-                    logos.appendChild(img);
-                });
-                tooltip.appendChild(logos);
-
-
-                tooltip.style.left = event.pageX - tooltip.offsetWidth + 'px';
-                tooltip.style.top = event.pageY - tooltip.offsetHeight + 'px';
-                tooltip.style.display = 'block';
-            });
-
-            icon.addEventListener('mouseout', function () {
-                tooltip.style.display = 'none';
-            });
-
-            icon.addEventListener('mousemove', function (event) {
-                tooltip.style.left = event.pageX - tooltip.offsetWidth + 'px';
-                tooltip.style.top = event.pageY - tooltip.offsetHeight + 'px';
-            });
+        var logos = document.createElement('div');
+        logos.classList.add('logos');
+        icons.forEach(logo => {
+            var img = document.createElement('img');
+            img.src = badges[logo];
+            logos.appendChild(img);
         });
+        tooltip.appendChild(logos);
+
+        tooltip.style.left = event.pageX - tooltip.offsetWidth + 'px';
+        tooltip.style.top = event.pageY - tooltip.offsetHeight + 'px';
+        tooltip.style.display = 'block';
+    });
+
+    icon.addEventListener('mouseleave', function () {
+        const tooltip = this.querySelector('.tooltip');
+        tooltip.style.display = 'none';
+    });
+
+    icon.addEventListener('mousemove', function (event) {
+        const tooltip = this.querySelector('.tooltip');
+        tooltip.style.left = event.pageX - tooltip.offsetWidth + 'px';
+        tooltip.style.top = event.pageY - tooltip.offsetHeight + 'px';
+    });
+});
+
     </script>
 
 </body>
