@@ -1,0 +1,204 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Martian+Mono&display=swap');
+body{
+font-family: 'martian mono', cursive;
+font-size: 80%;
+}
+
+img{
+  filter: sepia(100%) saturate(0);
+}
+img:hover{
+  filter: sepia(100%) saturate(0) blur(1px);
+  animation: shake 1s;
+  animation-iteration-count: infinite;
+}
+@keyframes shake{
+  0% {transform: translate(1px, 1px) rotate(0deg);}
+  10% {transform: translate(-1px, -2px) rotate(-1deg);}
+  20% {transform: translate(-2px, 0px) rotate(1deg);}
+  30% {transform: translate(2px, 2px) rotate(0deg);}
+  40% {transform: translate(1px, -1px) rotate(1deg);}
+  50% {transform: translate(-1px, 2px) rotate(-1deg);}
+  60% {transform: translate(-2px, 1px) rotate(0deg);}
+  70% {transform: translate(2px, 1px) rotate(-1deg);}
+  80% {transform: translate(-1px, -1px) rotate(1deg);}
+  90% {transform: translate(1px, 2px) rotate(0deg);}
+  100% {transform: translate(1px, -2px) rotate(-1deg);}
+
+}
+nav .top, footer{
+  background-color: black;
+  border: 3px solid white;
+  border-radius: 3px;
+  color: white;
+}
+nav .links{
+  background-color: #404040;
+  border: 2px solid #dedede;
+  border-radius: 3px;
+  text-align: center;
+}
+nav .links .special a{
+  color: white;
+}
+
+nav .links li:not(:last-child)::after, footer .links li:not(:last-child)::after {
+  content: " ✮ ";
+  color: black;
+}
+
+body{
+background:url(https://i.pinimg.com/564x/b4/f2/29/b4f229db81f9672477f361e51465c848.jpg);
+}
+
+main{
+background:url(https://i.pinimg.com/564x/9b/a7/e8/9ba7e87af7ff66254f828b0e07c38516.jpg);
+  border: 3px solid black;
+  border-radius: 3px;
+}
+main .left{
+  background-color: black;
+  border: 5px solid white;
+  border-radius: 3px;
+}
+
+h1{
+background:url(https://i.pinimg.com/564x/cd/60/c6/cd60c603e37328c5c8307cbaa73ad519.jpg);
+  border: 2px solid white;
+  border-radius: 3px;
+  color: white;
+  text-shadow: 0px 0px 5px black;
+  text-align: center;
+}
+
+.general-about .profile-pic img{
+  border-radius: 3px;
+  border: 2px solid #dedede;
+}
+ .general-about .details{
+  padding: 10px 0px;
+}
+.general-about, .mood{
+  color: white;
+  text-align: center;
+}
+
+.online{
+  color: #dedede;
+  animation-name: blink;
+  animation-iteration-count: infinite;
+  animation-duration: 2s;
+}
+
+ DIV.blog-preview{
+background:url(https://i.pinimg.com/564x/43/c4/2c/43c42cd5152ef06b285ad0c2cb7a0d1f.jpg);
+  border-radius: 3px;
+  border: 3px solid black;
+  color: black;
+  text-align: center;
+}
+
+.profile .blurbs, .profile .friends, .profile .contact, .profile .table-section{
+  background-color: #dedede;
+  border-radius: 3px;
+  border: 3px solid black;
+  color: black;
+  text-align: center;
+}
+.profile .blurbs .heading, .profile .friends .heading, .profile .contact .heading, .profile .table-section .heading{
+  background-color: black;
+  color: white;
+  text-align: center;
+}
+.profile .contact .heading, .profile .table-section .heading{
+  border: 2px solid white;
+}
+
+.profile-info{
+background:url(https://i.pinimg.com/originals/3c/c7/22/3cc722c153af2109fb1dee43e084ca39.gif);
+  border-radius: 3px;
+}
+
+.profile .url-info{
+background:url(https://i.pinimg.com/564x/ad/b4/ca/adb4caf54e07744b1517e5d6ae27fb10.jpg);
+  border-radius: 3px;
+  border: 3px solid white;
+  color: white;
+  text-shadow: 0px 0px 5px black;
+  text-align: center;
+}
+
+.profile .contact{
+  text-align: left;
+}
+
+.contact .inner a img{
+  font-size: 0;
+}
+.contact .inner a img:before{
+  font-size: 1em;
+  display: block
+}
+/*ADD TO FRIENDS*/
+.contact .inner .f-row:nth-child(1) .f-col:nth-child(1) a:before{
+  content: "★"
+}
+/*ADD TO FAVS*/
+.contact .inner .f-row:nth-child(1) .f-col:nth-child(2) a:before{
+  content: "☆"
+}
+/*SEND MSG*/
+.contact .inner .f-row:nth-child(2) .f-col:nth-child(1) a:before{
+  content: "☆"
+}
+/*FORWARD TO FRIEND*/
+.contact .inner .f-row:nth-child(2) .f-col:nth-child(2) a:before{
+  content: "★"
+}
+/*INSTANT MESSAGE*/
+.contact .inner .f-row:nth-child(3) .f-col:nth-child(1) a:before{
+  content: "★"
+}
+/*BLOCK USER*/
+.contact .inner .f-row:nth-child(3) .f-col:nth-child(2) a:before{
+  content: "☆"
+}
+/*ADD TO GROUP*/
+.contact .inner .f-row:nth-child(4) .f-col:nth-child(1) a:before{
+  content: "☆"
+}
+/*REPORT USER*/
+.contact .inner .f-row:nth-child(4) .f-col:nth-child(2) a:before{
+  content: "★"
+}
+
+.details-table td:first-child{
+  background-color: white;
+  color: black;
+  text-align: center;
+  border-radius: 3px;
+}
+.details-table td{
+  background-color: black;
+  color: white;
+  text-align: center;
+  border-radius: 3px;
+}
+
+.comments-table td:first-child{
+  background-color: black;
+  border-radius: 3px;
+}
+.comments-table td{
+  background-color: #dedede;
+  border: 2px solid white;
+  border-radius: 3px;
+}
+
+a, .count, .profile .blurbs .section h4, .profile .friends .section h4, .profile .friends .person p{
+  color: #404040;
+}
+a:hover{
+  color: white;
+}

@@ -1,0 +1,390 @@
+/* Mac OS 8.0 Theme - Classic Platinum */
+@import 'ChiKareGo2.ttf';
+
+:root {
+    --mac8-platinum: #c6c6c6;
+    --mac8-light-gray: #dddddd;
+    --mac8-dark-gray: #808080;
+    --mac8-very-dark: #555555;
+    --mac8-black: #000000;
+    --mac8-white: #ffffff;
+    --mac8-blue: #0000ff;
+    --mac8-highlight: #000080;
+    --mac8-window-border: #808080;
+    --mac8-button-light: #f0f0f0;
+    --mac8-button-dark: #999999;
+}
+
+body {
+    background: url('https://wallpapers.com/images/hd/old-mac-nlufm7jv025peyh8.jpg') repeat;
+    background-size: 1920px 1080px;
+    font-family: 'ChiKareGo2', 'Lucida Grande', Arial, sans-serif;
+    font-size: 12px;
+    color: var(--mac8-black);
+    margin: 0;
+    padding: 0;
+    animation: moveBackground 20s linear infinite;
+}
+
+@keyframes moveBackground {
+    0% {
+        background-position: 0% 0%;
+    }
+    100% {
+        background-position: 300px 300px;
+    }
+}
+
+/* Navigation - styled like Mac OS 8 menu bar */
+nav .top {
+    background: linear-gradient(to bottom, var(--mac8-light-gray) 0%, var(--mac8-platinum) 50%, var(--mac8-dark-gray) 100%);
+    border: 1px solid var(--mac8-window-border);
+    border-radius: 0;
+    box-shadow: 
+        inset 1px 1px 0 var(--mac8-white),
+        inset -1px -1px 0 var(--mac8-very-dark),
+        0 1px 3px rgba(0, 0, 0, 0.3);
+    padding: 4px 8px;
+}
+
+nav .links {
+    background: linear-gradient(to bottom, var(--mac8-light-gray) 0%, var(--mac8-platinum) 50%, var(--mac8-dark-gray) 100%);
+    border: 1px solid var(--mac8-window-border);
+    border-top: none;
+    box-shadow: 
+        inset 1px 1px 0 var(--mac8-white),
+        inset -1px -1px 0 var(--mac8-very-dark);
+    padding: 6px 0;
+}
+
+nav .links a {
+    color: var(--mac8-black);
+    text-decoration: none;
+    padding: 3px 8px;
+    margin: 0 2px;
+    border-radius: 0;
+    font-family: 'ChiKareGo2', Arial, sans-serif;
+    font-size: 11px;
+    transition: all 0.1s ease;
+}
+
+nav .links a:hover {
+    background: var(--mac8-highlight);
+    color: var(--mac8-white);
+}
+
+nav .links li:not(:last-child)::after {
+    content: "";
+}
+
+/* Main container */
+main {
+    background: transparent;
+    margin: 8px;
+}
+
+/* Classic Mac window styling */
+.profile h1 {
+    background: linear-gradient(to bottom, var(--mac8-light-gray) 0%, var(--mac8-platinum) 100%);
+    color: var(--mac8-black);
+    text-shadow: 1px 1px 0 var(--mac8-white);
+    padding: 6px 12px;
+    border: 2px outset var(--mac8-platinum);
+    margin-bottom: 0;
+    font-family: 'ChiKareGo2', 'ChiKareGo2', sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: left;
+}
+
+/* Window sections */
+.general-about, .mood, .contact, .table-section, .url-info, 
+.blurbs, .friends, .blog-preview {
+    background: var(--mac8-platinum);
+    border: 2px outset var(--mac8-platinum);
+    margin: 8px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+}
+
+.general-about {
+    border-top: none;
+    border-radius: 0;
+    margin-top: 0;
+    border: 2px inset var(--mac8-platinum);
+    border-top: 1px solid var(--mac8-dark-gray);
+}
+
+/* Title bars */
+.contact .heading, .table-section .heading, 
+.blurbs .heading, .friends .heading {
+    background: linear-gradient(to bottom, var(--mac8-light-gray) 0%, var(--mac8-platinum) 100%);
+    border-bottom: 1px solid var(--mac8-dark-gray);
+    padding: 4px 8px;
+    border-radius: 0;
+    position: relative;
+}
+
+.contact .heading h4, .table-section .heading h4,
+.blurbs .heading h4, .friends .heading h4 {
+    font-family: 'ChiKareGo2', 'ChiKareGo2', sans-serif;
+    font-size: 11px;
+    font-weight: bold;
+    color: var(--mac8-black);
+    margin: 0;
+    text-shadow: 1px 1px 0 var(--mac8-white);
+}
+
+/* Add classic Mac window controls */
+.contact .heading::before, .table-section .heading::before,
+.blurbs .heading::before, .friends .heading::before {
+    content: "";
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 12px;
+    height: 12px;
+    background: linear-gradient(135deg, var(--mac8-light-gray) 0%, var(--mac8-dark-gray) 100%);
+    border: 1px outset var(--mac8-platinum);
+    border-radius: 0;
+}
+
+/* Mac-style buttons */
+.contact .f-col a {
+    background: linear-gradient(to bottom, var(--mac8-button-light) 0%, var(--mac8-platinum) 50%, var(--mac8-button-dark) 100%);
+    border: 1px outset var(--mac8-platinum);
+    border-radius: 3px;
+    color: var(--mac8-black);
+    text-decoration: none;
+    padding: 3px 8px;
+    margin: 2px;
+    font-size: 10px;
+    font-family: 'ChiKareGo2', Arial, sans-serif;
+    text-shadow: 1px 1px 0 var(--mac8-white);
+    transition: all 0.1s ease;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.contact .f-col a:hover {
+    background: linear-gradient(to bottom, var(--mac8-platinum) 0%, var(--mac8-button-dark) 50%, var(--mac8-dark-gray) 100%);
+}
+
+.contact .f-col a:active {
+    border: 1px inset var(--mac8-platinum);
+    background: var(--mac8-dark-gray);
+    color: var(--mac8-white);
+    text-shadow: none;
+}
+
+/* Table styling */
+.details-table {
+    border-collapse: separate;
+    border-spacing: 1px;
+    background: var(--mac8-dark-gray);
+    border: 1px inset var(--mac8-platinum);
+}
+
+.details-table td {
+    background: var(--mac8-white);
+    padding: 4px 6px;
+    border: none;
+    font-family: 'ChiKareGo2', Arial, sans-serif;
+    font-size: 10px;
+}
+
+.details-table td:first-child {
+    background: linear-gradient(to bottom, var(--mac8-light-gray) 0%, var(--mac8-platinum) 100%);
+    font-weight: bold;
+    color: var(--mac8-black);
+    text-shadow: 1px 1px 0 var(--mac8-white);
+}
+
+/* Profile picture */
+.profile-pic img {
+    border: 2px inset var(--mac8-platinum);
+    border-radius: 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Projects grid */
+.friends-grid .person {
+    background: var(--mac8-white);
+    border: 1px outset var(--mac8-platinum);
+    border-radius: 0;
+    padding: 4px;
+    transition: all 0.2s ease;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.friends-grid .person:hover {
+    background: var(--mac8-light-gray);
+    border: 1px inset var(--mac8-platinum);
+}
+
+.friends-grid .person img {
+    border: 1px solid var(--mac8-dark-gray);
+    border-radius: 0;
+}
+
+.friends-grid .person p {
+    font-family: 'ChiKareGo2', Arial, sans-serif;
+    font-size: 10px;
+    font-weight: bold;
+    margin: 2px 0;
+}
+
+/* Text styling */
+.mood p, .general-about p, .blurbs p, .url-info p {
+    font-family: 'ChiKareGo2', Arial, sans-serif;
+    font-size: 11px;
+    color: var(--mac8-black);
+    line-height: 1.3;
+    margin: 4px 0;
+}
+
+.blurbs .section h4 {
+    font-family: 'ChiKareGo2', 'ChiKareGo2', sans-serif;
+    font-size: 11px;
+    color: var(--mac8-black);
+    margin: 6px 0 3px 0;
+    font-weight: bold;
+}
+
+/* Links */
+a {
+    color: var(--mac8-blue);
+    text-decoration: underline;
+}
+
+a:hover {
+    color: var(--mac8-highlight);
+}
+
+/* Footer */
+footer {
+    background: linear-gradient(to bottom, var(--mac8-light-gray) 0%, var(--mac8-platinum) 50%, var(--mac8-dark-gray) 100%);
+    border: 2px outset var(--mac8-platinum);
+    margin: 20px 8px;
+    padding: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+}
+
+footer p {
+    font-family: 'ChiKareGo2', Arial, sans-serif;
+    font-size: 10px;
+    color: var(--mac8-black);
+    margin: 2px 0;
+    text-shadow: 1px 1px 0 var(--mac8-white);
+}
+
+/* Classic Mac scrollbar */
+::-webkit-scrollbar {
+    width: 16px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--mac8-platinum);
+    border: 1px inset var(--mac8-platinum);
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(to bottom, var(--mac8-light-gray) 0%, var(--mac8-dark-gray) 100%);
+    border: 1px outset var(--mac8-platinum);
+    border-radius: 0;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(to bottom, var(--mac8-platinum) 0%, var(--mac8-very-dark) 100%);
+}
+
+/* Theme selector styling */
+#theme-select, #cycle-theme {
+    background: linear-gradient(to bottom, var(--mac8-button-light) 0%, var(--mac8-platinum) 50%, var(--mac8-button-dark) 100%);
+    border: 1px outset var(--mac8-platinum);
+    border-radius: 3px;
+    color: var(--mac8-black);
+    font-family: 'ChiKareGo2', Arial, sans-serif;
+    font-size: 10px;
+    text-shadow: 1px 1px 0 var(--mac8-white);
+    padding: 2px 4px;
+}
+
+#theme-select:hover, #cycle-theme:hover {
+    background: linear-gradient(to bottom, var(--mac8-platinum) 0%, var(--mac8-button-dark) 50%, var(--mac8-dark-gray) 100%);
+}
+
+#theme-select:active, #cycle-theme:active {
+    border: 1px inset var(--mac8-platinum);
+    background: var(--mac8-dark-gray);
+}
+
+/* Classic Mac dialog styling for special sections */
+.blurbs, .friends {
+    position: relative;
+}
+
+.blurbs::before, .friends::before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    height: 20px;
+    background: linear-gradient(to bottom, var(--mac8-light-gray) 0%, var(--mac8-platinum) 100%);
+    border: 2px outset var(--mac8-platinum);
+    border-bottom: 1px solid var(--mac8-dark-gray);
+    z-index: 1;
+}
+
+/* Add depth to containers */
+.container {
+    filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.3));
+}
+
+/* Content spacing */
+.inner {
+    padding: 8px;
+}
+
+/* Classic Mac button effects */
+button, input[type="submit"] {
+    background: linear-gradient(to bottom, var(--mac8-button-light) 0%, var(--mac8-platinum) 50%, var(--mac8-button-dark) 100%);
+    border: 1px outset var(--mac8-platinum);
+    border-radius: 3px;
+    color: var(--mac8-black);
+    font-family: 'ChiKareGo2', Arial, sans-serif;
+    font-size: 10px;
+    text-shadow: 1px 1px 0 var(--mac8-white);
+    padding: 3px 8px;
+    cursor: pointer;
+}
+
+button:hover, input[type="submit"]:hover {
+    background: linear-gradient(to bottom, var(--mac8-platinum) 0%, var(--mac8-button-dark) 50%, var(--mac8-dark-gray) 100%);
+}
+
+button:active, input[type="submit"]:active {
+    border: 1px inset var(--mac8-platinum);
+    background: var(--mac8-dark-gray);
+    color: var(--mac8-white);
+    text-shadow: none;
+}
+
+/* Responsive adjustments */
+@media(max-width: 768px) {
+    body {
+        font-size: 11px;
+    }
+    
+    .profile h1 {
+        font-size: 11px;
+    }
+    
+    nav, main, footer {
+        margin: 4px;
+    }
+    
+    .inner {
+        padding: 6px;
+    }
+}
