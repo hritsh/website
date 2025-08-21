@@ -190,6 +190,8 @@ main {
     max-width: var(--profile-pic-max-width);
     max-height: var(--profile-pic-max-height);
     object-fit: cover;
+    border: var(--img-border);
+    box-shadow: var(--img-shadow);
 }
 
 .profile-info {
@@ -308,6 +310,7 @@ main {
 .experience-item {
     margin-bottom: var(--experience-margin-bottom);
     font-size: var(--font-size-main);
+    padding: 0 0.5em;
 }
 
 .experience-item strong {
@@ -358,6 +361,8 @@ main {
     height: 100px;
     image-rendering: pixelated;
     display: none;
+    border: var(--img-border);
+    box-shadow: var(--img-shadow);
 }
 
 #lastfm-track-link {
