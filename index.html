@@ -27,8 +27,8 @@
                 <button aria-label="Resize" class="resize"></button>
             </div>
             <div class="separator"></div>
-            <nav class="navbar">
-                <ul role="menu-bar">
+            <nav class="navbar" style="display: flex; align-items: center; justify-content: space-between;">
+                <ul role="menu-bar" style="margin: 0;">
                     <li role="menu-item" tabindex="0" aria-haspopup="false">
                         <a href="#">
                             <object data="public/svg/apple.svg" alt="Home" class="home-icon" width="18"
@@ -45,6 +45,15 @@
                     <li role="menu-item" tabindex="6" aria-haspopup="false"><a href="https://github.com/hritsh/"
                             target="_blank">GitHub</a></li>
                 </ul>
+                <div class="navbar-right">
+                    <span id="navbar-clock" class="navbar-clock"
+                        style="font-family: var(--font-main); font-size: 14pt; margin-left: 0;"></span>
+                    <button id="about-info-btn" class="info-btn" aria-label="About this website"
+                        style="background:none;border:none;cursor:pointer;padding:0 4px;">
+                        <object data="public/svg/info.svg" type="image/svg+xml" width="16" height="16"
+                            style="vertical-align:top;"></object>
+                    </button>
+                </div>
             </nav>
         </header>
 
@@ -157,7 +166,7 @@
                 <!-- Interests -->
                 <div class="window">
                     <div class="title-bar">
-                        <h1 class="title">Stuff I'm into</h1>
+                        <h1 class="title">Some stuff I'm into</h1>
                     </div>
                     <div class="separator"></div>
                     <div class="window-pane">
@@ -185,6 +194,39 @@
                         </table>
                     </div>
                 </div>
+                <div class="window">
+                    <div class="title-bar">
+                        <h1 class="title">More Links</h1>
+                    </div>
+                    <div class="separator"></div>
+                    <div class="window-pane">
+                        <div class="links-finder">
+                            <a class="link-item" href="https://www.last.fm/user/hritish" target="_blank">
+                                <span class="link-icon"><object data="public/png/lastfm.png"
+                                        alt="Last.fm"></object></span>
+                                <span class="link-label">Last.fm</span>
+                            </a>
+                            <a class="link-item" href="https://letterboxd.com/hritish/" target="_blank">
+                                <span class="link-icon"><object data="public/png/letterboxd.png"
+                                        alt="Letterboxd"></object></span>
+                                <span class="link-label">Letterboxd</span>
+                            </a>
+                            <a class="link-item" href="https://open.spotify.com/user/yiyux7j8ulk65u43htlfe84tv"
+                                target="_blank">
+                                <span class="link-icon"><object data="public/png/spotify.png"
+                                        alt="Spotify"></object></span>
+                                <span class="link-label">Spotify</span>
+                            </a>
+                            <a class="link-item" href="https://www.youtube.com/@DonaldJTrumpforPresident"
+                                target="_blank">
+                                <span class="link-icon"><object data="public/png/youtube.png"
+                                        alt="YouTube"></object></span>
+                                <span class="link-label">YouTube</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
             </aside>
 
             <!-- Right Column -->
@@ -236,7 +278,8 @@
                             <div class="experience-header">
                                 <img src="public/png/circum.png" alt="Circum Medtech" class="company-icon">
                                 <div class="experience-content">
-                                    <strong>Machine Learning Engineer @ Circum Medtech</strong>
+                                    <strong>Machine Learning Engineer @ <a href="https://www.circummedtechpharma.com"
+                                            target="_blank">Circum Medtech</a></strong>
                                     <div class="exp-location">Nice, France (Remote) &middot; Jun 2025 - Present</div>
                                 </div>
                             </div>
@@ -247,8 +290,9 @@
                                 <img src="public/png/rit.png" alt="Rochester Institute of Technology"
                                     class="company-icon">
                                 <div class="experience-content">
-                                    <strong>BS in CIT @ Rochester Institute of
-                                        Technology</strong>
+                                    <strong>BS in CIT @ <a href="https://www.rit.edu" target="_blank">Rochester
+                                            Institute of
+                                            Technology</a></strong>
                                     <div class="exp-location">Rochester, NY &middot; Aug 2021 - May 2025</div>
                                 </div>
                             </div>
@@ -258,7 +302,8 @@
                             <div class="experience-header">
                                 <img src="public/png/globalpayments.png" alt="Global Payments" class="company-icon">
                                 <div class="experience-content">
-                                    <strong>Software Engineer Intern @ Global Payments</strong>
+                                    <strong>Software Engineer Intern @ <a href="https://www.globalpayments.com"
+                                            target="_blank">Global Payments</a></strong>
                                     <div class="exp-location">Atlanta, GA &middot; Jun 2024 - Aug 2024</div>
                                 </div>
                             </div>
@@ -268,7 +313,8 @@
                             <div class="experience-header">
                                 <img src="public/png/unityinfotech.png" alt="Unity Infotech" class="company-icon">
                                 <div class="experience-content">
-                                    <strong>Software Engineer Intern @ Unity Infotech</strong>
+                                    <strong>Software Engineer Intern @ <a href="https://www.unityinfotech.com"
+                                            target="_blank">Unity Infotech</a></strong>
                                     <div class="exp-location">Dubai, UAE &middot; May 2023 - Aug 2023</div>
                                 </div>
                             </div>
@@ -463,6 +509,8 @@
                 const diffDays = Math.floor(diffHours / 24);
                 return `${diffDays} day${diffDays === 1 ? '' : 's'}`;
             }
+
+
         });
 
         fetch('https://api.github.com/repos/hritsh/website/commits?per_page=1')
@@ -474,7 +522,9 @@
                     const formatted =
                         String(dateObj.getMonth() + 1).padStart(2, '0') + '/' +
                         String(dateObj.getDate()).padStart(2, '0') + '/' +
-                        dateObj.getFullYear();
+                        dateObj.getFullYear() + ' at ' +
+                        String(dateObj.getHours()).padStart(2, '0') + ':' +
+                        String(dateObj.getMinutes()).padStart(2, '0');
                     document.querySelector('.about [data-last-update]')
                         .textContent = formatted;
                 }
@@ -484,7 +534,6 @@
                     .textContent = 'Unavailable';
             });
 
-        // Modal logic for About/System Info
         // Modal logic for About/System Info
         document.addEventListener('DOMContentLoaded', function () {
             function openAboutModal() {
@@ -508,6 +557,30 @@
             document.addEventListener('keydown', function (e) {
                 if (e.key === "Escape") closeAboutModal();
             });
+        });
+
+        document.getElementById('about-info-btn').addEventListener('click', function (e) {
+            e.preventDefault();
+            document.getElementById('about-modal').style.display = 'flex';
+            document.body.classList.add('modal-open');
+        });
+
+        document.addEventListener('DOMContentLoaded', function () {
+            document.getElementById('about-info-btn').addEventListener('click', function (e) {
+                e.preventDefault();
+                document.getElementById('about-modal').style.display = 'flex';
+                document.body.classList.add('modal-open');
+            });
+
+            // Clock logic
+            function updateClock() {
+                const now = new Date();
+                const hh = String(now.getHours()).padStart(2, '0');
+                const mm = String(now.getMinutes()).padStart(2, '0');
+                document.getElementById('navbar-clock').textContent = `${hh}:${mm}`;
+            }
+            updateClock();
+            setInterval(updateClock, 10000);
         });
 
     </script>

@@ -126,7 +126,7 @@ main {
     color: #000;
     text-decoration: none;
     font-weight: normal;
-    font-size: var(--font-size-main);
+    font-size: 14pt;
     display: flex;
     align-items: center;
     gap: var(--navbar-gap);
@@ -136,9 +136,31 @@ main {
     text-decoration: underline;
 }
 
+.navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.info-btn object {
+    pointer-events: none;
+}
+
+.info-btn:focus {
+    outline: 1.5px solid #000;
+    outline-offset: 1px;
+}
+
+.navbar-clock {
+    /* min-width: 70px; */
+    text-align: right;
+    letter-spacing: 1px;
+    color: #222;
+}
+
 .home-icon {
-    width: 16px;
-    height: 16px;
+    width: 20px;
+    height: 20px;
     border: 0;
     box-shadow: none;
     background: none;
@@ -455,8 +477,8 @@ small {
 
 .link-icon object,
 .project-icon {
-    width: 32px;
     height: 32px;
+    width: auto;
     margin-bottom: 4px;
     image-rendering: pixelated;
     border: none;
