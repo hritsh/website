@@ -5,471 +5,468 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://unpkg.com/@sakun/system.css" />
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" type="image/x-icon" href="/public/favicon2.ico">
     <title>Hritish Mahajan | MySpace</title>
-    <meta name="description" content="Hritish Mahajan's MySpace Portfolio. Software Engineer & Junior at RIT. Welcome to my tiny corner on the internet.">
+    <meta name="description" content="Hritish Mahajan's Portfolio. Machine Learning Engineer at Circum Medtech.">
     <meta name="author" content="Hritish Mahajan">
     <meta name="keywords" content="Hritish Mahajan, Hritish, Mahajan, MySpace, Portfolio, Resume, Website">
 </head>
 
 <body>
-
     <div class="master-container">
-
-        <!-- Main Header Begins -->
-        <header class="main-header">
-            <h1 class="main-header-h1"><svg class="myspace-logo" width="24" height="24" viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <path fill="currentColor"
-                        d="M19.802 12.274A3.811 3.811 0 0 0 23.62 8.47c0-2.101-1.71-3.795-3.818-3.795a3.816 3.816 0 0 0-3.818 3.81a3.817 3.817 0 0 0 3.818 3.811zm-8.602.705a3.43 3.43 0 0 0 3.435-3.424A3.43 3.43 0 0 0 11.2 6.13a3.44 3.44 0 0 0-3.436 3.436A3.436 3.436 0 0 0 11.2 13zm-7.8.635c1.71 0 3.093-1.38 3.093-3.081c0-1.704-1.395-3.084-3.105-3.084A3.086 3.086 0 0 0 .3 10.539c0 1.7 1.387 3.078 3.095 3.078zm0 .705c-1.96 0-3.4 1.717-3.4 3.495v1.196c0 .17.138.31.31.31h6.18a.31.31 0 0 0 .309-.31v-1.196c0-1.779-1.437-3.5-3.398-3.5zm7.8-.56c-2.18 0-3.78 1.915-3.78 3.891v1.331c0 .188.156.344.345.344h6.87a.344.344 0 0 0 .342-.344V17.65c0-1.976-1.598-3.891-3.777-3.891zm8.602-.617c-2.422 0-4.197 2.126-4.197 4.323v1.477c0 .21.172.381.382.381h7.63c.21 0 .383-.171.383-.381v-1.477c-.001-2.197-1.776-4.323-4.198-4.323z" />
-                </svg> myspace</h1>
+        <header class="main-header window">
+            <div class="title-bar">
+                <button aria-label="Close" class="close"></button>
+                <h1 class="title">
+                    <object data="public/svg/myspace.svg" alt="MySpace Logo" class="myspace-logo" width="24"
+                        height="24"></object>
+                    hritish.com
+                </h1>
+                <button aria-label="Resize" class="resize"></button>
+            </div>
+            <div class="separator"></div>
             <nav class="navbar">
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                    <li><a href="/public/resume_hritish_mahajan.pdf" target="_blank">Resume</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="https://linkedin.com/in/hritishmahajan" target="_blank">LinkedIn</a></li>
-                    <li><a href="https://github.com/hritsh/" target="_blank">GitHub</a></li>
+                <ul role="menu-bar">
+                    <li role="menu-item" tabindex="0" aria-haspopup="false">
+                        <a href="#">
+                            <object data="public/svg/apple.svg" alt="Home" class="home-icon" width="18"
+                                height="18"></object>
+                        </a>
+                    </li>
+                    <li role="menu-item" tabindex="1" aria-haspopup="false"><a href="#" id="about-btn">About</a></li>
+                    <li role="menu-item" tabindex="2" aria-haspopup="false"><a href="#contact">Contact</a></li>
+                    <li role="menu-item" tabindex="3" aria-haspopup="false"><a href="/public/resume_hritish_mahajan.pdf"
+                            target="_blank">Resume</a></li>
+                    <li role="menu-item" tabindex="4" aria-haspopup="false"><a href="#projects">Projects</a></li>
+                    <li role="menu-item" tabindex="5" aria-haspopup="false"><a href="https://linkedin.com/in/hritishm"
+                            target="_blank">LinkedIn</a></li>
+                    <li role="menu-item" tabindex="6" aria-haspopup="false"><a href="https://github.com/hritsh/"
+                            target="_blank">GitHub</a></li>
                 </ul>
             </nav>
-
         </header>
-        <!-- Main Header Ends -->
 
         <div class="page-content-container">
 
-            <!-- Profile Sidebar Begins -->
+            <!-- Left Column -->
             <aside class="profile-sidebar">
 
-                <header>
-                </header>
-
-                <!-- Profile Picture -->
-                <div class="profile-picture-container">
-                    <h1>Hritish Mahajan</h1>
-                    <img class="profile-pic" src="public/pfp.jpg" alt="Profile Picture">
-
-                    <p class="personal-msg"><b>":/"</b></p>
-
-                    <ul class="gender-age">
-                        <li>Male</li>
-                        <li>20 years old</li>
-                        <li>Rochester, NY</li>
-                        <li>| Dubai, UAE</li>
-                    </ul>
-
-
-                    <ul class="last-login">
-                        <img class="online-status" src="public/myspaceon.gif" alt="Online Status">
-                        <li>Last Login:</li>
-                        <li>02/23/2004</li>
-                    </ul>
-
-                    <p class="mood"><b>Mood: </b>Confused <img class="mood-image" src="public/confusedemoji.png"
-                            alt="Confused"></p>
+                <!-- Profile -->
+                <div class="window">
+                    <div class="title-bar">
+                        <h1 class="title">Profile</h1>
+                    </div>
+                    <div class="separator"></div>
+                    <div class="window-pane profile-picture-container">
+                        <img class="profile-pic" src="public/pfp_compressed.jpeg" alt="Profile Picture">
+                        <div class="profile-info">
+                            <div>Hritish Mahajan</div>
+                            <div>San Diego, CA</div>
+                            <div>21 years old</div>
+                        </div>
+                    </div>
                 </div>
 
-                <!-- Contact Box -->
-                <section class="contact-box" id="contact">
-                    <h2>Contacting Hritish</h2>
-                    <a href="mailto:hritish.mahajan@gmail.com" target="_blank"><svg width="24" height="24" viewBox="0 0 24 24"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path fill="currentColor"
-                                d="M22 6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6zm-2 0l-8 5l-8-5h16zm0 12H4V8l8 5l8-5v10z" />
-                        </svg>
-                        <p>Send me an email</p>
-                    </a>
-                    <a href="https://linkedin.com/in/hritishmahajan" target="_blank"><svg width="24" height="24" viewBox="0 0 24 24"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path fill="currentColor"
-                                d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77Z" />
-                        </svg>
-                        <p>Connect with me on Linkedin</p>
-                    </a>
-                </section>
+                <!-- Links -->
+                <div class="window">
+                    <div class="title-bar">
+                        <h1 class="title">Links</h1>
+                    </div>
+                    <div class="separator"></div>
+                    <div class="window-pane">
+                        <div class="links-finder">
+                            <a class="link-item" href="mailto:hritish.mahajan@gmail.com" target="_blank">
+                                <span class="link-icon"><object data="public/svg/email.svg" alt="Email"></object></span>
+                                <span class="link-label">Email</span>
+                            </a>
+                            <a class="link-item" href="https://linkedin.com/in/hritishm" target="_blank">
+                                <span class="link-icon"><object data="public/svg/linkedin.svg"
+                                        alt="LinkedIn"></object></span>
+                                <span class="link-label">LinkedIn</span>
+                            </a>
+                            <a class="link-item" href="https://github.com/hritsh/" target="_blank">
+                                <span class="link-icon"><object data="public/svg/github.svg"
+                                        alt="GitHub"></object></span>
+                                <span class="link-label">GitHub</span>
+                            </a>
+                            <a class="link-item" href="/public/resume.pdf" target="_blank">
+                                <span class="link-icon"><object data="public/svg/resume.svg"
+                                        alt="Resume"></object></span>
+                                <span class="link-label">Resume</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
 
-                <!-- MySpace URL -->
-                <section class="myspace-url-box">
-                    <h3>MySpace URL:</h3>
-                    <p><a href="./404.html">www.myspace.com/hritish</a></p>
-                </section>
+                <!-- Recently Played -->
+                <div class="window" id="recently-played">
+                    <div class="title-bar">
+                        <h1 class="title">Recently Played</h1>
+                    </div>
+                    <div class="separator"></div>
+                    <div class="window-pane">
+                        <div id="lastfm-widget">
+                            <div class="lastfm-album-art">
+                                <img id="lastfm-album-img" src="" alt="Album Art">
+                            </div>
+                            <div>
+                                <a id="lastfm-track-link" href="#" target="_blank">Track Name</a>
+                            </div>
+                            <div id="lastfm-artist">Artist</div>
+                            <div id="lastfm-album">Album</div>
+                            <div id="lastfm-date">Played: --</div>
+                            <div id="lastfm-nowplaying">Now Playing</div>
+                        </div>
+                    </div>
+                </div>
 
-                <!-- Interests Section -->
-                <section class="interests">
-                    <table class="sidebar-table">
-
-                        <caption>
-                            <h2 class="sidebar-table-h2">Hritish's Interests</h2>
-                        </caption>
-
-                        <tbody>
+                <!-- Interests -->
+                <div class="window">
+                    <div class="title-bar">
+                        <h1 class="title">Interests</h1>
+                    </div>
+                    <div class="separator"></div>
+                    <div class="window-pane">
+                        <table class="interests-table">
                             <tr>
-                                <th class="sidebar-table-header" scope="row">General</th>
-                                <td class="sidebar-table-data">
-                                    <p>Technology, Computers, Internet, Music, Culture, Film, Alternative Art, Human</p>
-                                </td>
+                                <td>Programming</td>
+                                <td>Music</td>
                             </tr>
-
                             <tr>
-                                <th class="sidebar-table-header" scope="row">Music</th>
-                                <td class="sidebar-table-data">
-                                    <p>Experimental Hip-Hop, Indie, DHH, Punjabi, R&B/Soul, Alternative/Leftfield</p>
-                                </td>
+                                <td>AI/ML</td>
+                                <td>Film</td>
                             </tr>
-
                             <tr>
-                                <th class="sidebar-table-header" scope="row">Movies</th>
-                                <td class="sidebar-table-data">
-                                    <p>Whiplash, Trainspotting, Sorry to Bother You, A Clockwork Orange, 3
-                                        Idiots, Tenet, mid90s, The Social Network (of course :|)</p>
-                                </td>
+                                <td>Photography</td>
+                                <td>Skateboarding</td>
                             </tr>
-
                             <tr>
-                                <th class="sidebar-table-header" scope="row">Food</th>
-                                <td class="sidebar-table-data">
-                                    <p>Anything Paneer</p>
-                                </td>
+                                <td>Badminton</td>
+                                <td>Formula 1</td>
                             </tr>
-
-                            <tr>
-                                <th class="sidebar-table-header" scope="row">Other</th>
-                                <td class="sidebar-table-data">
-                                    <p>Graphic Design, Video Editing, Badminton, Music Production, 
-                                    Cricket, Skating, Chess?</p>
-                                </td>
-                            </tr>
-
-                        </tbody>
-                    </table>
-                </section>
-
-                <!-- Last.fm -->
-                <div id="lastfm">
-                    <embed src="https://lastfm-recently-played.vercel.app/api?user=hritish" width="100%"
-                        type="image/svg+xml" />
+                        </table>
+                    </div>
                 </div>
             </aside>
-            <!-- Profile Side Bar Ends -->
 
-            <!-- Main Section -->
+            <!-- Right Column -->
             <main>
+                <!-- Extended Network -->
+                <div class="standard-dialog">
+                    Hritish is in your extended network
+                </div>
 
-                <section class="user-network">
-                    <header>
-                        <h2>Hritish is in your extended network</h2>
-                    </header>
-                </section>
-
-                <section class="experience">
-                    <p>
-                    <h3>Hritish's Latest Experience</h3>
-                    </p>
-                    <p><b>Software Engineer Intern at Unity Infotech:</b> Worked on full-stack development on a
-                        corporate banking app for a private bank in Dubai, UAE. Used <span class="info">Flutter, .NET Core, and
-                        SQL Server</span>. Also contributed to development for an online grocery ordering app for local
-                        grocery stores in Dubai, using Flutter.
-                        <b>[May 2023 - Aug 2023]</b></p>
-                    <p><b>B.S. Computing & Information Technologies at RIT:</b> Minoring in Software
-                        Engineering, Deans List Fall 2021 - Present.<br><span class="info">Courses: </span>Software Development & Problem Solving, Java Object Oriented Programming, Web Applications, Engineering
-                        Secure Software, Task Automation, Database & Data Modeling, Systems Administration. <br><b>[Aug 2021 -
-                            May 2025]</b></p>
-
-                    <p>[<a href="./public/resume_hritish_mahajan.pdf" target="_blank">View Full Resume</a>]</p>
-
-                    <p>
-                    <h3>Hritish's Tech Stack</h3>
-                    </p>
-                    <div class="badges">
-                        <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white"
-                            alt="Python">
-                        <img src="https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white"
-                            alt="Java">
-                        <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black"
-                            alt="JavaScript">
-                        <img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white"
-                            alt="TypeScript">
-                        <img src="https://img.shields.io/badge/C++-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white"
-                            alt="C++">
-                        <img src="https://img.shields.io/badge/C%23-239120?style=for-the-badge&logo=c-sharp&logoColor=white"
-                            alt="C#">
-                        <img src="https://img.shields.io/badge/Dart-0175C2?style=for-the-badge&logo=dart&logoColor=white"
-                            alt="Dart">
-                        <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white"
-                            alt="HTML">
-                        <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white"
-                            alt="CSS">
-                        <img src="https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white"
-                            alt="PHP">
-                        <img src="https://img.shields.io/badge/Shell_Script-4EAA25?style=for-the-badge&logo=gnu-bash&logoColor=white"
-                        alt="Shell Script">
-                            <br>
-                            <br>
-                        <img src="https://img.shields.io/badge/MySQL-00000F?style=for-the-badge&logo=mysql&logoColor=white"
-                            alt="MySQL">
-                        <img src="https://img.shields.io/badge/SQL_Server-CC2927?style=for-the-badge&logo=microsoft-sql-server&logoColor=white"
-                            alt="Microsoft SQL Server">
-                        <img src="https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white"
-                            alt="MongoDB">
-                        <img src="https://img.shields.io/badge/PostgreSQL-336791?style=for-the-badge&logo=postgresql&logoColor=white"
-                            alt="PostgreSQL">
-                            <br>
-                            <br>
-                        <img src="https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white"
-                            alt="Angular">
-                        <img src="https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black"
-                            alt="React">
-                        <img src="https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white"
-                            alt="Flutter">
-                        <img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white"
-                            alt="Node.js">
-                        <img src="https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=next.js&logoColor=white"
-                            alt="Next.js">
-
-                        <img src="https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white"
-                            alt="NumPy">
-                        <img src="https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white"
-                            alt="Pandas">
-                        <img src="https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white"
-                            alt="jQuery">
-                        <img src="https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white"
-                            alt="Flask">
-                        <img src="https://img.shields.io/badge/Spring_Boot-6DB33F?style=for-the-badge&logo=spring-boot&logoColor=white"
-                            alt="Spring Boot">
-                        <img src="https://img.shields.io/badge/Selenium-43B02A?style=for-the-badge&logo=selenium&logoColor=white"
-                            alt="Selenium">
-                        <img src="https://img.shields.io/badge/junit5-25A162?style=for-the-badge&logo=junit5&logoColor=white"
-                            alt="JUnit5">
-                        <img src="https://img.shields.io/badge/pytest-0A9EDC?style=for-the-badge&logo=pytest&logoColor=white"
-                            alt="Pytest">
-                        <img src="https://img.shields.io/badge/jest-C21325?style=for-the-badge&logo=jest&logoColor=white"
-                            alt="Jest">
-                            <br>
-                            <br>
-                        <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white"
-                            alt="Git">
-                        <img src="https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=amazon-aws&logoColor=white"
-                            alt="AWS">
-                        <img src="https://img.shields.io/badge/REST_APIs-005571?style=for-the-badge" alt="REST APIs">
-                        <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white"
-                            alt="Docker">
-                        <img src="https://img.shields.io/badge/Firebase/Firestore-FFCA28?style=for-the-badge&logo=firebase&logoColor=black"
-                            alt="Firebase / Firestore">
-                        <img src="https://img.shields.io/badge/gitlab%20ci-%23181717.svg?style=for-the-badge&logo=gitlab&logoColor=white"
-                            alt="GitLab CI">
-                        <img src="https://img.shields.io/badge/github%20actions-%232671E5.svg?style=for-the-badge&logo=githubactions&logoColor=white"
-                            alt="GitHub Actions">
-                        <img src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black"
-                            alt="Linux">
-                        <img src="https://img.shields.io/badge/mac%20os-000000?style=for-the-badge&logo=macos&logoColor=F0F0F0"
-                            alt="MacOS">
+                <!-- about -->
+                <div class="window" id="about">
+                    <div class="title-bar">
+                        <h1 class="title">About</h1>
                     </div>
-                </section>
+                    <div class="separator"></div>
 
-                <section class="blurbs" id="about">
-                    <header class="main-section-header">
-                        <h2 class="main-section-h2">Hritish's Blurbs</h2>
-                    </header>
+                    <div class="window-pane">
+                        <p>
+                            Hello! I'm Hritish, I love tech & building stuff that leverages technology to solve
+                            real-world problems, especially at the intersection of software engineering, machine
+                            learning & healthcare.
+                        </p>
+                        <p>
+                            I'm currently working at Circum Medtech as a Machine Learning Engineer, where I'm working on
+                            a smart catheter system that uses ML to detect sepsis early in ICU patients.
+                        </p>
+                        <p>
+                            My work involves training models on large healthcare datasets, developing real-time data
+                            pipelines with ICU systems, and building a desktop & mobile app for clinicians to monitor
+                            patient
+                            vitals.
+                        </p>
+                        <p>
+                            When I'm not working or building personal projects, I enjoy exploring new technologies,
+                            ricing my
+                            desktop, and spending hours writing scripts to automate stuff that take 5 minutes to do.
+                        </p>
+                    </div>
+                </div>
 
-                    <h3>About me:</h3>
-                    <p>Hello! My Name is Hritish and I'm a passionate software developer currently doing my Bachelors in
-                        Computing & IT at Rochester Institute of Technology. My interests are kinda all over the place,
-                        but I'm mainly
-                        interested in
-                        full-stack development and software engineering. I love building projects that me or my friends would like to 
-                        use or that I can annoy people with, and also love spending hours automating stuff that would
-                        take me 5 minutes to do manually.
-                    </p>
-                    <p>
-                        Feel free to reach out to me at my email address <a
-                            href="mailto:hritish.mahajan@gmail.com" target="_blank">hritish.mahajan@gmail.com</a>
-                        or on <a href="https://linkedin.com/in/hritishmahajan" target="_blank">LinkedIn</a>.
-                    </p>
-                    <h3>About my Programming Experience:</h3>
-                    <p>
-                        I was always into computers and technology growing up, but I didn't really get into programming
-                        until I was 12 or 13. I started off with HTML when I found out I could change up stuff in
-                        websites
-                        using the Inspect Element tool in Chrome. Later on I made some questionable websites so I could
-                        share
-                        curated links to pirated games and music with my friends. (I am 100% joking here by the way, I
-                        swear.)
-                    </p>
-                    <p>
-                        I learnt C++ during the summer of 8th grade, Python in school in the 9th grade, and
-                        I've been hooked ever since.
-                        Making spam bots and other stuff to annoy people and break things, and ESPECIALLY automate my
-                        school work was fun.
-                        I also wanted to make games so I got into game development
-                        with Unity and C#, and later also won third place at a game hackathon. 
-                        <em>At some point</em> I got an ESP32 and started playing around
-                        with Arduino C and later I got back into web and app development,
-                        so yeah it's been all over the place.
-                    </p>
-                    <p>
-                        So after high school, I took up Computing & IT with a minor in Software Engineering at RIT, since it 
-                        covered a lot of the
-                        stuff I was interested in and wanted to learn more about including web development, software
-                        engineering as well as Networking, Databases and System Administration. I'm currently in my
-                        junior year and expected to graduate in May 2025.
-                    </p>
 
-                    <h3>About this website:</h3>
-                    <p>
-                        This website is a responsive recreation of one of the original MySpace profiles from like 2005.
-                        It's mostly based off
-                        of <a href="https://web.archive.org/web/20060423020134/myspace.com/tom" target="_blank">the original MySpace
-                            profile</a> of Tom Anderson, the founder of MySpace.
-                    </p>
-                    <p>
-                        Full disclosure I was like a toddler or something when MySpace was a thing, so this isn't out of
-                        pure nostalgia, but I've always been fascinated by the internet of the 2000s and
-                        the culture surrounding it (especially the retro design & aesthetic, it felt like everything
-                        was much more personal and creative before everything started turning flat & corporate), so I decided to 
-                        make this website as a fun little project. It's <em>kind of</em> nostalgic even 
-                        though it's not? If that makes any sense.
-                    </p>
-                    <p>
-                        I first made this website with Next.js and Tailwind, and was deploying it as a static site on
-                        Vercel, but I felt like I was over-engineering it. (and it did not need all that JavaScript slowing it down)
-                        After considering Astro which supports static site generation (and also which I created my previous portfolio
-                        website with), I rewrote it in vanilla HTML and CSS (which made sense) with a bit of JS for a bit of a challenge and
-                        also to <em>kinda</em> make it more authentic?
-                    </p>
 
-                    <h3>What I'm currently working on:</h3>
-                    <p>I'm currently working on AnonChat, a secure and anonymous chat app made with React and Firebase where messages and rooms auto delete in an hour,
-                        a machine learning project with Python and TensorFlow, and a 3 other projects related to my coursework at RIT.</p>
-                </section>
-
-                <section class="projects" id="projects">
-                    <header class="main-section-header">
-                        <h2 class="main-section-h2">Hritish's Portfolio</h2>
-                    </header>
-
-                    <p><b>Hritish has <span class="focus-highlight">8</span> Projects.</b> (Hover for More Information)
-                    </p>
-
-                    <div class="project-icons">
-                        <div><a href="https://github.com/hritsh/spotistats" target="_blank"
-                                aria-label="A React app that displays your most played Spotify artists and tracks over different time ranges with charts."
-                                aria-details="react vite spotify-api json chartjs ghactions">Spotistats<br><img
-                                    class="project-icon" src="public/projects/spotistats.svg" alt="Spotistats"></a></div>
-                        <div><a href="https://github.com/hritsh/calorify-estore" target="_blank"
-                                aria-label="E-Store built with Java Spring Boot in the backend and Angular in the frontend for ordering food based on calorie intake, as well as inventory and sales."
-                                aria-details="java springboot angular json">Calorify<br><img
-                                    class="project-icon" src="public/projects/calorify.png" alt="Calorify"></a></div>
-                        <div><a href="https://github.com/hritsh/minima" target="_blank"
-                                aria-label="A post apocalyptic top-down RPG set in 2050 made with the Godot game engine. 3rd Place Winner @ HP Gaming Garage Hackathon 2022."
-                                aria-details="godot gdscript">Minima<br><img class="project-icon" src="public/projects/minima.png"
-                                    alt="Minima"></a></div>
-                        <div><a href="https://github.com/hritsh/anon-chat" target="_blank"
-                                aria-label="Secure and Anonymous chat app made with React and Firebase where messages and rooms auto delete in an hour."
-                                aria-details="react firebase firestore">AnonChat<br><img
-                                    class="project-icon" src="public/projects/anonchat.png" alt="AnonChat"></a></div>
-                        <div><a href="https://github.com/hritsh/emojify" target="_blank"
-                                aria-label="Format & transform text with emoji and unicode symbols for social media or whatever. Built with Angular."
-                                aria-details="angular">Emojify<br><img class="project-icon" src="public/projects/emojify.png"
-                                    alt="Emojify"></a></div>
-                        <div><a href="https://github.com/hritsh/DiscordClassReminder" target="_blank"
-                                aria-label="Discord.js bot that sends reminders for a class according to a class time table stored in a JSON file. Built with Node.js / Express.js running on Repl.it"
-                                aria-details="nodejs expressjs json replit">DiscordCR<br><img
-                                    class="project-icon" src="public/projects/discordcr2.png" alt=""></a></div>
-                        <div><a href="https://github.com/hritsh/discord-autosend" target="_blank"
-                                aria-label="A Python program that uses selenium to automate sending messages on Discord. Uses an automated browser instance to bypass Discord's anti-spam ToS. Frontend made with PyQt5."
-                                aria-details="python selenium qt">DiscordAutosend<br><img
-                                    class="project-icon" src="public/projects/discord_autosend.png" alt=""></a>
+                <!-- latest experience -->
+                <div class="window">
+                    <div class="title-bar">
+                        <h1 class="title">Latest Experience</h1>
+                    </div>
+                    <div class="separator"></div>
+                    <div class="window-pane">
+                        <div class="experience-item">
+                            <div class="experience-header">
+                                <img src="public/png/circum.png" alt="Circum Medtech" class="company-icon">
+                                <div class="experience-content">
+                                    <strong>Machine Learning Engineer @ Circum Medtech</strong>
+                                    <div class="exp-location">Nice, France (Remote) &middot; Jun 2025 - Present</div>
+                                </div>
+                            </div>
                         </div>
-                        <div><a href="https://github.com/hritsh/pylera-app" target="_blank"
-                                aria-label="A Flutter App Made for Newbridge Pharmaceuticals to Provide Information and Schedule and Set Reminders for Pylera Dosages."
-                                aria-details="flutter dart">PyleraApp<br><img class="project-icon" src="public/projects/pylera_app.png"
-                                    alt=""></a></div>
+                        <hr>
+                        <div class="experience-item">
+                            <div class="experience-header">
+                                <img src="public/png/rit.png" alt="Rochester Institute of Technology"
+                                    class="company-icon">
+                                <div class="experience-content">
+                                    <strong>BS in CIT @ Rochester Institute of
+                                        Technology</strong>
+                                    <div class="exp-location">Rochester, NY &middot; Aug 2021 - May 2025</div>
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="experience-item">
+                            <div class="experience-header">
+                                <img src="public/png/globalpayments.png" alt="Global Payments" class="company-icon">
+                                <div class="experience-content">
+                                    <strong>Software Engineer Intern @ Global Payments</strong>
+                                    <div class="exp-location">Atlanta, GA &middot; Jun 2024 - Aug 2024</div>
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="experience-item">
+                            <div class="experience-header">
+                                <img src="public/png/unityinfotech.png" alt="Unity Infotech" class="company-icon">
+                                <div class="experience-content">
+                                    <strong>Software Engineer Intern @ Unity Infotech</strong>
+                                    <div class="exp-location">Dubai, UAE &middot; May 2023 - Aug 2023</div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
+                </div>
 
-                    <p class="projects-list-link"><a href="https://github.com/hritsh/" target="_blank">View All of Hritish's
-                            Projects on GitHub</a></p>
-                </section>
+                <!-- projects -->
+                <div class="window" id="projects">
+                    <div class="title-bar">
+                        <h1 class="title">Projects</h1>
+                    </div>
+                    <div class="separator"></div>
+                    <div class="window-pane">
+                        <div class="projects-finder">
+                            <div class="project-item">
+                                <a href="https://github.com/hritsh/spotistats" target="_blank"
+                                    title="React app for Spotify stats and charts.">
+                                    <img class="project-icon" src="public/projects/spotistats.svg" alt="Spotistats">
+                                    <div class="project-filename">Spotistats</div>
+                                    <div class="project-description">Spotify stats & charts</div>
+                                </a>
+                            </div>
+                            <div class="project-item">
+                                <a href="https://github.com/hritsh/calorify-estore" target="_blank"
+                                    title="Java Spring Boot & Angular e-store for food and inventory.">
+                                    <img class="project-icon" src="public/projects/calorify.png" alt="Calorify">
+                                    <div class="project-filename">Calorify</div>
+                                    <div class="project-description">Calorie-based food e-store</div>
+                                </a>
+                            </div>
+                            <div class="project-item">
+                                <a href="https://github.com/hritsh/minima" target="_blank"
+                                    title="Top-down RPG made with Godot. HP Hackathon 3rd Place.">
+                                    <img class="project-icon" src="public/projects/minima.png" alt="Minima">
+                                    <div class="project-filename">Minima</div>
+                                    <div class="project-description">Post-apocalyptic RPG</div>
+                                </a>
+                            </div>
+                            <div class="project-item">
+                                <a href="https://github.com/hritsh/anon-chat" target="_blank"
+                                    title="Anonymous chat app with auto-deleting messages.">
+                                    <img class="project-icon" src="public/projects/anonchat.png" alt="AnonChat">
+                                    <div class="project-filename">AnonChat</div>
+                                    <div class="project-description">Anonymous chat app</div>
+                                </a>
+                            </div>
+                            <div class="project-item">
+                                <a href="https://github.com/hritsh/emojify" target="_blank"
+                                    title="Format and transform text with emoji and unicode.">
+                                    <img class="project-icon" src="public/projects/emojify.png" alt="Emojify">
+                                    <div class="project-filename">Emojify</div>
+                                    <div class="project-description">Text emoji formatter</div>
+                                </a>
+                            </div>
+                            <div class="project-item">
+                                <a href="https://github.com/hritsh/DiscordClassReminder" target="_blank"
+                                    title="Discord bot for class reminders. Node.js/Express.">
+                                    <img class="project-icon" src="public/projects/discordcr.png" alt="DiscordCR">
+                                    <div class="project-filename">DiscordCR</div>
+                                    <div class="project-description">Discord class reminders</div>
+                                </a>
+                            </div>
+                            <div class="project-item">
+                                <a href="https://github.com/hritsh/discord-autosend" target="_blank"
+                                    title="Python app to automate Discord messages with Selenium.">
+                                    <img class="project-icon" src="public/projects/discord_autosend.png"
+                                        alt="DiscordAutosend">
+                                    <div class="project-filename">DiscordAutosend</div>
+                                    <div class="project-description">Automate Discord messages</div>
+                                </a>
+                            </div>
+                            <div class="project-item">
+                                <a href="https://github.com/hritsh/pylera-app" target="_blank"
+                                    title="Flutter app for Pylera dosage reminders.">
+                                    <img class="project-icon" src="public/projects/pylera_app.png" alt="PyleraApp">
+                                    <div class="project-filename">PyleraApp</div>
+                                    <div class="project-description">Pylera dosage reminders</div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </main>
-
-
         </div>
+
         <!-- Footer -->
-        <footer class="footer">
-            <small>©2003-2006 hritish.com. All Rights Reserved.</small>
+        <footer class="standard-dialog footer">
+            <p class="dialog-text">©1998 hritish.com. All Rights Reserved.</p>
         </footer>
     </div>
+    <!-- Modal for About/System Info -->
+    <div id="about-modal" class="modal" style="display:none;">
+        <div class="modal-backdrop"></div>
+        <div class="modal-dialog outer-border" style="width: 30rem; z-index: 1002;">
+            <div class="inner-border center">
+                <div class="modal-contents">
+                    <h1 class="title">About This Website</h1>
+                    <div class="separator"></div>
+                    <div class="window-pane" style="text-align:center;">
+                        <img src="public/svg/myspace.svg" alt="Logo" style="width:48px;height:48px;margin-bottom:10px;">
+                        <div class="about" style="margin-bottom:10px;">
+                            <strong>Hritish Mahajan's Portfolio</strong><br>
+                            Version 2025.08<br>
+                            <strong>Last Update: </strong><span data-last-update>Loading…</span><br>
+                            Built with <a href="https://github.com/sakofchit/system.css" target="_blank">system.css</a>
+                        </div>
+                        <div style="margin-bottom:10px;">
+                            <strong>Technologies:</strong><br>
+                            HTML, CSS, JavaScript, system.css, GitHub Pages
+                        </div>
+                        <div>
+                            <strong>Contact:</strong><br>
+                            <a href="mailto:hritish.mahajan@gmail.com">hritish.mahajan@gmail.com</a>
+                        </div>
+                    </div>
+                    <section class="field-row" style="justify-content: flex-end">
+                        <button class="btn" id="close-about-modal">Close</button>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
 
-    <script defer>
-        const badges = {
-            'react': 'https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black',
-            'angular': 'https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white',
-            'flutter': 'https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white',
-            'dart': 'https://img.shields.io/badge/Dart-0175C2?style=for-the-badge&logo=dart&logoColor=white',
-            'godot': 'https://img.shields.io/badge/Godot-478CBF?style=for-the-badge&logo=godot-engine&logoColor=white',
-            'gdscript': 'https://img.shields.io/badge/GDScript-478CBF?style=for-the-badge&logo=godot-engine&logoColor=white',
-            'firebase': 'https://img.shields.io/badge/Firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=black',
-            'firestore': 'https://img.shields.io/badge/Firestore-FFCA28?style=for-the-badge&logo=firebase&logoColor=black',
-            'nodejs': 'https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white',
-            'expressjs': 'https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white',
-            'python': 'https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white',
-            'java': 'https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white',
-            'selenium': 'https://img.shields.io/badge/Selenium-43B02A?style=for-the-badge&logo=selenium&logoColor=white',
-            'springboot': 'https://img.shields.io/badge/Spring_Boot-6DB33F?style=for-the-badge&logo=spring-boot&logoColor=white',
-            'vite': 'https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white',
-            'spotify-api': 'https://img.shields.io/badge/Spotify-1ED760?style=for-the-badge&logo=spotify&logoColor=white',
-            'json': 'https://img.shields.io/badge/JSON-000000?style=for-the-badge&logo=json&logoColor=white',
-            'chartjs': 'https://img.shields.io/badge/Chart.js-FF6384?style=for-the-badge&logo=chart.js&logoColor=white',
-            'replit': 'https://img.shields.io/badge/Replit-667881?style=for-the-badge&logo=replit&logoColor=white',
-            'qt': 'https://img.shields.io/badge/Qt-41CD52?style=for-the-badge&logo=qt&logoColor=white',
-            'ghactions': 'https://img.shields.io/badge/github%20actions-%232671E5.svg?style=for-the-badge&logo=githubactions&logoColor=white',
-        }
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            fetch('https://www.ballix.net/whatsplaying/now?user=hritish')
+                .then(r => r.json())
+                .then(data => {
+                    const img = document.getElementById('lastfm-album-img');
+                    img.src = data.image && data.image.large ? data.image.large : '';
+                    img.style.display = data.image && data.image.large ? 'block' : 'none';
 
-        const projectIcons = document.querySelectorAll('.project-icons div');
+                    const trackLink = document.getElementById('lastfm-track-link');
+                    trackLink.href = data.url || '#';
+                    trackLink.textContent = data.name || 'Unknown Track';
 
-projectIcons.forEach(icon => {
-    const tooltip = document.createElement('div');
-    tooltip.classList.add('tooltip');
-    icon.appendChild(tooltip);
+                    document.getElementById('lastfm-artist').textContent = data.artist || 'Unknown Artist';
+                    document.getElementById('lastfm-album').textContent = data.album || '';
 
-    icon.addEventListener('mouseover', function (event) {
-        // Get the first child 'a' element
-        const linkElement = this.querySelector('a');
-        const link = linkElement.getAttribute('aria-label');
-        const icons = linkElement.getAttribute('aria-details').split(' ');
+                    const np = document.getElementById('lastfm-nowplaying');
+                    const dateDiv = document.getElementById('lastfm-date');
+                    if (data.nowplaying === "true" || data.nowplaying === true) {
+                        np.innerHTML = `<span style="display:inline-block;width:10px;height:10px;background:#0c0;border-radius:50%;margin-right:6px;vertical-align:middle;"></span>Playing now`;
+                        np.style.display = 'inline-block';
+                        dateDiv.style.display = 'none';
+                    } else {
+                        np.style.display = 'none';
+                        if (data.date) {
+                            const ago = getTimeAgo(data.date);
+                            dateDiv.textContent = ago ? `Played ${ago} ago` : `Played: ${data.date}`;
+                            dateDiv.style.display = 'block';
+                        } else {
+                            dateDiv.textContent = '';
+                            dateDiv.style.display = 'none';
+                        }
+                    }
+                })
+                .catch(() => {
+                    document.getElementById('lastfm-widget').innerHTML = '<div style="color:#c00;">Could not load Last.fm data.</div>';
+                });
 
-        tooltip.innerText = link;
-
-        var logos = document.createElement('div');
-        logos.classList.add('logos');
-        icons.forEach(logo => {
-            var img = document.createElement('img');
-            img.src = badges[logo];
-            logos.appendChild(img);
+            function getTimeAgo(dateStr) {
+                if (!dateStr) return '';
+                const parts = dateStr.match(/^(\d{1,2}) (\w+) (\d{4}), (\d{1,2}):(\d{2})$/);
+                if (!parts) return '';
+                const [, day, monthStr, year, hour, min] = parts;
+                const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+                const month = months.indexOf(monthStr);
+                if (month === -1) return '';
+                const playedDate = new Date(Date.UTC(
+                    parseInt(year), month, parseInt(day), parseInt(hour), parseInt(min)
+                ));
+                const now = new Date();
+                const diffMs = now - playedDate;
+                if (diffMs < 0) return '';
+                const diffMins = Math.floor(diffMs / 60000);
+                if (diffMins < 1) return 'just now';
+                if (diffMins < 60) return `${diffMins} min${diffMins === 1 ? '' : 's'}`;
+                const diffHours = Math.floor(diffMins / 60);
+                if (diffHours < 24) return `${diffHours} hour${diffHours === 1 ? '' : 's'}`;
+                const diffDays = Math.floor(diffHours / 24);
+                return `${diffDays} day${diffDays === 1 ? '' : 's'}`;
+            }
         });
-        tooltip.appendChild(logos);
 
-        tooltip.style.left = event.pageX - tooltip.offsetWidth + 'px';
-        tooltip.style.top = event.pageY - tooltip.offsetHeight + 'px';
-        tooltip.style.display = 'block';
-    });
+        fetch('https://api.github.com/repos/hritsh/website/commits?per_page=1')
+            .then(r => r.json())
+            .then(data => {
+                if (Array.isArray(data) && data.length > 0) {
+                    const commitDate = data[0].commit.committer.date;
+                    const dateObj = new Date(commitDate);
+                    const formatted =
+                        String(dateObj.getMonth() + 1).padStart(2, '0') + '/' +
+                        String(dateObj.getDate()).padStart(2, '0') + '/' +
+                        dateObj.getFullYear();
+                    document.querySelector('.about [data-last-update]')
+                        .textContent = formatted;
+                }
+            })
+            .catch(() => {
+                document.querySelector('.about [data-last-update]')
+                    .textContent = 'Unavailable';
+            });
 
-    icon.addEventListener('mouseleave', function () {
-        const tooltip = this.querySelector('.tooltip');
-        tooltip.style.display = 'none';
-    });
-
-    icon.addEventListener('mousemove', function (event) {
-        const tooltip = this.querySelector('.tooltip');
-        tooltip.style.left = event.pageX - tooltip.offsetWidth + 'px';
-        tooltip.style.top = event.pageY - tooltip.offsetHeight + 'px';
-    });
-});
+        // Modal logic for About/System Info
+        // Modal logic for About/System Info
+        document.addEventListener('DOMContentLoaded', function () {
+            function openAboutModal() {
+                document.getElementById('about-modal').style.display = 'flex';
+                document.body.classList.add('modal-open');
+            }
+            function closeAboutModal() {
+                document.getElementById('about-modal').style.display = 'none';
+                document.body.classList.remove('modal-open');
+            }
+            document.getElementById('about-btn').addEventListener('click', function (e) {
+                e.preventDefault();
+                openAboutModal();
+            });
+            document.getElementById('close-about-modal').addEventListener('click', function () {
+                closeAboutModal();
+            });
+            document.querySelector('#about-modal .modal-backdrop').addEventListener('click', function () {
+                closeAboutModal();
+            });
+            document.addEventListener('keydown', function (e) {
+                if (e.key === "Escape") closeAboutModal();
+            });
+        });
 
     </script>
-
 </body>
 
 </html>
