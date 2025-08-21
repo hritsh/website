@@ -157,16 +157,6 @@ main {
     gap: 15px;
 }
 
-@media screen and (max-width: 768px) {
-    .page-content-container {
-        grid-template-columns: 1fr;
-        grid-template-areas: "sidebar" "main";
-    }
-
-    .master-container {
-        width: 80vw;
-    }
-}
 
 .window,
 .standard-dialog {
@@ -497,4 +487,50 @@ small {
     background: rgba(80, 80, 80, 0.45);
     z-index: 1001;
     pointer-events: auto;
+}
+
+.profile-sidebar #about-sidebar {
+    display: none;
+}
+
+main #about-main {
+    display: block;
+}
+
+@media screen and (max-width: 768px) {
+    .page-content-container {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .main-header {
+        width: 80vw;
+    }
+
+    .footer {
+        width: 82vw;
+    }
+
+    main .window,
+    main .standard-dialog {
+        width: 80vw;
+    }
+
+    main .standard-dialog {
+        width: 82vw;
+    }
+
+    .profile-sidebar {
+        width: 80vw;
+        order: 0;
+    }
+
+    .profile-sidebar #about-sidebar {
+        display: block;
+    }
+
+    main #about-main {
+        display: none;
+    }
 }
