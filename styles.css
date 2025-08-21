@@ -52,12 +52,37 @@ c * {
     letter-spacing: normal !important;
 }
 
+/* Layout containers */
 .master-container {
     margin: auto;
     max-width: 900px;
     width: 90vw;
 }
 
+.page-content-container {
+    display: grid;
+    grid-template-columns: 0.8fr 1.4fr;
+    grid-gap: 20px;
+    grid-template-areas: "sidebar main";
+    margin-bottom: 20px;
+}
+
+.profile-sidebar {
+    grid-area: sidebar;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 250px;
+}
+
+main {
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Header & Navbar */
 .main-header {
     margin-bottom: 20px;
 }
@@ -72,21 +97,6 @@ c * {
 .separator {
     height: var(--separator-height);
     background: var(--separator-bg);
-}
-
-img {
-    image-rendering: pixelated;
-    border: var(--img-border);
-    background: var(--img-bg);
-    box-shadow: var(--img-shadow);
-    margin: 0 auto;
-    display: block;
-}
-
-.myspace-logo {
-    vertical-align: middle;
-    border: 0;
-    box-shadow: none;
 }
 
 .navbar ul[role="menu-bar"] {
@@ -134,30 +144,7 @@ img {
     background: none;
 }
 
-.page-content-container {
-    display: grid;
-    grid-template-columns: 0.8fr 1.4fr;
-    grid-gap: 20px;
-    grid-template-areas: "sidebar main";
-    margin-bottom: 20px;
-}
-
-.profile-sidebar {
-    grid-area: sidebar;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    width: 250px;
-}
-
-main {
-    grid-area: main;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-
+/* Windows & Dialogs */
 .window,
 .standard-dialog {
     box-shadow: var(--window-shadow);
@@ -185,12 +172,18 @@ main {
     padding: 1em 0;
 }
 
+.footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: var(--footer-size);
+}
+
+/* Profile */
 .profile-picture-container {
     display: flex;
-    align-items: flex-start;
-    gap: 0;
     flex-direction: column;
     align-items: center;
+    gap: 0;
 }
 
 .profile-pic {
@@ -210,6 +203,7 @@ main {
     margin: 4px 0;
 }
 
+/* Interests Table */
 .interests-table {
     width: 100%;
     border-collapse: collapse;
@@ -223,6 +217,7 @@ main {
     text-align: center;
 }
 
+/* Projects */
 .projects-finder {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
@@ -284,6 +279,7 @@ main {
     line-height: 1.1;
 }
 
+/* Experience */
 .experience-header {
     display: flex;
     align-items: flex-start;
@@ -328,6 +324,7 @@ main {
     font-size: var(--font-size-main);
 }
 
+/* Buttons */
 .btn {
     font-size: var(--btn-size);
     font-family: var(--font-main);
@@ -338,6 +335,7 @@ main {
     font-size: var(--btn-size);
 }
 
+/* Last.fm Widget */
 #lastfm-widget {
     font-size: var(--font-size-main);
     width: 100%;
@@ -394,12 +392,7 @@ main {
     display: none;
 }
 
-.footer {
-    text-align: center;
-    margin-top: 20px;
-    font-size: var(--footer-size);
-}
-
+/* Typography */
 h1,
 h2,
 h3 {
@@ -422,6 +415,7 @@ small {
     font-size: var(--font-size-small);
 }
 
+/* Links Finder (Finder-style links) */
 .links-finder {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(30px, 1fr));
@@ -454,14 +448,15 @@ small {
     text-decoration: underline;
 }
 
-.link-icon object {
+.link-icon object,
+.project-icon {
     width: 32px;
     height: 32px;
     margin-bottom: 4px;
     image-rendering: pixelated;
     border: none;
-    background: #fff;
     box-shadow: none;
+    display: block;
 }
 
 .link-label {
@@ -472,6 +467,7 @@ small {
     letter-spacing: 0.5px;
 }
 
+/* Modal */
 .modal {
     position: fixed;
     z-index: 1000;
@@ -489,6 +485,7 @@ small {
     pointer-events: auto;
 }
 
+/* Responsive: Mobile */
 .profile-sidebar #about-sidebar {
     display: none;
 }
