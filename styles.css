@@ -513,12 +513,14 @@ small {
 }
 
 /* Responsive: Mobile */
-.profile-sidebar #about-sidebar {
-    display: none;
+.profile-sidebar #profile-left,
+.profile-sidebar #links-left {
+    display: block;
 }
 
-main #about-main {
-    display: block;
+main #profile-main,
+main #links-main {
+    display: none;
 }
 
 @media screen and (max-width: 768px) {
@@ -547,14 +549,20 @@ main #about-main {
 
     .profile-sidebar {
         width: 80vw;
-        order: 0;
+        order: 1;
     }
 
-    .profile-sidebar #about-sidebar {
+    .profile-sidebar #profile-left,
+    .profile-sidebar #links-left {
+        display: none;
+    }
+
+    main #profile-main,
+    main #links-main {
         display: block;
     }
 
-    main #about-main {
+    main .standard-dialog {
         display: none;
     }
 }

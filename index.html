@@ -63,7 +63,7 @@
             <aside class="profile-sidebar">
 
                 <!-- Profile -->
-                <div class="window">
+                <div class="window" id="profile-left">
                     <div class="title-bar">
                         <h1 class="title">Profile</h1>
                     </div>
@@ -80,7 +80,7 @@
                 </div>
 
                 <!-- Links -->
-                <div class="window">
+                <div class="window" id="links-left">
                     <div class="title-bar">
                         <h1 class="title">Links</h1>
                     </div>
@@ -107,37 +107,6 @@
                                 <span class="link-label">Resume</span>
                             </a>
                         </div>
-                    </div>
-                </div>
-
-                <!-- about -->
-                <div class="window" id="about-sidebar">
-                    <div class="title-bar">
-                        <h1 class="title">About</h1>
-                    </div>
-                    <div class="separator"></div>
-
-                    <div class="window-pane">
-                        <p>
-                            Hello! I'm Hritish, I love tech & building stuff that leverages technology to solve
-                            real-world problems, especially at the intersection of software engineering, machine
-                            learning & healthcare.
-                        </p>
-                        <p>
-                            I'm currently working at Circum Medtech as a Machine Learning Engineer, where I'm working on
-                            a smart catheter system that uses ML to detect sepsis early in ICU patients.
-                        </p>
-                        <p>
-                            My work involves training models on large healthcare datasets, developing real-time data
-                            pipelines with ICU systems, and building a desktop & mobile app for clinicians to monitor
-                            patient
-                            vitals.
-                        </p>
-                        <p>
-                            When I'm not working or building personal projects, I enjoy exploring new technologies,
-                            ricing my
-                            desktop, and spending hours writing scripts to automate stuff that take 5 minutes to do.
-                        </p>
                     </div>
                 </div>
 
@@ -231,13 +200,61 @@
 
             <!-- Right Column -->
             <main>
+                <!-- Profile -->
+                <div class="window" id="profile-main">
+                    <div class="title-bar">
+                        <h1 class="title">Profile</h1>
+                    </div>
+                    <div class="separator"></div>
+                    <div class="window-pane profile-picture-container">
+                        <img class="profile-pic" src="public/pfp_compressed.jpeg" alt="Profile Picture">
+                        <div class="profile-info">
+                            <div>Hritish Mahajan</div>
+                            <div>21 years old</div>
+                            <div>San Diego, CA</div>
+                            <div>aura coding</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Links -->
+                <div class="window" id="links-main">
+                    <div class="title-bar">
+                        <h1 class="title">Links</h1>
+                    </div>
+                    <div class="separator"></div>
+                    <div class="window-pane">
+                        <div class="links-finder">
+                            <a class="link-item" href="mailto:hritish.mahajan@gmail.com" target="_blank">
+                                <span class="link-icon"><object data="public/svg/email.svg" alt="Email"></object></span>
+                                <span class="link-label">Email</span>
+                            </a>
+                            <a class="link-item" href="https://linkedin.com/in/hritishm" target="_blank">
+                                <span class="link-icon"><object data="public/svg/linkedin.svg"
+                                        alt="LinkedIn"></object></span>
+                                <span class="link-label">LinkedIn</span>
+                            </a>
+                            <a class="link-item" href="https://github.com/hritsh/" target="_blank">
+                                <span class="link-icon"><object data="public/svg/github.svg"
+                                        alt="GitHub"></object></span>
+                                <span class="link-label">GitHub</span>
+                            </a>
+                            <a class="link-item" href="/public/resume.pdf" target="_blank">
+                                <span class="link-icon"><object data="public/svg/resume.svg"
+                                        alt="Resume"></object></span>
+                                <span class="link-label">Resume</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
                 <!-- Extended Network -->
                 <div class="standard-dialog">
                     Hritish is NOT in your extended network
                 </div>
 
                 <!-- about -->
-                <div class="window" id="about-main">
+                <div class="window" id="about">
                     <div class="title-bar">
                         <h1 class="title">About</h1>
                     </div>
