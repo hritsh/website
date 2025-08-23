@@ -38,7 +38,7 @@ body {
     background-color: #c0c0c0;
     margin: 0;
     padding: 20px;
-    background-image: url('public/tile.png');
+    background-image: url('public/png/tile.png');
     background-repeat: repeat;
     font-family: var(--font-main);
     font-size: var(--font-size-main);
@@ -190,6 +190,34 @@ main {
 
 .title-bar .title {
     font-size: var(--font-size-title);
+}
+
+.details-bar {
+    height: 12px;
+}
+
+.details-bar span {
+    color: #666;
+    font-size: var(--font-size-small);
+}
+
+.close-btn {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: var(--font-size-xsmall);
+    background: #fff;
+    border: 1.5px solid #000;
+    padding: 2px 2px;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.close-btn:hover {
+    background: #000;
+    color: #fff;
 }
 
 .standard-dialog {
@@ -425,6 +453,20 @@ main {
     display: none;
 }
 
+.lastfm-credit {
+    font-size: 8pt;
+    color: #888;
+    opacity: 0.85;
+    font-family: var(--font-main);
+    /* bottom right */
+    text-align: end;
+    transform: translate(6px, 8px);
+}
+
+.lastfm-credit a {
+    color: #888;
+}
+
 /* Typography */
 h1,
 h2,
@@ -465,7 +507,6 @@ small {
     text-align: center;
     text-decoration: none;
     color: #000;
-    cursor: pointer;
     padding: 6px;
     border-radius: 4px;
     transition: background 0.12s;
@@ -490,6 +531,7 @@ small {
     border: none;
     box-shadow: none;
     display: block;
+    pointer-events: none;
 }
 
 .link-label {
