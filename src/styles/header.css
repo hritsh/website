@@ -1,6 +1,6 @@
 /* Header & Navbar */
 .main-header {
-    margin-bottom: 20px;
+    margin-bottom: 5px;
 }
 
 .main-header .title {
@@ -33,6 +33,7 @@
     border-right: none;
 }
 
+
 .navbar a {
     color: #000;
     text-decoration: none;
@@ -43,8 +44,12 @@
     gap: var(--navbar-gap);
 }
 
-.navbar a:hover {
-    text-decoration: underline;
+.navbar li:hover {
+    background: #000;
+}
+
+.navbar li:hover a {
+    color: #fff;
 }
 
 .navbar-right {
@@ -88,6 +93,6 @@
     transition: filter 0.1s;
 }
 
-.home-icon.hover-apple {
+.home-icon img.hover-apple {
     content: url('/png/apple_color.png');
 }

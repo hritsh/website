@@ -16,7 +16,7 @@
 		<ul role="menubar">
 			<li role="menuitem" tabindex="0" aria-haspopup="false">
 				<a href="#" class="home-icon">
-					<object data="/svg/apple.svg" width="18" height="18"></object>
+					<img src="/svg/apple.svg" width="18" height="18" alt="Home Icon" />
 				</a>
 			</li>
 			<li role="menuitem" tabindex="1" aria-haspopup="false">
@@ -41,7 +41,7 @@
 		<div class="navbar-right">
 			<span id="navbar-clock" class="navbar-clock"></span>
 			<button id="about-info-btn" class="info-btn" aria-label="About this website">
-				<object data="/svg/info.svg" type="image/svg+xml" width="16" height="16"></object>
+				<object data="/svg/info.svg" type="image/svg+xml" width="15" height="15"></object>
 			</button>
 		</div>
 	</nav>
@@ -52,5 +52,8 @@
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
+	}
+	#about-info-btn {
+		margin-right: 5px;
 	}
 </style>

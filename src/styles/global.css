@@ -104,7 +104,3 @@ small {
     z-index: 1001;
     pointer-events: auto;
 }
-
-body.modal-open {
-    overflow: hidden;
-}

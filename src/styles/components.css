@@ -51,6 +51,7 @@ main {
 
 .details-bar {
     height: 12px;
+    border-top: 0;
 }
 
 .details-bar span {
