@@ -1,0 +1,127 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/Navbar.astro";
+import Window from "../components/Window.astro";
+import { techData } from "../data/tech";
+---
+
+<Layout title="Tech Stack - Hritish Mahajan">
+	<div class="master-container">
+		<Navbar pageTitle="Tech Stack" />
+
+		<div class="tech-full-width">
+			{
+				techData.map(({ category, skills }) => (
+					<Window title={category} class="tech-category-window">
+						<div class="tech-finder">
+							{skills.map((skill) => {
+								let iconPath;
+								if (skill.devicon === "amazonwebservices") {
+									iconPath = "amazonwebservices/amazonwebservices-original-wordmark.svg";
+								} else {
+									iconPath = `${skill.devicon}/${skill.devicon}-original.svg`;
+								}
+								return (
+									<div class="tech-item">
+										<img
+											class="tech-icon"
+											src={`https://cdn.jsdelivr.net/gh/devicons/devicon/icons/${iconPath}`}
+											alt={skill.name}
+											title={skill.name}
+											loading="lazy"
+										/>
+										<span class="tech-name">{skill.name}</span>
+									</div>
+								);
+							})}
+						</div>
+					</Window>
+				))
+			}
+		</div>
+	</div>
+</Layout>
+
+<style>
+	.tech-full-width {
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: 5px;
+		margin: 10px 0;
+		width: 100%;
+	}
+
+	.tech-category-window {
+		width: 100%;
+		max-width: none;
+	}
+
+	.tech-finder {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+		gap: 20px;
+		padding: 20px;
+		justify-items: center;
+	}
+
+	.tech-item {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+		padding: 10px;
+		border-radius: 4px;
+		transition: background 0.2s;
+	}
+
+	.tech-item:hover {
+		outline: 2px solid #000;
+		cursor: default;
+	}
+
+	.tech-icon {
+		width: 48px;
+		height: 48px;
+		margin-bottom: 8px;
+		image-rendering: pixelated;
+		image-rendering: crisp-edges;
+		object-fit: contain;
+		border: 1.5px solid #000;
+		border-radius: 4px;
+		filter: contrast(1.2) saturate(1) drop-shadow(1px 1px 0 #fff) drop-shadow(2px 2px 0 #000);
+		background: #e0e0e0;
+	}
+
+	.tech-name {
+		font-family: var(--font-main);
+		font-size: 14pt;
+		font-weight: bold;
+		text-align: center;
+	}
+
+	/* Responsive: Mobile */
+	@media screen and (max-width: 768px) {
+		.tech-full-width {
+			width: 80vw;
+			display: block;
+		}
+		.tech-category-window {
+			width: 80vw;
+		}
+
+		.tech-finder {
+			grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
+			gap: 15px;
+			padding: 15px;
+		}
+
+		.tech-icon {
+			width: 40px;
+			height: 40px;
+		}
+
+		.tech-name {
+			font-size: 12pt;
+		}
+	}
+</style>

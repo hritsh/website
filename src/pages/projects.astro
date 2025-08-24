@@ -1,0 +1,229 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/Navbar.astro";
+import Window from "../components/Window.astro";
+import { projectsData } from "../data/projects";
+---
+
+<Layout title="Projects - Hritish Mahajan">
+	<div class="master-container">
+		<Navbar pageTitle="Projects" />
+
+		<div class="projects-grid">
+			{
+				projectsData.map((project) => (
+					<div class="project-wrapper" data-project={JSON.stringify(project)}>
+						<Window title={project.name} class="project-detail-window">
+							<div class="project-detail">
+								<div class="project-screenshot">
+									<img
+										src={project.imageUrl || `/projects/${project.name.toLowerCase()}_screenshot.png`}
+										alt={`${project.name} screenshot`}
+										onerror="this.style.display='none'"
+									/>
+								</div>
+								<div class="project-info">
+									<p>{project.description}</p>
+									<div class="project-tech-stack">
+										{project.technologies && (
+											<small>
+												<strong>Tech:</strong> {project.technologies.join(", ")}
+											</small>
+										)}
+									</div>
+									<div class="project-buttons">
+										<div class="left-buttons">
+											<a href={project.url} target="_blank" class="system-btn github-btn">
+												<img src="/svg/github.svg" width="16" height="16" alt="" />
+												GitHub
+											</a>
+											{project.demoUrl && (
+												<a href={project.demoUrl} target="_blank" class="system-btn demo-btn">
+													<img src="/svg/globe.svg" width="16" height="16" alt="" />
+													Website
+												</a>
+											)}
+										</div>
+										<div class="right-buttons">
+											<button class="system-btn info-btn" data-project={JSON.stringify(project)}>
+												<img src="/svg/info.svg" width="16" height="16" alt="" />
+												Read More
+											</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</Window>
+					</div>
+				))
+			}
+		</div>
+	</div>
+
+	<!-- Project Modal -->
+	<div id="project-modal" class="modal" style="display: none;">
+		<div class="modal-backdrop"></div>
+		<div class="modal-dialog">
+			<Window title="" id="project-modal-window" showCloseBtn={true} closeBtnText="ㅤ">
+				<div id="project-modal-content" class="project-modal-content">
+					<div class="loading-spinner">Loading project details...</div>
+				</div>
+			</Window>
+		</div>
+	</div>
+</Layout>
+
+<style>
+	/* Import the projects CSS */
+	@import "../styles/projects.css";
+
+	/* Project wrapper for click handling */
+	.project-wrapper {
+		cursor: pointer;
+		transition: transform 0.1s ease;
+	}
+
+	.project-wrapper:hover {
+		transform: translateY(-2px);
+	}
+
+	/* Project buttons layout */
+	.project-buttons {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-top: 15px;
+		gap: 10px;
+	}
+
+	.left-buttons,
+	.right-buttons {
+		display: flex;
+		gap: 6px;
+	}
+
+	/* Ensure buttons don't trigger window click */
+	.project-buttons a,
+	.project-buttons button {
+		position: relative;
+		z-index: 10;
+	}
+
+	/* Project info layout in modal */
+	.project-info-header {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+		margin-bottom: 20px;
+		gap: 20px;
+	}
+
+	.project-info > p {
+		margin: 0 0 15px 0;
+	}
+
+	.project-title-section {
+		flex: 1;
+	}
+
+	.project-meta-section {
+		flex-shrink: 0;
+		text-align: right;
+		min-width: 200px;
+	}
+
+	.project-meta-section h1 {
+		margin: 0 0 10px 0;
+		font-size: 2em;
+	}
+
+	.project-meta-section .tech-list {
+		margin-bottom: 15px;
+		color: #666;
+		font-size: var(--font-size-small);
+	}
+
+	.project-meta-section .project-links {
+		display: flex;
+		gap: 8px;
+		justify-content: flex-end;
+		flex-wrap: wrap;
+	}
+
+	/* Additional override for images and videos */
+	:global(.readme-content img),
+	:global(.readme-content video) {
+		max-width: 80% !important;
+		border: var(--img-border);
+		box-shadow: var(--img-shadow);
+	}
+
+	:global(.readme-content video) {
+		background: #000 !important;
+	}
+
+	:global(#project-modal-window) {
+		margin: 0 !important;
+	}
+	:global(#project-modal-window > .window-pane) {
+		padding: 0 !important;
+	}
+
+	:global(#project-modal-window > .window-pane) {
+		height: calc(100% - 35px) !important;
+	}
+
+	@media screen and (max-width: 768px) {
+		.projects-grid {
+			grid-template-columns: 1fr;
+			gap: 5px;
+			margin: 10px 0;
+			width: 80vw;
+			display: block;
+		}
+
+		.project-detail-window {
+			width: 90vw;
+		}
+
+		#project-modal-window {
+			width: 90vw !important;
+			max-height: 90vh;
+		}
+
+		.modal-dialog {
+			width: 90vw;
+		}
+
+		#project-modal-content {
+			max-height: 75vh;
+			padding: 10px 15px;
+		}
+
+		.project-header {
+			flex-direction: column;
+			gap: 15px;
+			align-items: stretch;
+		}
+
+		.project-header-buttons {
+			justify-content: center;
+			flex-wrap: wrap;
+		}
+
+		.project-buttons {
+			flex-direction: column;
+			gap: 10px;
+			align-items: stretch;
+		}
+
+		.left-buttons,
+		.right-buttons {
+			justify-content: center;
+		}
+	}
+</style>
+
+<script>
+	import "/src/scripts/projects.js";
+</script>
