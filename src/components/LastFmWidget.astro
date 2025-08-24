@@ -1,0 +1,22 @@
+---
+import Window from "./Window.astro";
+import { profileData } from "../data/profile";
+---
+
+<Window title="Recently Played">
+	<div id="lastfm-widget">
+		<div class="lastfm-album-art">
+			<img id="lastfm-album-img" src="" alt="Album Art" />
+		</div>
+		<div>
+			<a id="lastfm-track-link" href="#" target="_blank">Track Name</a>
+		</div>
+		<div id="lastfm-artist">Artist</div>
+		<div id="lastfm-album">Album</div>
+		<div id="lastfm-date">Played: --</div>
+		<div id="lastfm-nowplaying">Now Playing</div>
+	</div>
+	<div class="lastfm-credit">
+		fetched from <a href={`https://last.fm/user/${profileData.lastfmUser}`} target="_blank">last.fm</a>
+	</div>
+</Window>

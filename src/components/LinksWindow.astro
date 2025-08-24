@@ -1,0 +1,25 @@
+---
+import Window from "./Window.astro";
+import { primaryLinks } from "../data/links";
+
+export interface Props {
+	id?: string;
+}
+
+const { id } = Astro.props;
+---
+
+<Window title="Links" id={id}>
+	<div class="links-finder">
+		{
+			primaryLinks.map((link) => (
+				<a class="link-item" href={link.url} target={link.target}>
+					<span class="link-icon">
+						<object data={link.icon} />
+					</span>
+					<span class="link-label">{link.label}</span>
+				</a>
+			))
+		}
+	</div>
+</Window>

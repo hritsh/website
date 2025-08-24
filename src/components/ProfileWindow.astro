@@ -1,0 +1,31 @@
+---
+import Window from "./Window.astro";
+import { profileData } from "../data/profile";
+
+export interface Props {
+	id?: string;
+	showStatus?: boolean;
+}
+
+const { id, showStatus = true } = Astro.props;
+---
+
+<Window title="Profile" id={id}>
+	<div class="profile-picture-container">
+		<img class="profile-pic" src="/img/pfp_compressed.jpeg" alt="Profile Picture" />
+		<div class="profile-info">
+			<div>{profileData.name}</div>
+			<div>{profileData.age} years old</div>
+			<div>{profileData.location}</div>
+			{
+				showStatus && (
+					<div>
+						<strong>Status: </strong>
+						{profileData.status}
+					</div>
+				)
+			}
+			{!showStatus && <div>{profileData.status}</div>}
+		</div>
+	</div>
+</Window>

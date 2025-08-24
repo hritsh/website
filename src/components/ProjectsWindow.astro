@@ -1,0 +1,22 @@
+---
+import Window from "./Window.astro";
+import { projectsData } from "../data/projects";
+
+const details = ["9 items", "2,340K in disk", '<a href="#projects">View All</a>'];
+---
+
+<Window title="Projects" id="projects" showDetailsBar={true} details={details}>
+	<div class="projects-finder">
+		{
+			projectsData.map((project) => (
+				<div class="project-item">
+					<a href={project.url} target="_blank" title={project.title}>
+						<img class="project-icon" src={project.icon} alt={project.name} />
+						<div class="project-filename">{project.name}</div>
+						<div class="project-description">{project.description}</div>
+					</a>
+				</div>
+			))
+		}
+	</div>
+</Window>

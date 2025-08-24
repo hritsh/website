@@ -1,0 +1,50 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/Navbar.astro";
+import ProfileWindow from "../components/ProfileWindow.astro";
+import LinksWindow from "../components/LinksWindow.astro";
+import LastFmWidget from "../components/LastFmWidget.astro";
+import InterestsWindow from "../components/InterestsWindow.astro";
+import SocialLinksWindow from "../components/SocialLinksWindow.astro";
+import AboutWindow from "../components/AboutWindow.astro";
+import ExperienceWindow from "../components/ExperienceWindow.astro";
+import ProjectsWindow from "../components/ProjectsWindow.astro";
+import AboutModal from "../components/AboutModal.astro";
+---
+
+<Layout title="Hritish Mahajan">
+	<div class="master-container">
+		<Navbar />
+
+		<div class="page-content-container">
+			<!-- Left Column -->
+			<aside class="profile-sidebar">
+				<ProfileWindow id="profile-left" />
+				<LinksWindow id="links-left" />
+				<LastFmWidget />
+				<InterestsWindow />
+				<SocialLinksWindow />
+			</aside>
+
+			<!-- Right Column -->
+			<main>
+				<ProfileWindow id="profile-main" showStatus={false} />
+				<LinksWindow id="links-main" />
+
+				<!-- Extended Network -->
+				<div class="standard-dialog">Hritish is NOT in your extended network</div>
+
+				<AboutWindow />
+				<ExperienceWindow />
+				<ProjectsWindow />
+			</main>
+		</div>
+
+		<!-- Footer -->
+		<footer class="standard-dialog footer">
+			<p class="dialog-text">©1998 hritish.com. All Rights Reserved.</p>
+		</footer>
+	</div>
+
+	<AboutModal />
+</Layout>

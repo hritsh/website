@@ -1,0 +1,68 @@
+---
+
+---
+
+<div id="about-modal" class="modal">
+	<div class="modal-backdrop"></div>
+	<div class="modal-dialog outer-border">
+		<div class="inner-border center">
+			<div class="modal-contents">
+				<h1 class="title">About This Website</h1>
+				<div class="separator"></div>
+				<div class="window-pane">
+					<img src="/svg/myspace.svg" alt="Logo" class="modal-logo" />
+					<div class="about">
+						<strong>Hritish Mahajan's Portfolio</strong><br />
+						Version 2025.08<br />
+						<strong>Last Update: </strong><span data-last-update>Loading…</span><br />
+						Built with <a href="https://github.com/sakofchit/system.css" target="_blank">system.css</a>
+					</div>
+					<div class="technologies">
+						<strong>Technologies:</strong><br />
+						Astro, HTML, CSS, JavaScript, system.css, GitHub Pages
+					</div>
+					<div>
+						<strong>Contact:</strong><br />
+						<a href="mailto:hritish.mahajan@gmail.com">hritish.mahajan@gmail.com</a>
+					</div>
+				</div>
+				<section class="field-row">
+					<button class="btn" id="close-about-modal">Close</button>
+				</section>
+			</div>
+		</div>
+	</div>
+</div>
+
+<style>
+	#about-modal {
+		display: none;
+	}
+
+	.modal-dialog {
+		width: 30rem;
+		z-index: 1002;
+	}
+
+	.window-pane {
+		text-align: center;
+	}
+
+	.modal-logo {
+		width: 48px;
+		height: 48px;
+		margin-bottom: 10px;
+	}
+
+	.about {
+		margin-bottom: 10px;
+	}
+
+	.technologies {
+		margin-bottom: 10px;
+	}
+
+	.field-row {
+		justify-content: flex-end;
+	}
+</style>

@@ -1,0 +1,62 @@
+---
+export interface Props {
+	title: string;
+	id?: string;
+	class?: string;
+	showDetailsBar?: boolean;
+	details?: string[];
+	showCloseBtn?: boolean;
+	closeBtnLink?: string;
+	closeBtnText?: string;
+}
+
+const {
+	title,
+	id,
+	class: className = "",
+	showDetailsBar = false,
+	details = [],
+	showCloseBtn = false,
+	closeBtnLink = "",
+	closeBtnText = "View Full",
+} = Astro.props;
+---
+
+<div class={`window ${className}`} id={id}>
+	<div class="title-bar" class:list={[{ "close-btn-bar": showCloseBtn }]}>
+		<h1 class="title" class:list={[{ "centered-title": showCloseBtn }]}>{title}</h1>
+		{
+			showCloseBtn && (
+				<a href={closeBtnLink} class="close-btn">
+					{closeBtnText}
+				</a>
+			)
+		}
+	</div>
+	{
+		showDetailsBar && (
+			<div class="details-bar">
+				{details.map((detail) => (
+					<span class="detail-item" set:html={detail} />
+				))}
+			</div>
+		)
+	}
+	<div class="separator"></div>
+	<div class="window-pane">
+		<slot />
+	</div>
+</div>
+
+<style>
+	.close-btn-bar {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		position: relative;
+	}
+
+	.centered-title {
+		margin: 0 auto;
+	}
+</style>

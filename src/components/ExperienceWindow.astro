@@ -1,0 +1,30 @@
+---
+import Window from "./Window.astro";
+import { experienceData } from "../data/experience";
+---
+
+<Window title="Latest Experience" showCloseBtn={true} closeBtnLink="#experience" closeBtnText="View Full" id="experience">
+	{
+		experienceData.map((exp, index) => (
+			<>
+				<div class="experience-item">
+					<div class="experience-header">
+						<img src={exp.icon} alt={exp.company} class="company-icon" />
+						<div class="experience-content">
+							<strong>
+								{exp.role} @{" "}
+								<a href={exp.website} target="_blank">
+									{exp.company}
+								</a>
+							</strong>
+							<div class="exp-location">
+								{exp.location} &middot; {exp.period}
+							</div>
+						</div>
+					</div>
+				</div>
+				{index < experienceData.length - 1 && <hr />}
+			</>
+		))
+	}
+</Window>

@@ -1,0 +1,53 @@
+---
+
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<style>
+			body {
+				background-color: #0511a9;
+				color: #ffffff;
+				font-family: "Courier New", Courier, monospace;
+				padding: 50px;
+				margin: 0;
+			}
+
+			.bsod-container {
+				padding: 10%;
+			}
+
+			h1 {
+				color: #0511a9;
+				background-color: #a2a2a4;
+				width: fit-content;
+				padding: 0 0.5em;
+			}
+
+			p {
+				margin-top: 20px;
+				font-size: 18px;
+			}
+		</style>
+		<title>404 - Not Found</title>
+		<script>
+			document.addEventListener("keydown", function (e) {
+				window.location.href = "/";
+			});
+		</script>
+	</head>
+	<body>
+		<div class="bsod-container">
+			<center><h1>FATAL ERROR</h1></center>
+			<p>THE WEBPAGE YOU ARE TRYING TO VISIT IS MISSING:</p>
+			<p>REASON: 404 - Not Found</p>
+			<p>If this is a website, I'm pretty positive you've either entered the wrong URL or the page has been removed.</p>
+			<p>Technical Information:</p>
+			<p>*** STOP: 0x404_NOT_FOUND (0-00000000h)</p>
+			<center><p>Press any key to go back_</p></center>
+		</div>
+	</body>
+</html>

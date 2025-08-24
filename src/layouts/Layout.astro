@@ -1,0 +1,40 @@
+---
+export interface Props {
+	title: string;
+	description?: string;
+}
+
+const { title, description = "Hritish Mahajan's Portfolio. Machine Learning Engineer at Circum Medtech." } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<link rel="stylesheet" href="https://unpkg.com/@sakun/system.css" />
+		<link rel="icon" type="image/x-icon" href="/favicon2.ico" />
+		<title>{title}</title>
+		<meta name="description" content={description} />
+		<meta name="author" content="Hritish Mahajan" />
+		<meta name="keywords" content="Hritish Mahajan, Hritish, Mahajan, MySpace, Portfolio, Resume, Website" />
+	</head>
+	<body>
+		<slot />
+
+		<script>
+			import "/src/scripts/lastfm.js";
+			import "/src/scripts/modal.js";
+			import "/src/scripts/clock.js";
+			import "/src/scripts/apple-hover.js";
+			import "/src/scripts/github-update.js";
+		</script>
+	</body>
+</html>
+
+<style is:global>
+	@import "/src/styles/global.css";
+	@import "/src/styles/components.css";
+	@import "/src/styles/header.css";
+</style>
