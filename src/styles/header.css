@@ -103,3 +103,24 @@
 .home-icon img.hover-apple {
     content: url('/png/apple_color.png');
 }
+
+/* responsive styles */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar-right {
+        display: none;
+    }
+
+    .navbar a {
+        padding: 8px 12px;
+    }
+
+    .navbar li[role="menuitem"] {
+        border: 1px solid #000;
+        border-top: none;
+    }
+}

@@ -13,7 +13,7 @@ import { projectsData } from "../data/projects";
 			{
 				projectsData.map((project) => (
 					<div class="project-wrapper" data-project={JSON.stringify(project)}>
-						<Window title={project.name} class="project-detail-window">
+						<Window class="project-detail-window" title={project.name} icon={project.icon}>
 							<div class="project-detail">
 								<div class="project-screenshot">
 									<img
@@ -76,6 +76,25 @@ import { projectsData } from "../data/projects";
 <style>
 	/* Import the projects CSS */
 	@import "../styles/projects.css";
+
+	/* Window title with icon */
+	.window-title-with-icon {
+		display: flex;
+		align-items: center;
+		gap: 6px;
+	}
+
+	.title-icon {
+		width: 16px;
+		height: 16px;
+		flex-shrink: 0;
+	}
+
+	/* Project wrapper for click handling */
+	.project-wrapper {
+		cursor: pointer;
+		transition: transform 0.1s ease;
+	}
 
 	/* Project wrapper for click handling */
 	.project-wrapper {

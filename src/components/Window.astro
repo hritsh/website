@@ -8,6 +8,7 @@ export interface Props {
 	showCloseBtn?: boolean;
 	closeBtnLink?: string;
 	closeBtnText?: string;
+	icon?: string;
 }
 
 const {
@@ -19,12 +20,16 @@ const {
 	showCloseBtn = false,
 	closeBtnLink = "",
 	closeBtnText = "View Full",
+	icon,
 } = Astro.props;
 ---
 
 <div class={`window ${className}`} id={id}>
 	<div class="title-bar" class:list={[{ "close-btn-bar": showCloseBtn }]}>
-		<h1 class="title" class:list={[{ "centered-title": showCloseBtn }]} set:html={title} />
+		<h1 class="title" class:list={[{ "centered-title": showCloseBtn }]}>
+			{icon && <img src={icon} class="title-icon" width="16" height="16" alt="" />}
+			<span set:html={title} />
+		</h1>
 		{
 			showCloseBtn && (
 				<a href={closeBtnLink} class="close-btn">
@@ -58,5 +63,19 @@ const {
 
 	.centered-title {
 		margin: 0 auto;
+	}
+
+	.title {
+		display: flex;
+		align-items: center;
+		gap: 6px;
+	}
+
+	.title > span {
+		font-size: inherit;
+	}
+
+	.title-icon {
+		flex-shrink: 0;
 	}
 </style>

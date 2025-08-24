@@ -8,7 +8,10 @@ const { pageTitle } = Astro.props;
 
 <header class="main-header window">
 	<div class="title-bar">
-		<button aria-label="Close" class="close"></button>
+		<button
+			aria-label="Close"
+			class="close"
+			onclick="if(window.goatcounter){goatcounter.count({path:'/navbar/close', title:'Navbar Close'});}"></button>
 		<h1 class="title">
 			{
 				pageTitle ? (
@@ -24,35 +27,58 @@ const { pageTitle } = Astro.props;
 				)
 			}
 		</h1>
-		<button aria-label="Resize" class="resize"></button>
+		<button
+			aria-label="Resize"
+			class="resize"
+			onclick="if(window.goatcounter){goatcounter.count({path:'/navbar/resize', title:'Navbar Resize'});}"></button>
 	</div>
 	<div class="separator"></div>
 	<nav class="navbar">
 		<ul role="menubar">
 			<li role="menuitem" tabindex="0" aria-haspopup="false">
-				<a href="/" class="home-icon">
+				<a
+					href="/"
+					class="home-icon"
+					onclick="if(window.goatcounter){goatcounter.count({path:'/navbar/homeicon', title:'Navbar Home Icon'});}"
+				>
 					<img src="/svg/apple.svg" width="18" height="18" alt="Home Icon" />
 				</a>
 			</li>
 			<li role="menuitem" tabindex="1" aria-haspopup="false">
-				<a href="/">Home</a>
+				<a href="/" onclick="if(window.goatcounter){goatcounter.count({path:'/navbar/home', title:'Navbar Home'});}">Home</a>
 			</li>
 			<li role="menuitem" tabindex="2" aria-haspopup="false">
-				<a href="/projects">Projects</a>
+				<a
+					href="/projects"
+					onclick="if(window.goatcounter){goatcounter.count({path:'/navbar/projects', title:'Navbar Projects'});}">Projects</a
+				>
 			</li>
 			<li role="menuitem" tabindex="3" aria-haspopup="false">
-				<a href="/experience">Experience</a>
+				<a
+					href="/experience"
+					onclick="if(window.goatcounter){goatcounter.count({path:'/navbar/experience', title:'Navbar Experience'});}"
+					>Experience</a
+				>
 			</li>
 			<li role="menuitem" tabindex="4" aria-haspopup="false">
-				<a href="/tech">Tech</a>
+				<a href="/tech" onclick="if(window.goatcounter){goatcounter.count({path:'/navbar/tech', title:'Navbar Tech'});}">Tech</a>
 			</li>
 			<li role="menuitem" tabindex="5" aria-haspopup="false">
-				<a href="/files/resume.pdf" target="_blank">Resume</a>
+				<a
+					href="/files/resume.pdf"
+					target="_blank"
+					onclick="if(window.goatcounter){goatcounter.count({path:'/navbar/resume', title:'Navbar Resume'});}">Resume</a
+				>
 			</li>
 		</ul>
 		<div class="navbar-right">
 			<span id="navbar-clock" class="navbar-clock"></span>
-			<button id="about-info-btn" class="info-btn" aria-label="About this website">
+			<button
+				id="about-info-btn"
+				class="info-btn"
+				aria-label="About this website"
+				onclick="if(window.goatcounter){goatcounter.count({path:'/navbar/about', title:'Navbar About'});}"
+			>
 				<object data="/svg/info.svg" type="image/svg+xml" width="15" height="15"></object>
 			</button>
 		</div>

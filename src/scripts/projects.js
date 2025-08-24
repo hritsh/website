@@ -57,7 +57,11 @@ document.addEventListener("DOMContentLoaded", () => {
 		});
 
 		async function openProjectModal(project) {
-			modalWindow.querySelector(".title").textContent = project.name;
+			const titleElement = modalWindow.querySelector(".title");
+			titleElement.innerHTML = `
+        <img src="${project.icon}" class="title-icon" width="16" height="16" alt="" />
+        <span>${project.name}</span>
+    `;
 			modalContent.innerHTML = '<div class="loading-spinner">Loading project details...</div>';
 			modal.style.display = "flex";
 			document.body.classList.add("modal-open");
