@@ -12,83 +12,83 @@ export interface Project {
 export const projectsData: Project[] = [
     {
         name: "jpeg98",
-        title: "Win98-style JPEG compressor",
+        title: "Retro Win98 JPEG Compressor",
         url: "https://github.com/hritsh/jpeg98",
         icon: "/projects/jpeg98.png",
-        description: "Windows 98-style JPEG compressor for deep frying images in your browser.",
+        description: "A Windows 98-themed image compressor that lets you add compression and artifacting to your photos right in your browser",
         demoUrl: "https://hritsh.github.io/jpeg98/",
         technologies: ["JavaScript", "HTML5 Canvas", "CSS"],
         imageUrl: "https://github.com/hritsh/jpeg98/raw/main/screenshots/web2.jpeg"
     },
     {
         name: "Spotistats",
-        title: "Spotify stats & charts",
+        title: "Spotify Listening Insights & Charts",
         url: "https://github.com/hritsh/spotistats",
         icon: "/projects/spotistats.svg",
-        description: "React app for Spotify stats and charts.",
+        description: "A React-powered dashboard that visualizes your Spotify listening habits with interactive charts, trends, and artist breakdowns.",
         demoUrl: "https://hritsh.github.io/spotistats/",
         technologies: ["React", "JavaScript", "Spotify API"],
         imageUrl: "https://user-images.githubusercontent.com/65954042/219965780-45872d3a-ab97-4af3-82ed-4477e0f01646.png"
     },
     {
         name: "DiscordAutosend",
-        title: "Automate Discord messages",
+        title: "Automated Discord Message Sender",
         url: "https://github.com/hritsh/discord-autosend",
         icon: "/projects/discord_autosend.png",
-        description: "Python app to automate Discord messages with Selenium.",
+        description: "A Python + Selenium tool that schedules and sends automated messages to Discord channels (totally not built for spam)",
         technologies: ["Python", "Selenium", "Discord API"],
         imageUrl: "https://user-images.githubusercontent.com/65954042/119881628-8b3f6f80-bf3e-11eb-86f5-834c16880904.png"
     },
     {
         name: "Calorify",
-        title: "Calorie-based food e-store",
+        title: "Calorie-Based Food Store Platform",
         url: "https://github.com/hritsh/calorify-estore",
         icon: "/projects/calorify.png",
-        description: "Java Spring Boot & Angular e-store for food and inventory.",
+        description: "A Java Spring Boot + Angular e-commerce platform where food products are organized and sold based on calorie count and nutritional data.",
         technologies: ["Java", "Spring Boot", "Angular"],
         imageUrl: "https://github.com/hritsh/calorify-estore/raw/main/docs/calorifydomain2.png"
     },
     {
         name: "Minima",
-        title: "Post-apocalyptic RPG",
+        title: "Post Apocalyptic RPG",
         url: "https://github.com/hritsh/minima",
         icon: "/projects/minima.png",
-        description: "Top-down RPG made with Godot. HP Hackathon 3rd Place.",
+        description: "A top-down RPG built in Godot, set in a post-apocalyptic world. Awarded 3rd place at the HP Gaming Garage Hackathon 2022 for its gameplay and design.",
         demoUrl: "https://hritish.itch.io/minima",
         technologies: ["Godot", "GDScript"],
-        imageUrl: "https://github-production-user-asset-6210df.s3.amazonaws.com/65954042/481398322-e0f73ece-a999-4f21-94a8-f0b136c951e5.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20250824%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250824T172753Z&X-Amz-Expires=300&X-Amz-Signature=b99151b3fb1fa5836abdcb067fa760bfa0551059740b34344b6468a102886ac0&X-Amz-SignedHeaders=host"
+        imageUrl: "https://github-production-user-asset-6210df.s3.amazonaws.com/65954042/481398322-e0f73ece-a999-4f21-94a8-f0b136c951e5.png"
     },
     {
         name: "Emojify",
-        title: "Text emoji formatter",
+        title: "Text to Emoji Formatter",
         url: "https://github.com/hritsh/emojify",
         icon: "/projects/emojify.png",
-        description: "Format and transform text with emoji and unicode.",
+        description: "A fun text transformation tool that decorates your words with emojis and Unicode characters for maximum flair.",
         technologies: ["JavaScript", "HTML", "CSS"],
         imageUrl: "https://user-images.githubusercontent.com/65954042/172168284-11173290-fa72-484a-8cc7-a1284d030048.png"
     },
     {
         name: "AnonChat",
-        title: "Anonymous chat app",
+        title: "Anonymous Messaging App",
         url: "https://github.com/hritsh/anon-chat",
         icon: "/projects/anonchat.png",
-        description: "Anonymous chat app with auto-deleting messages.",
+        description: "A lightweight, anonymous chat app with auto-deleting messages to keep conversations private.",
         technologies: ["JavaScript", "Node.js", "WebSocket"]
     },
     {
         name: "DiscordCR",
-        title: "Discord class reminders",
+        title: "Discord Class Reminder Bot",
         url: "https://github.com/hritsh/DiscordClassReminder",
         icon: "/projects/discordcr.png",
-        description: "Discord bot for class reminders. Node.js/Express.",
+        description: "A Node.js + Express bot that sends automated class reminders to Discord servers.",
         technologies: ["Node.js", "Express", "Discord API"]
     },
     {
         name: "PyleraApp",
-        title: "Pylera dosage reminders",
+        title: "Pylera Medication Tracker & Reminder",
         url: "https://github.com/hritsh/pylera-app",
         icon: "/projects/pylera_app.png",
-        description: "Flutter app for Pylera dosage reminders.",
+        description: "A Flutter mobile app that helps patients follow their Pylera dosage schedule with timely reminders and tracking. Built for Neubridge Pharmaceuticals.",
         technologies: ["Flutter", "Dart"],
         imageUrl: "https://private-user-images.githubusercontent.com/65954042/278838673-ba667f2c-0fe1-46a9-887c-dfbe372c724b.mp4"
     }

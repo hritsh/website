@@ -1,17 +1,23 @@
 ---
 import Window from "./Window.astro";
-import { socialLinks } from "../data/links";
+import { primaryLinks } from "../data/links";
+
+export interface Props {
+	id?: string;
+}
+
+const { id } = Astro.props;
 ---
 
-<Window title="More Links">
+<Window title="Links" id={id}>
 	<div class="links-finder">
 		{
-			socialLinks.map((link) => (
+			primaryLinks.map((link) => (
 				<a
 					class="link-item"
 					href={link.url}
 					target={link.target}
-					onclick={`if(window.goatcounter){goatcounter.count({path:'/social/${link.label.toLowerCase()}', title:'Social - ${link.label}'});}`}
+					onclick={`if(window.goatcounter){goatcounter.count({path:'/links/${link.label.toLowerCase()}', title:'Links - ${link.label}'});}`}
 				>
 					<span class="link-icon">
 						<object data={link.icon} />
