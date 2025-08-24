@@ -10,6 +10,13 @@
     font-size: var(--font-size-title);
 }
 
+/* FIX: Make navbar a flex container to keep navbar-right on the same line */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
 .navbar ul[role="menubar"] {
     background: none;
     border: none;
@@ -24,7 +31,7 @@
 .navbar li[role="menuitem"] {
     background: none;
     border: none;
-    padding: var(--navbar-padding);
+    padding: 0;
     margin: 0;
     border-right: 1px solid #000;
 }
@@ -32,7 +39,6 @@
 .navbar li[role="menuitem"]:last-child {
     border-right: none;
 }
-
 
 .navbar a {
     color: #000;
@@ -42,6 +48,7 @@
     display: flex;
     align-items: center;
     gap: var(--navbar-gap);
+    padding: var(--navbar-padding);
 }
 
 .navbar li:hover {

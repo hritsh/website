@@ -9,11 +9,6 @@ document.addEventListener("DOMContentLoaded", function () {
 		document.body.classList.remove("modal-open");
 	}
 
-	document.getElementById("about-btn").addEventListener("click", function (e) {
-		e.preventDefault();
-		openAboutModal();
-	});
-
 	document.getElementById("about-info-btn").addEventListener("click", function (e) {
 		e.preventDefault();
 		openAboutModal();

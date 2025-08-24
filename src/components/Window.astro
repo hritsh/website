@@ -24,7 +24,7 @@ const {
 
 <div class={`window ${className}`} id={id}>
 	<div class="title-bar" class:list={[{ "close-btn-bar": showCloseBtn }]}>
-		<h1 class="title" class:list={[{ "centered-title": showCloseBtn }]}>{title}</h1>
+		<h1 class="title" class:list={[{ "centered-title": showCloseBtn }]} set:html={title} />
 		{
 			showCloseBtn && (
 				<a href={closeBtnLink} class="close-btn">

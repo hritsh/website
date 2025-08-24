@@ -3,7 +3,7 @@ import Window from "./Window.astro";
 import { experienceData } from "../data/experience";
 ---
 
-<Window title="Latest Experience" showCloseBtn={true} closeBtnLink="#experience" closeBtnText="View Full" id="experience">
+<Window title="Latest Experience" showCloseBtn={true} closeBtnLink="/experience" closeBtnText="View Full" id="experience">
 	{
 		experienceData.map((exp, index) => (
 			<>

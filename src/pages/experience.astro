@@ -1,0 +1,204 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/Navbar.astro";
+import Window from "../components/Window.astro";
+import { experienceData } from "../data/experience";
+
+// Function to convert markdown-style formatting to HTML
+function formatText(text: string): string {
+	return text
+		.replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>")
+		.replace(/\[(.*?)\]\((.*?)\)/g, '<a href="$2" target="_blank">$1</a>');
+}
+---
+
+<Layout title="Experience - Hritish Mahajan">
+	<div class="master-container">
+		<Navbar pageTitle="Experience" />
+
+		<div class="full-width-grid">
+			{
+				experienceData.map((exp) => (
+					<Window title={exp.company} class="experience-detail-window">
+						<div class="experience-detail">
+							<div class="experience-header">
+								<img src={exp.icon} alt={exp.company} class="company-icon-large" />
+								<div class="experience-info">
+									<h2>{exp.role}</h2>
+									<h3>
+										<a href={exp.website} target="_blank">
+											{exp.company}
+										</a>
+									</h3>
+									<p class="location-period">
+										{exp.location} • {exp.period}
+									</p>
+								</div>
+							</div>
+							<div class="experience-description">
+								{exp.description && <p class="experience-summary" set:html={formatText(exp.description)} />}
+
+								{exp.bullets && exp.bullets.length > 0 && (
+									<div class="key-achievements">
+										<h4>Key achievements:</h4>
+										<ul>
+											{exp.bullets.map((bullet) => (
+												<li set:html={formatText(bullet)} />
+											))}
+										</ul>
+									</div>
+								)}
+							</div>
+						</div>
+					</Window>
+				))
+			}
+		</div>
+	</div>
+</Layout>
+
+<style>
+	.full-width-grid {
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: 5px;
+		margin: 10px 0;
+		width: 100%;
+	}
+
+	.experience-detail-window {
+		width: 100%;
+		max-width: none;
+	}
+
+	.experience-detail {
+		padding: 20px;
+	}
+
+	.company-icon-large {
+		width: 64px;
+		height: 64px;
+		border: none;
+		box-shadow: none;
+		flex-shrink: 0;
+	}
+
+	.experience-header {
+		display: flex;
+		gap: 20px;
+		margin-bottom: 20px;
+		align-items: flex-start;
+	}
+
+	.experience-info {
+		flex: 1;
+	}
+
+	.experience-info h2,
+	.experience-info h3 {
+		margin: 0;
+		font-size: var(--font-size-main);
+	}
+
+	.experience-info h2 {
+		font-weight: bold;
+		margin-bottom: 5px;
+	}
+
+	.experience-info h3 a {
+		color: #0066cc;
+		text-decoration: none;
+	}
+
+	.experience-info h3 a:hover {
+		text-decoration: underline;
+	}
+
+	.location-period {
+		color: #666;
+		font-size: var(--font-size-small);
+		margin: 5px 0;
+	}
+
+	.experience-description {
+		font-size: var(--font-size-main);
+		line-height: 1.4;
+	}
+
+	.experience-summary {
+		margin: 0 0 20px 0;
+		padding: 0;
+		font-style: italic;
+		color: #555;
+	}
+
+	.experience-summary a {
+		color: #0066cc;
+		text-decoration: none;
+	}
+
+	.experience-summary a:hover {
+		text-decoration: underline;
+	}
+
+	.key-achievements h4 {
+		margin: 0 0 10px 0;
+		font-size: var(--font-size-main);
+		font-weight: bold;
+	}
+
+	.key-achievements ul {
+		margin: 0;
+		padding-left: 20px;
+	}
+
+	.key-achievements li {
+		margin-bottom: 8px;
+	}
+
+	.key-achievements li a {
+		color: #0066cc;
+		text-decoration: none;
+	}
+
+	.key-achievements li a:hover {
+		text-decoration: underline;
+	}
+
+	/* Responsive: Mobile */
+	@media screen and (max-width: 768px) {
+		.full-width-grid {
+			width: 80vw;
+			display: block;
+		}
+
+		.experience-detail-window {
+			width: 80vw;
+		}
+
+		.experience-detail {
+			padding: 15px;
+		}
+
+		.experience-header {
+			flex-direction: column;
+			gap: 15px;
+			align-items: center;
+			text-align: center;
+		}
+
+		.company-icon-large {
+			width: 48px;
+			height: 48px;
+		}
+
+		.experience-info h2,
+		.experience-info h3 {
+			font-size: calc(var(--font-size-main) * 0.9);
+		}
+
+		.location-period {
+			font-size: calc(var(--font-size-small) * 0.9);
+		}
+	}
+</style>
