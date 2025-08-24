@@ -116,11 +116,18 @@
     }
 
     .navbar a {
-        padding: 8px 12px;
+        padding: 6px 10px;
+        display: block;
+        text-align: center;
     }
 
-    .navbar li[role="menuitem"] {
-        border: 1px solid #000;
-        border-top: none;
+    .navbar ul[role="menubar"] {
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    li[role="menuitem"] {
+        flex: 1 1 auto;
+        border: 1px solid #000 !important;
     }
 }

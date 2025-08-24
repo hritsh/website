@@ -19,7 +19,10 @@ function formatText(text: string): string {
 		<div class="full-width-grid">
 			{
 				experienceData.map((exp) => (
-					<Window title={exp.company} class="experience-detail-window">
+					<Window
+						title={exp.company === "Rochester Institute of Technology" ? "RIT" : exp.company}
+						class="experience-detail-window"
+					>
 						<div class="experience-detail">
 							<div class="experience-header">
 								<img src={exp.icon} alt={exp.company} class="company-icon-large" />
