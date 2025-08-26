@@ -34,7 +34,7 @@ export const projectsData: Project[] = [
         name: "MovieRecEngine",
         title: "Clanker Movie Recommendation Engine",
         url: "https://github.com/hritsh/movierecengine",
-        icon: "/projects/movierecengine.png",
+        icon: "/projects/movierecengine.svg",
         description: "An interactive NLP-powered movie recommendation engine built with Python and Streamlit. Find movies like your favorites, browse by genre, cast, or plot, and enjoy a clean, colorful UI.",
         demoUrl: "https://movierecengine.streamlit.app/",
         technologies: ["Python", "Streamlit", "NLP", "Cosine Similarity", "Bag of Words"],
