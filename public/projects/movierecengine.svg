@@ -1,0 +1,68 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 256 256"
+  role="img"
+  aria-labelledby="title desc">
+  <title id="title">clanker logo</title>
+  <desc id="desc">robot head with clapperboard and film-reel eyes for a movie recommendation engine</desc>
+
+  <!-- colors: edit these two for theming -->
+  <defs>
+    <style>
+      .line { stroke: #111; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; fill: none; }
+      .accent { fill: #ffc34d; }
+      .ink { fill: #111; }
+      .white { stroke: #fff; stroke-width: 4; stroke-linecap: round; }
+    </style>
+  </defs>
+
+  <!-- antenna -->
+  <line class="line" x1="128" y1="36" x2="128" y2="56"/>
+  <circle class="accent" cx="128" cy="30" r="8"/>
+
+  <!-- clapperboard top -->
+  <path class="accent" d="M52 56 H204 L196 80 H60 Z"/>
+  <!-- clapperboard stripes -->
+  <line class="white" x1="68" y1="56" x2="84" y2="80"/>
+  <line class="white" x1="92" y1="56" x2="108" y2="80"/>
+  <line class="white" x1="116" y1="56" x2="132" y2="80"/>
+  <line class="white" x1="140" y1="56" x2="156" y2="80"/>
+  <line class="white" x1="164" y1="56" x2="180" y2="80"/>
+
+  <!-- robot head -->
+  <rect class="line" x="40" y="56" width="176" height="140" rx="24" ry="24"/>
+
+  <!-- film-reel eye: left -->
+  <circle class="line" cx="92" cy="116" r="22"/>
+  <circle class="ink" cx="92" cy="116" r="4"/>
+  <!-- reel holes -->
+  <circle class="ink" cx="106" cy="116" r="2.2"/>
+  <circle class="ink" cx="99" cy="104" r="2.2"/>
+  <circle class="ink" cx="85" cy="104" r="2.2"/>
+  <circle class="ink" cx="78" cy="116" r="2.2"/>
+  <circle class="ink" cx="85" cy="128" r="2.2"/>
+  <circle class="ink" cx="99" cy="128" r="2.2"/>
+
+  <!-- film-reel eye: right -->
+  <circle class="line" cx="164" cy="116" r="22"/>
+  <circle class="ink" cx="164" cy="116" r="4"/>
+  <!-- reel holes -->
+  <circle class="ink" cx="178" cy="116" r="2.2"/>
+  <circle class="ink" cx="171" cy="104" r="2.2"/>
+  <circle class="ink" cx="157" cy="104" r="2.2"/>
+  <circle class="ink" cx="150" cy="116" r="2.2"/>
+  <circle class="ink" cx="157" cy="128" r="2.2"/>
+  <circle class="ink" cx="171" cy="128" r="2.2"/>
+
+  <!-- mouth with play icon -->
+  <rect class="line" x="96" y="152" width="64" height="20" rx="10" ry="10"/>
+  <path class="accent" d="M122 156 L122 168 L138 162 Z"/>
+
+  <!-- subtle chin vents (film perforation nod) -->
+  <rect class="ink" x="76" y="188" width="10" height="4" rx="2"/>
+  <rect class="ink" x="94" y="188" width="10" height="4" rx="2"/>
+  <rect class="ink" x="112" y="188" width="10" height="4" rx="2"/>
+  <rect class="ink" x="134" y="188" width="10" height="4" rx="2"/>
+  <rect class="ink" x="152" y="188" width="10" height="4" rx="2"/>
+  <rect class="ink" x="170" y="188" width="10" height="4" rx="2"/>
+</svg>

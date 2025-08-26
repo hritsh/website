@@ -31,6 +31,16 @@ export const projectsData: Project[] = [
         imageUrl: "https://user-images.githubusercontent.com/65954042/219965780-45872d3a-ab97-4af3-82ed-4477e0f01646.png"
     },
     {
+        name: "MovieRecEngine",
+        title: "Clanker Movie Recommendation Engine",
+        url: "https://github.com/hritsh/movierecengine",
+        icon: "/projects/movierecengine.png",
+        description: "An interactive NLP-powered movie recommendation engine built with Python and Streamlit. Find movies like your favorites, browse by genre, cast, or plot, and enjoy a clean, colorful UI.",
+        demoUrl: "https://movierecengine.streamlit.app/",
+        technologies: ["Python", "Streamlit", "NLP", "Cosine Similarity", "Bag of Words"],
+        imageUrl: "https://github.com/hritsh/movierecengine/raw/main/img/screenshot_rec.png"
+    },
+    {
         name: "DiscordAutosend",
         title: "Automated Discord Message Sender",
         url: "https://github.com/hritsh/discord-autosend",
