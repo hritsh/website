@@ -66,7 +66,7 @@ export const projectsData: Project[] = [
         description: "A top-down RPG built in Godot, set in a post-apocalyptic world. Awarded 3rd place at the HP Gaming Garage Hackathon 2022 for its gameplay and design.",
         demoUrl: "https://hritish.itch.io/minima",
         technologies: ["Godot", "GDScript"],
-        imageUrl: "https://github-production-user-asset-6210df.s3.amazonaws.com/65954042/481398322-e0f73ece-a999-4f21-94a8-f0b136c951e5.png"
+        imageUrl: "https://i.ibb.co/kVy25Hvr/image.png"
     },
     {
         name: "Emojify",
@@ -74,8 +74,18 @@ export const projectsData: Project[] = [
         url: "https://github.com/hritsh/emojify",
         icon: "/projects/emojify.png",
         description: "A fun text transformation tool that decorates your words with emojis and Unicode characters for maximum flair.",
+        demoUrl: "https://hritsh.github.io/emojify/",
         technologies: ["JavaScript", "HTML", "CSS"],
         imageUrl: "https://user-images.githubusercontent.com/65954042/172168284-11173290-fa72-484a-8cc7-a1284d030048.png"
+    },
+    {
+        name: "PyleraApp",
+        title: "Pylera Medication Tracker & Reminder",
+        url: "https://github.com/hritsh/pylera-app",
+        icon: "/projects/pylera_app.png",
+        description: "A Flutter mobile app that helps patients follow their Pylera dosage schedule with timely reminders and tracking. Built for Neubridge Pharmaceuticals.",
+        technologies: ["Flutter", "Dart"],
+        imageUrl: "https://i.ibb.co/tpGKPVP1/278838673-ba667f2c-0fe1-46a9-887c-dfbe372c724b-0001.png"
     },
     {
         name: "AnonChat",
@@ -93,13 +103,4 @@ export const projectsData: Project[] = [
         description: "A Node.js + Express bot that sends automated class reminders to Discord servers.",
         technologies: ["Node.js", "Express", "Discord API"]
     },
-    {
-        name: "PyleraApp",
-        title: "Pylera Medication Tracker & Reminder",
-        url: "https://github.com/hritsh/pylera-app",
-        icon: "/projects/pylera_app.png",
-        description: "A Flutter mobile app that helps patients follow their Pylera dosage schedule with timely reminders and tracking. Built for Neubridge Pharmaceuticals.",
-        technologies: ["Flutter", "Dart"],
-        imageUrl: "https://private-user-images.githubusercontent.com/65954042/278838673-ba667f2c-0fe1-46a9-887c-dfbe372c724b.mp4"
-    }
 ];
