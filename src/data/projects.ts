@@ -41,6 +41,16 @@ export const projectsData: Project[] = [
         imageUrl: "https://github.com/hritsh/jpeg98/raw/main/screenshots/web2.jpeg"
     },
     {
+        name: "MovieRecEngine",
+        title: "Clanker Movie Recommendation Engine",
+        url: "https://github.com/hritsh/movierecengine",
+        icon: "/projects/movierecengine.svg",
+        description: "An interactive NLP-powered movie recommendation engine built with Python and Streamlit. Find movies like your favorites, browse by genre, cast, or plot, and enjoy a clean, colorful UI.",
+        demoUrl: "https://movierecengine.streamlit.app/",
+        technologies: ["Python", "Streamlit", "NLP", "Cosine Similarity", "Bag of Words"],
+        imageUrl: "https://github.com/hritsh/movierecengine/raw/main/img/screenshot_rec.png"
+    },
+    {
         name: "Spotistats",
         title: "Spotify Listening Insights & Charts",
         url: "https://github.com/hritsh/spotistats",
@@ -51,14 +61,23 @@ export const projectsData: Project[] = [
         imageUrl: "https://user-images.githubusercontent.com/65954042/219965780-45872d3a-ab97-4af3-82ed-4477e0f01646.png"
     },
     {
-        name: "MovieRecEngine",
-        title: "Clanker Movie Recommendation Engine",
-        url: "https://github.com/hritsh/movierecengine",
-        icon: "/projects/movierecengine.svg",
-        description: "An interactive NLP-powered movie recommendation engine built with Python and Streamlit. Find movies like your favorites, browse by genre, cast, or plot, and enjoy a clean, colorful UI.",
-        demoUrl: "https://movierecengine.streamlit.app/",
-        technologies: ["Python", "Streamlit", "NLP", "Cosine Similarity", "Bag of Words"],
-        imageUrl: "https://github.com/hritsh/movierecengine/raw/main/img/screenshot_rec.png"
+        name: "Minima",
+        title: "Post Apocalyptic RPG",
+        url: "https://github.com/hritsh/minima",
+        icon: "/projects/minima.png",
+        description: "A top-down RPG built in Godot, set in a post-apocalyptic world. Awarded 3rd place at the HP Gaming Garage Hackathon 2022 for its gameplay and design.",
+        demoUrl: "https://hritish.itch.io/minima",
+        technologies: ["Godot", "GDScript"],
+        imageUrl: "https://i.ibb.co/kVy25Hvr/image.png"
+    },
+    {
+        name: "PyleraApp",
+        title: "Pylera Medication Tracker & Reminder",
+        url: "https://github.com/hritsh/pylera-app",
+        icon: "/projects/pylera_app.png",
+        description: "A Flutter mobile app that helps patients follow their Pylera dosage schedule with timely reminders and tracking. Built for Neubridge Pharmaceuticals.",
+        technologies: ["Flutter", "Dart"],
+        imageUrl: "https://i.ibb.co/tpGKPVP1/278838673-ba667f2c-0fe1-46a9-887c-dfbe372c724b-0001.png"
     },
     {
         name: "DiscordAutosend",
@@ -79,16 +98,6 @@ export const projectsData: Project[] = [
         imageUrl: "https://github.com/hritsh/calorify-estore/raw/main/docs/calorifydomain2.png"
     },
     {
-        name: "Minima",
-        title: "Post Apocalyptic RPG",
-        url: "https://github.com/hritsh/minima",
-        icon: "/projects/minima.png",
-        description: "A top-down RPG built in Godot, set in a post-apocalyptic world. Awarded 3rd place at the HP Gaming Garage Hackathon 2022 for its gameplay and design.",
-        demoUrl: "https://hritish.itch.io/minima",
-        technologies: ["Godot", "GDScript"],
-        imageUrl: "https://i.ibb.co/kVy25Hvr/image.png"
-    },
-    {
         name: "Emojify",
         title: "Text to Emoji Formatter",
         url: "https://github.com/hritsh/emojify",
@@ -97,23 +106,6 @@ export const projectsData: Project[] = [
         demoUrl: "https://hritsh.github.io/emojify/",
         technologies: ["JavaScript", "HTML", "CSS"],
         imageUrl: "https://user-images.githubusercontent.com/65954042/172168284-11173290-fa72-484a-8cc7-a1284d030048.png"
-    },
-    {
-        name: "PyleraApp",
-        title: "Pylera Medication Tracker & Reminder",
-        url: "https://github.com/hritsh/pylera-app",
-        icon: "/projects/pylera_app.png",
-        description: "A Flutter mobile app that helps patients follow their Pylera dosage schedule with timely reminders and tracking. Built for Neubridge Pharmaceuticals.",
-        technologies: ["Flutter", "Dart"],
-        imageUrl: "https://i.ibb.co/tpGKPVP1/278838673-ba667f2c-0fe1-46a9-887c-dfbe372c724b-0001.png"
-    },
-    {
-        name: "AnonChat",
-        title: "Anonymous Messaging App",
-        url: "https://github.com/hritsh/anon-chat",
-        icon: "/projects/anonchat.png",
-        description: "A lightweight, anonymous chat app with auto-deleting messages to keep conversations private.",
-        technologies: ["JavaScript", "Node.js", "WebSocket"]
     },
     {
         name: "DiscordCR",
