@@ -113,6 +113,7 @@ export const projectsData: Project[] = [
         url: "https://github.com/hritsh/DiscordClassReminder",
         icon: "/projects/discordcr.png",
         description: "A Node.js + Express bot that sends automated class reminders to Discord servers.",
-        technologies: ["Node.js", "Express", "Discord API"]
+        technologies: ["Node.js", "Express", "Discord API"],
+        imageUrl: "https://i.ibb.co/MD4h3r3d/image.png"
     },
 ];
