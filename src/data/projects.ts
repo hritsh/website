@@ -11,6 +11,26 @@ export interface Project {
 
 export const projectsData: Project[] = [
     {
+        name: "clanker.fm",
+        title: "Clanker that Roasts your Spotify",
+        url: "https://github.com/hritsh/clanker-fm",
+        icon: "/projects/clanker_fm.png",
+        description: "An AI-powered Spotify taste evaluator that analyzes your listening history, roasts your music taste, and connects you with users who share your questionable preferences.",
+        demoUrl: "https://clanker-fm.hritish.com",
+        technologies: [
+            "Next.js",
+            "OpenAI API",
+            "Spotify API",
+            "Gemini",
+            "NextAuth",
+            "Tailwind CSS",
+            "Framer Motion",
+            "Vercel",
+            "PostgreSQL"
+        ],
+        imageUrl: "https://raw.githubusercontent.com/hritsh/clanker-fm/main/public/screenshots/home.gif"
+    },
+    {
         name: "jpeg98",
         title: "Retro Win98 JPEG Compressor",
         url: "https://github.com/hritsh/jpeg98",
