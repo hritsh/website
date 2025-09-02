@@ -26,11 +26,29 @@ import { projectsData } from "../data/projects";
 									<p>{project.description}</p>
 									<div class="project-tech-stack">
 										{project.technologies && (
-											<small>
-												<strong>Tech:</strong> {project.technologies.join(", ")}
-											</small>
+											<div class="tech-badges">
+												<span class="tech-badges-label">tech stack</span>
+												{project.technologies.map((tech) => {
+													let label = tech;
+													let logo = tech;
+													const match = tech.match(/^(.*)\((.*)\)$/);
+													if (match) {
+														label = match[1].trim();
+														logo = match[2].trim();
+													}
+													return (
+														<img
+															src={`https://img.shields.io/badge/${encodeURIComponent(label)}-22223b?style=flat-square&logo=${encodeURIComponent(logo)}`}
+															alt={label}
+															class="tech-badge"
+															height="20"
+															style="margin-right:4px;margin-bottom:4px;"
+														/>
+													);
+												})}
+											</div>
 										)}
-									</div>
+									</div>{" "}
 									<div class="project-buttons">
 										<div class="left-buttons">
 											<a href={project.url} target="_blank" class="system-btn github-btn">
@@ -139,6 +157,7 @@ import { projectsData } from "../data/projects";
 
 	.project-info > p {
 		margin: 0 0 15px 0;
+		text-align: center;
 	}
 
 	.project-title-section {
@@ -169,6 +188,33 @@ import { projectsData } from "../data/projects";
 		flex-wrap: wrap;
 	}
 
+	.tech-badges {
+		position: relative;
+		display: flex;
+		flex-wrap: wrap;
+		gap: 4px;
+		margin: 8px 0;
+		justify-content: center;
+		padding: 1rem;
+		border: var(--img-border);
+		box-shadow: var(--img-shadow);
+	}
+	.tech-badge {
+		border: var(--img-border);
+		box-shadow: var(--img-shadow);
+		height: 1.3em;
+	}
+	.tech-badges-label {
+		position: absolute;
+		top: -0.7em;
+		left: 0.5em;
+		font-family: var(--font-main);
+		font-size: 1em;
+		color: #22223b;
+		background: #fff;
+		padding: 0px 6px;
+	}
+
 	/* Additional override for images and videos */
 	:global(.readme-content img),
 	:global(.readme-content video) {
@@ -190,6 +236,10 @@ import { projectsData } from "../data/projects";
 
 	:global(#project-modal-window > .window-pane) {
 		height: calc(100% - 35px) !important;
+	}
+
+	:global(.title span) {
+		font-size: var(--font-size-title) !important;
 	}
 
 	@media screen and (max-width: 768px) {

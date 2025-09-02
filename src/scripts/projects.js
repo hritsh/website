@@ -92,6 +92,29 @@ document.addEventListener("DOMContentLoaded", () => {
 		}
 
 		function buildProjectHeader(project) {
+			let techBadges = "";
+			if (project.technologies && project.technologies.length) {
+				techBadges = `
+            <div class="tech-badges">
+                ${project.technologies
+									.map((tech) => {
+										let label = tech;
+										let logo = tech;
+										const match = tech.match(/^(.*)\((.*)\)$/);
+										if (match) {
+											label = match[1].trim();
+											logo = match[2].trim();
+										}
+										return `<img src="https://img.shields.io/badge/${encodeURIComponent(
+											label
+										)}-22223b?style=flat-square&logo=${encodeURIComponent(
+											logo
+										)}" alt="${label}" class="tech-badge" height="20" style="margin-right:4px;margin-bottom:4px;" />`;
+									})
+									.join("")}
+            </div>
+        `;
+			}
 			const websiteLink = project.demoUrl
 				? `
                 <a href="${project.demoUrl}" target="_blank" class="system-btn demo-btn">
@@ -106,6 +129,9 @@ document.addEventListener("DOMContentLoaded", () => {
                         <h1>${escapeHtml(project.name)}</h1>
                         <p>${escapeHtml(project.description)}</p>
                     </div>
+					<div class="project-tech-stack" style="margin: 0.5em 0;">
+                    	${techBadges}
+                	</div>
                     <div class="project-header-buttons">
                         <a href="${project.url}" target="_blank" class="system-btn github-btn">
                             <img src="/svg/github.svg" width="16" height="16" alt="" /> GitHub
