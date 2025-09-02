@@ -29,7 +29,7 @@ export const projectsData: Project[] = [
             "Vercel",
             "PostgreSQL"
         ],
-        imageUrl: "https://raw.githubusercontent.com/hritsh/clanker-fm/main/public/screenshots/home.gif"
+        imageUrl: "https://raw.githubusercontent.com/hritsh/clanker-fm/main/public/screenshots/scanning_3.gif"
     },
     {
         name: "MovieRecEngine",
@@ -39,7 +39,7 @@ export const projectsData: Project[] = [
         description: "An interactive NLP-powered movie recommendation engine built with Python and Streamlit. Find movies like your favorites, browse by genre, cast, or plot, and enjoy a clean, colorful UI.",
         demoUrl: "https://movierecengine.streamlit.app/",
         technologies: ["Python", "Streamlit", "NLTK(python)", "Cosine Similarity(framework)", "Bag of Words(framework)"],
-        imageUrl: "https://github.com/hritsh/movierecengine/raw/main/img/screenshot_rec.png"
+        imageUrl: "https://raw.githubusercontent.com/hritsh/movierecengine/main/img/demo.gif"
     },
     {
         name: "jpeg98",
@@ -49,7 +49,7 @@ export const projectsData: Project[] = [
         description: "A Windows 98-themed image compressor that lets you add compression and artifacting to your photos right in your browser",
         demoUrl: "https://hritsh.github.io/jpeg98/",
         technologies: ["Svelte", "Vite", "TypeScript", "98.css(css)"],
-        imageUrl: "https://github.com/hritsh/jpeg98/raw/main/screenshots/web2.jpeg"
+        imageUrl: "https://raw.githubusercontent.com/hritsh/jpeg98/main/screenshots/demo.gif"
     },
     {
         name: "Spotistats",
@@ -69,7 +69,7 @@ export const projectsData: Project[] = [
         description: "A top-down RPG built in Godot, set in a post-apocalyptic world. Awarded 3rd place at the HP Gaming Garage Hackathon 2022 for its gameplay and design.",
         demoUrl: "https://hritish.itch.io/minima",
         technologies: ["Godot Engine", "GDScript(godotengine)", "Aseprite", "itch.io"],
-        imageUrl: "https://i.ibb.co/kVy25Hvr/image.png"
+        imageUrl: "https://i.ibb.co/G4SSPjF6/Clean-Shot-2025-09-03-at-02-19-14.gif"
     },
     {
         name: "PyleraApp",
@@ -78,7 +78,7 @@ export const projectsData: Project[] = [
         icon: "/projects/pylera_app.png",
         description: "A Flutter mobile app that helps patients follow their Pylera dosage schedule with timely reminders and tracking. Built for Neubridge Pharmaceuticals.",
         technologies: ["Flutter", "Dart", "Material UI(google)", "i18n(globus)"],
-        imageUrl: "https://i.ibb.co/tpGKPVP1/278838673-ba667f2c-0fe1-46a9-887c-dfbe372c724b-0001.png"
+        imageUrl: "https://i.ibb.co/JRQbKbPv/neubridge.png"
     },
     {
         name: "DiscordAutosend",
