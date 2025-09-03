@@ -26,7 +26,7 @@ export const projectsData: Project[] = [
             "NextAuth(next.js)",
             "Tailwind CSS",
             "Framer Motion(framer)",
-            "Vercel",
+            "Supabase",
             "PostgreSQL"
         ],
         imageUrl: "https://raw.githubusercontent.com/hritsh/clanker-fm/main/public/screenshots/scanning_3.gif"
