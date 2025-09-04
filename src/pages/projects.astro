@@ -13,7 +13,7 @@ import { projectsData } from "../data/projects";
 			{
 				projectsData.map((project) => (
 					<div class="project-wrapper" data-project={JSON.stringify(project)}>
-						<Window class="project-detail-window" title={project.name} icon={project.icon}>
+						<Window class="project-detail-window" title={project.name} icon={project.icon} id={project.name.toLowerCase()}>
 							<div class="project-detail">
 								<div class="project-screenshot">
 									<img

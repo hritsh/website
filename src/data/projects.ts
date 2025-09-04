@@ -11,7 +11,7 @@ export interface Project {
 
 export const projectsData: Project[] = [
     {
-        name: "clanker.fm",
+        name: "clanker-fm",
         title: "Clanker that Roasts your Spotify",
         url: "https://github.com/hritsh/clanker-fm",
         icon: "/projects/clanker_fm.png",

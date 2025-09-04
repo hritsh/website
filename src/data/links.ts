@@ -53,7 +53,7 @@ export const socialLinks: LinkItem[] = [
     },
     {
         label: "YouTube",
-        url: "https://www.youtube.com/@DonaldJTrumpforPresident",
+        url: "https://youtube.com/playlist?list=PLOr-MoOX5EBk6ZHz2D8_DqELRgbt3g7fq",
         icon: "/png/youtube.png",
         target: "_blank"
     }
