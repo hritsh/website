@@ -4,7 +4,10 @@ export interface Props {
 	description?: string;
 }
 
-const { title, description = "Hritish Mahajan's Portfolio. Machine Learning Engineer at Circum Medtech." } = Astro.props;
+const {
+	title = "hritish mahajan",
+	description = "hritish's portfolio website — machine learning engineer at circum medtech. building icu-grade systems, clinician tools, and occasionally unserious web apps & software.",
+} = Astro.props;
 ---
 
 <!doctype html>
@@ -13,14 +16,40 @@ const { title, description = "Hritish Mahajan's Portfolio. Machine Learning Engi
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
-		<link rel="stylesheet" href="https://unpkg.com/@sakun/system.css" />
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/devicon.min.css" />
-		<link rel="icon" type="image/x-icon" href="/favicon2.ico" />
+
 		<title>{title}</title>
 		<meta name="description" content={description} />
-		<meta name="author" content="Hritish Mahajan" />
-		<meta name="keywords" content="Hritish Mahajan, Hritish, Mahajan, MySpace, Portfolio, Resume, Website" />
+		<meta name="author" content="hritish mahajan" />
+		<meta
+			name="keywords"
+			content="hritish mahajan, hritish, machine learning, circum medtech, healthcare ai, full-stack dev, machine learning engineer, clanker.fm, spotify roast, last.fm widget, portfolio, resume"
+		/>
+
+		<!-- open graph (for link previews) -->
+		<meta property="og:title" content="{title} | hritish mahajan" />
+		<meta
+			property="og:description"
+			content="ml engineer at circum medtech. building smart catheter systems and unserious side projects. this is his corner of the internet."
+		/>
+		<meta property="og:image" content="https://hritish.com/img/pfp_compressed.jpeg" />
+		<meta property="og:url" content="https://hritish.com" />
+		<meta property="og:type" content="website" />
+
+		<!-- twitter card -->
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:title" content="{title} | hritish mahajan" />
+		<meta
+			name="twitter:description"
+			content="icu-grade ml, clinician-facing apps, and a few questionable side quests. currently at circum medtech."
+		/>
+		<meta name="twitter:image" content="https://hritish.com/img/pfp_compressed.jpeg" />
+
+		<!-- favicon & styles -->
+		<link rel="icon" type="image/x-icon" href="/favicon2.ico" />
+		<link rel="stylesheet" href="https://unpkg.com/@sakun/system.css" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/devicon.min.css" />
 	</head>
+
 	<body>
 		<slot />
 
