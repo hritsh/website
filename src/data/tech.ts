@@ -92,6 +92,7 @@ export const techData: TechCategory[] = [
             { name: "Unity", devicon: "unity" },
             { name: "Blender", devicon: "blender" },
             { name: "Selenium", devicon: "selenium" },
+            { name: "Figma", devicon: "figma" }
         ]
     }
 ];

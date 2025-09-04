@@ -5,7 +5,7 @@ export interface Props {
 }
 
 const {
-	title = "hritish mahajan",
+	title,
 	description = "hritish's portfolio website — machine learning engineer at circum medtech. building icu-grade systems, clinician tools, and occasionally unserious web apps & software.",
 } = Astro.props;
 ---
@@ -17,7 +17,7 @@ const {
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-		<title>{title}</title>
+		<title>{title.toLowerCase()}</title>
 		<meta name="description" content={description} />
 		<meta name="author" content="hritish mahajan" />
 		<meta
