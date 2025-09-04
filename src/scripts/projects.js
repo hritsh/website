@@ -13,18 +13,66 @@ document.addEventListener("DOMContentLoaded", () => {
 		const modalContent = document.getElementById("project-modal-content");
 		const modalWindow = document.getElementById("project-modal-window");
 
-		// Simple click handlers
+		// Get modalProject from the inline script
+		const modalProject = window.__MODAL_PROJECT__;
+
+		function openModalBySlug(slug) {
+			const allWrappers = document.querySelectorAll("[data-project]");
+			for (const wrapper of allWrappers) {
+				try {
+					const projectData = JSON.parse(wrapper.getAttribute("data-project"));
+					if (projectData.name.toLowerCase() === slug.toLowerCase()) {
+						openProjectModal(projectData);
+						return true;
+					}
+				} catch {}
+			}
+			return false;
+		}
+
+		function scrollToProjectBySlug(slug) {
+			const el = document.getElementById(slug.toLowerCase());
+			if (el) {
+				el.scrollIntoView({ behavior: "smooth", block: "center" });
+			}
+		}
+
+		// Handle different URL patterns on page load
+		function handleInitialLoad() {
+			// 1. If modalProject is set (from /projects/projectname), open modal
+			if (modalProject) {
+				setTimeout(() => openModalBySlug(modalProject), 100);
+			}
+			// 2. If hash is present (from /projects#projectname), just scroll to project
+			else if (window.location.hash) {
+				const hash = window.location.hash.replace("#", "");
+				if (hash) {
+					setTimeout(() => scrollToProjectBySlug(hash), 100);
+				}
+			}
+		}
+
+		// Listen for hash changes (for /projects#projectname navigation)
+		window.addEventListener("hashchange", () => {
+			const hash = window.location.hash.replace("#", "");
+			if (hash && !modalProject) {
+				scrollToProjectBySlug(hash);
+			}
+		});
+
+		// Handle project wrapper clicks
 		document.querySelectorAll(".project-wrapper").forEach((wrapper) => {
 			wrapper.addEventListener("click", (e) => {
 				// Don't open modal if clicking on buttons or links
-				if (e.target.closest("a, button")) {
-					return;
-				}
+				if (e.target.closest("a, button")) return;
 
 				const projectData = wrapper.getAttribute("data-project");
 				if (projectData) {
 					try {
 						const project = JSON.parse(projectData);
+						// Update URL to /projects/projectname and open modal
+						const newUrl = `/projects/${project.name.toLowerCase()}`;
+						window.history.pushState({}, "", newUrl);
 						openProjectModal(project);
 					} catch (error) {
 						console.error("Error parsing project data:", error);
@@ -33,7 +81,7 @@ document.addEventListener("DOMContentLoaded", () => {
 			});
 		});
 
-		// Read More buttons
+		// Handle "Read More" button clicks
 		document.querySelectorAll(".info-btn").forEach((btn) => {
 			btn.addEventListener("click", (e) => {
 				e.stopPropagation();
@@ -41,12 +89,32 @@ document.addEventListener("DOMContentLoaded", () => {
 				if (projectData) {
 					try {
 						const project = JSON.parse(projectData);
+						// Update URL to /projects/projectname and open modal
+						const newUrl = `/projects/${project.name.toLowerCase()}`;
+						window.history.pushState({}, "", newUrl);
 						openProjectModal(project);
 					} catch (error) {
 						console.error("Error parsing project data:", error);
 					}
 				}
 			});
+		});
+
+		// Handle browser back/forward navigation
+		window.addEventListener("popstate", () => {
+			const pathMatch = window.location.pathname.match(/^\/projects\/([^/]+)$/);
+			if (pathMatch) {
+				// URL is /projects/projectname - open modal
+				openModalBySlug(pathMatch[1]);
+			} else if (window.location.hash) {
+				// URL has hash - scroll to project
+				const hash = window.location.hash.replace("#", "");
+				closeModal();
+				if (hash) scrollToProjectBySlug(hash);
+			} else {
+				// Plain /projects - close modal
+				closeModal();
+			}
 		});
 
 		// Close modal handlers
@@ -56,12 +124,24 @@ document.addEventListener("DOMContentLoaded", () => {
 			if (e.key === "Escape" && modal.style.display === "flex") closeModal();
 		});
 
+		function closeModal() {
+			modal.style.display = "none";
+			document.body.classList.remove("modal-open");
+			// Navigate back to /projects when closing modal
+			if (window.location.pathname !== "/projects") {
+				window.history.pushState({}, "", "/projects");
+			}
+		}
+
+		// Initialize on page load
+		handleInitialLoad();
+
 		async function openProjectModal(project) {
 			const titleElement = modalWindow.querySelector(".title");
 			titleElement.innerHTML = `
-        <img src="${project.icon}" class="title-icon" width="16" height="16" alt="" />
-        <span>${project.name}</span>
-    `;
+                <img src="${project.icon}" class="title-icon" width="16" height="16" alt="" />
+                <span>${project.name}</span>
+            `;
 			modalContent.innerHTML = '<div class="loading-spinner">Loading project details...</div>';
 			modal.style.display = "flex";
 			document.body.classList.add("modal-open");
@@ -140,11 +220,6 @@ document.addEventListener("DOMContentLoaded", () => {
                     </div>
                 </div>
             `;
-		}
-
-		function closeModal() {
-			modal.style.display = "none";
-			document.body.classList.remove("modal-open");
 		}
 
 		function parseRepoUrl(url) {

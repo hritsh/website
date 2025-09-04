@@ -10,7 +10,9 @@ const details = [projectsData.length + " items", "2,340K in disk", '<a href="/pr
 		{
 			projectsData.map((project) => (
 				<div class="project-item">
-					<a href={`/projects/#${project.name.toLowerCase()}`} title={project.title}>
+					{/* <a href={`/projects/${project.name.toLowerCase()}`} title={project.title}> */}
+					{/* for modal links im not feeling it rn */}
+					<a href={`/projects#${project.name.toLowerCase()}`} title={project.title}>
 						<img class="project-icon" src={project.icon} alt={project.name} />
 						<div class="project-filename">{project.name}</div>
 						<div class="project-description">{project.title}</div>

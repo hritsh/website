@@ -1,0 +1,19 @@
+---
+import ProjectsPage from "../projects.astro";
+import { projectsData } from "../../data/projects";
+
+export async function getStaticPaths() {
+	return projectsData.map((project) => ({
+		params: { slug: project.name.toLowerCase() },
+	}));
+}
+
+const { slug } = Astro.params;
+const project = projectsData.find((p) => p.name.toLowerCase() === slug?.toLowerCase());
+
+if (!project) {
+	return Astro.redirect("/404");
+}
+---
+
+<ProjectsPage modalProject={slug} />

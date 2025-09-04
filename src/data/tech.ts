@@ -22,20 +22,25 @@ export const techData: TechCategory[] = [
         ]
     },
     {
-        category: "Frameworks",
+        category: "Web/App Development",
         skills: [
-            { name: ".NET", devicon: "dotnetcore" },
-            { name: "React", devicon: "react" },
-            { name: "Svelte", devicon: "svelte" },
-            { name: "Flutter", devicon: "flutter" },
-            { name: "React Native", devicon: "reactnative" },
-            { name: "Angular", devicon: "angularjs" },
-            { name: "Node.js", devicon: "nodejs" },
+            { name: "HTML5", devicon: "html5" },
+            { name: "CSS3", devicon: "css3" },
             { name: "Next.js", devicon: "nextjs" },
+            { name: "React", devicon: "react" },
+            { name: ".NET", devicon: "dotnetcore" },
+            { name: "Flutter", devicon: "flutter" },
+            { name: "Angular", devicon: "angularjs" },
+            { name: "Svelte", devicon: "svelte" },
+            { name: "React Native", devicon: "reactnative" },
+            { name: "Node.js", devicon: "nodejs" },
             { name: "Astro", devicon: "astro" },
             { name: "Spring Boot", devicon: "spring" },
             { name: "Flask", devicon: "flask" },
-            { name: "Express.js", devicon: "express" }
+            { name: "Express.js", devicon: "express" },
+            { name: "Tailwind CSS", devicon: "tailwindcss" }, // fallback
+            { name: "Framer Motion", devicon: "framermotion" } // fallback
+
         ]
     },
     {
@@ -62,7 +67,7 @@ export const techData: TechCategory[] = [
         ]
     },
     {
-        category: "Other Tools",
+        category: "Tools & Platforms",
         skills: [
             { name: "Git", devicon: "git" },
             { name: "Linux", devicon: "linux" },
@@ -73,8 +78,20 @@ export const techData: TechCategory[] = [
             { name: "Kubernetes", devicon: "kubernetes" },
             { name: "Firebase", devicon: "firebase" },
             { name: "Supabase", devicon: "supabase" },
+            { name: "Repl.it", devicon: "replit" },
             { name: "Jenkins", devicon: "jenkins" },
-            { name: "Github Actions", devicon: "githubactions" }
+            { name: "Github Actions", devicon: "githubactions" },
+            { name: "Vercel", devicon: "vercel" }
+        ]
+    },
+    {
+        category: "Other",
+        skills: [
+            { name: "Godot Engine", devicon: "godot" },
+            { name: "LaTeX", devicon: "latex" },
+            { name: "Unity", devicon: "unity" },
+            { name: "Blender", devicon: "blender" },
+            { name: "Selenium", devicon: "selenium" },
         ]
     }
 ];

@@ -3,6 +3,8 @@ import Layout from "../layouts/Layout.astro";
 import Navbar from "../components/Navbar.astro";
 import Window from "../components/Window.astro";
 import { projectsData } from "../data/projects";
+
+const modalProject = Astro.props?.modalProject ?? null;
 ---
 
 <Layout title="Projects - Hritish Mahajan">
@@ -12,7 +14,7 @@ import { projectsData } from "../data/projects";
 		<div class="projects-grid">
 			{
 				projectsData.map((project) => (
-					<div class="project-wrapper" data-project={JSON.stringify(project)}>
+					<div class="project-wrapper" id={project.name.toLowerCase()} data-project={JSON.stringify(project)}>
 						<Window class="project-detail-window" title={project.name} icon={project.icon} id={project.name.toLowerCase()}>
 							<div class="project-detail">
 								<div class="project-screenshot">
@@ -90,6 +92,11 @@ import { projectsData } from "../data/projects";
 		</div>
 	</div>
 </Layout>
+
+<script is:inline define:vars={{ modalProject }}>
+	window.__MODAL_PROJECT__ = modalProject;
+</script>
+<script src="/src/scripts/projects.js"></script>
 
 <style>
 	/* Import the projects CSS */
@@ -292,7 +299,3 @@ import { projectsData } from "../data/projects";
 		}
 	}
 </style>
-
-<script>
-	import "/src/scripts/projects.js";
-</script>

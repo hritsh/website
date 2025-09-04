@@ -23,11 +23,11 @@ export const projectsData: Project[] = [
             "OpenAI API(openai)",
             "Spotify API(spotify)",
             "Gemini API(googlegemini)",
-            "NextAuth(next.js)",
             "Tailwind CSS",
             "Framer Motion(framer)",
             "Supabase",
-            "PostgreSQL"
+            "PostgreSQL",
+            "Vercel"
         ],
         imageUrl: "https://raw.githubusercontent.com/hritsh/clanker-fm/main/public/screenshots/scanning_3.gif"
     },
