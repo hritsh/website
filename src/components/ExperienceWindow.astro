@@ -1,30 +1,106 @@
 ---
 import Window from "./Window.astro";
 import { experienceData } from "../data/experience";
+
+function parseDescription(desc: string) {
+	return desc
+		.split("\n")
+		.filter((line) => line.trim())
+		.map((line) => {
+			// Replace **text** with <strong>text</strong>
+			const bolded = line.replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>");
+			return `<i>${bolded}</i>`;
+		})
+		.join("<br>");
+}
+
+function parseBullets(bullets: string[]) {
+	return bullets
+		.map((b) => {
+			// Replace **text** with <strong>text</strong>
+			const bolded = b.replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>");
+			return `<li>${bolded}</li>`;
+		})
+		.join("");
+}
 ---
 
 <Window title="Latest Experience" showCloseBtn={true} closeBtnLink="/experience" closeBtnText="View Full" id="experience">
-	{
-		experienceData.map((exp, index) => (
-			<>
-				<div class="experience-item">
-					<div class="experience-header">
-						<img src={exp.icon} alt={exp.company} class="company-icon" />
-						<div class="experience-content">
-							<strong>
-								{exp.role} @{" "}
-								<a href={exp.website} target="_blank">
-									{exp.company}
-								</a>
-							</strong>
-							<div class="exp-location">
-								{exp.location} &middot; {exp.period}
+	<div id="experience-list">
+		{
+			experienceData.map((exp, index) => (
+				<>
+					<div class="experience-item" data-index={index}>
+						<div class="experience-header">
+							<img src={exp.icon} alt={exp.company} class="company-icon" />
+							<div class="experience-content">
+								<strong>
+									{exp.role} @{" "}
+									<a href={exp.website} target="_blank">
+										{exp.company}
+									</a>
+								</strong>
+								<div class="exp-location">
+									{exp.location} &middot; {exp.period}
+								</div>
 							</div>
+							<button class="exp-toggle" aria-label="Expand experience" data-index={index}>
+								<span class="exp-arrow">&#9660;</span>
+							</button>
+						</div>
+						<div class="experience-details" style="display: none;">
+							{exp.description && <div class="exp-description" set:html={parseDescription(exp.description)} />}{" "}
+							{exp.bullets && <ul class="exp-bullets" set:html={parseBullets(exp.bullets)} />}
 						</div>
 					</div>
-				</div>
-				{index < experienceData.length - 1 && <hr />}
-			</>
-		))
-	}
+					{index < experienceData.length - 1 && <hr />}
+				</>
+			))
+		}
+	</div>
 </Window>
+
+<script>
+	document.addEventListener("DOMContentLoaded", () => {
+		const items = document.querySelectorAll(".experience-item");
+		const toggles = document.querySelectorAll(".exp-toggle");
+
+		toggles.forEach((btn) => {
+			btn.addEventListener("click", (e) => {
+				const idx = btn.getAttribute("data-index");
+				items.forEach((item, i) => {
+					const details = item.querySelector(".experience-details") as HTMLElement | null;
+					const arrow = item.querySelector(".exp-arrow") as HTMLElement | null;
+					if (String(i) === idx) {
+						const isOpen = details?.style.display === "block";
+						if (details) details.style.display = isOpen ? "none" : "block";
+						if (arrow) arrow.style.transform = isOpen ? "rotate(0deg)" : "rotate(180deg)";
+					} else {
+						if (details) details.style.display = "none";
+						if (arrow) arrow.style.transform = "rotate(0deg)";
+					}
+				});
+			});
+		});
+	});
+</script>
+
+<style>
+	.exp-toggle {
+		background: none;
+		border: none;
+		cursor: pointer;
+		margin-left: auto;
+		padding: 0 8px;
+		display: flex;
+		align-items: center;
+	}
+	.exp-arrow {
+		font-size: 1.2em;
+		transition: transform 0.2s;
+		display: inline-block;
+	}
+	.experience-details {
+		padding: 0.5em 0 0.5em 2.5em;
+	}
+</style>
