@@ -306,3 +306,11 @@
     margin: 16px 0;
     opacity: 0.35;
 }
+
+:global(.readme-content img[src^="https://github.com/user-attachments/assets/"]) {
+    display: block;
+    max-width: 100%;
+    height: auto !important;
+    /* Use the HTML width/height attributes if present */
+    width: auto !important;
+}

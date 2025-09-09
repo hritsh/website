@@ -35,9 +35,9 @@ export const experienceData: ExperienceItem[] = [
         icon: "/png/rit.png",
         description: "Graduated with GPA of 3.80/4.00, Summa Cum Laude",
         bullets: [
-            "**Tech Director at RIT Student Government:** Led complete rewrite of university website in **Next.js**, managed tech infrastructure for campus events.",
+            "**Tech Director at RIT Student Government:** Led complete rewrite of university website in **Next.js**, built a voting platform for student club election, & managed tech infrastructure for campus events.",
             "**Tech Lead at Google Developer Group @ RIT:** Organized workshops with industry experts in AI/ML, UI/UX, and emerging tech.",
-            "**Vice President of RIT Chess Club:** Managed tournaments and club events."
+            "**Vice President of RIT Chess Club:** Helped Organize & Manage 12 tournaments and club events over 2022."
         ]
     },
     {

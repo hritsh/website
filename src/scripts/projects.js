@@ -336,6 +336,11 @@ document.addEventListener("DOMContentLoaded", () => {
 				return { url: specialVideo + ".mp4", isVideo: true };
 			}
 
+			// Treat user-attachments assets as images (not videos), use URL as-is
+			if (original.startsWith("https://github.com/user-attachments/assets/") && /\/[a-f0-9-]{36}$/.test(original)) {
+				return { url: original, isVideo: false };
+			}
+
 			// GitHub assets with specific ID pattern - treat as videos unless they have image extensions
 			if (original.includes("/assets/") && /\/[a-f0-9-]{36}$/.test(original)) {
 				const imageExt = /\.(png|jpe?g|gif|svg|webp|ico)$/i;
@@ -365,6 +370,10 @@ document.addEventListener("DOMContentLoaded", () => {
 		function upgradeGitHubAssetVideos(container) {
 			container.querySelectorAll("img").forEach((img) => {
 				const src = img.getAttribute("src") || "";
+				// Never treat user-attachments as video
+				if (src.startsWith("https://github.com/user-attachments/assets/")) {
+					return;
+				}
 				// Check for GitHub assets without explicit extensions or the special pylera video
 				if (
 					(src.includes("/assets/") && /\/[a-f0-9-]{36}$/.test(src)) ||
