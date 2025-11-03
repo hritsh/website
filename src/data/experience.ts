@@ -27,20 +27,6 @@ export const experienceData: ExperienceItem[] = [
         ]
     },
     {
-        company: "Rochester Institute of Technology",
-        role: "Bachelor of Science in Computing & Information Technologies",
-        website: "https://www.rit.edu",
-        location: "Rochester, NY",
-        period: "Aug 2021 - May 2025",
-        icon: "/png/rit.png",
-        description: "Graduated with GPA of 3.80/4.00, Summa Cum Laude",
-        bullets: [
-            "**Tech Director at RIT Student Government:** Led complete rewrite of university website in **Next.js**, built a voting platform for student club election, & managed tech infrastructure for campus events.",
-            "**Tech Lead at Google Developer Group @ RIT:** Organized workshops with industry experts in AI/ML, UI/UX, and emerging tech.",
-            "**Vice President of RIT Chess Club:** Helped Organize & Manage 12 tournaments and club events over 2022."
-        ]
-    },
-    {
         company: "Global Payments",
         role: "Software Engineer Intern",
         website: "https://www.globalpayments.com",
@@ -72,5 +58,19 @@ export const experienceData: ExperienceItem[] = [
             "Improved app performance by refactoring UI logic, **reducing load time by 40%**.",
             "Gained experience with **CI/CD pipelines** and **AWS deployments**."
         ]
-    }
+    },
+    {
+        company: "Rochester Institute of Technology",
+        role: "Bachelor of Science in Computing & Information Technologies",
+        website: "https://www.rit.edu",
+        location: "Rochester, NY",
+        period: "Aug 2021 - May 2025",
+        icon: "/png/rit.png",
+        description: "Graduated with GPA of 3.80/4.00, Summa Cum Laude",
+        bullets: [
+            "**Tech Director at RIT Student Government:** Led complete rewrite of university website in **Next.js**, built a voting platform for student club election, & managed tech infrastructure for campus events.",
+            "**Tech Lead at Google Developer Group @ RIT:** Organized workshops with industry experts in AI/ML, UI/UX, and emerging tech.",
+            "**Vice President of RIT Chess Club:** Helped Organize & Manage 12 tournaments and club events over 2022."
+        ]
+    },
 ];

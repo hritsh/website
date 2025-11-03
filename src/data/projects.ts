@@ -36,7 +36,7 @@ export const projectsData: Project[] = [
         title: "Clanker Movie Recommendation Engine",
         url: "https://github.com/hritsh/movierecengine",
         icon: "/projects/movierecengine.svg",
-        description: "An interactive NLP-powered movie recommendation engine built with Python and Streamlit. Find movies like your favorites, browse by genre, cast, or plot. Uses cosine similarity and bag of words to find similar movies by the field selected.",
+        description: "An interactive NLP-powered movie recommendation engine that uses cosine similarity and bag of words to find similar movies by the field selected.",
         demoUrl: "https://movierecengine.streamlit.app/",
         technologies: ["Python", "Streamlit", "NLTK(python)", "Pandas", "Scikit-learn", "Numpy"],
         imageUrl: "https://raw.githubusercontent.com/hritsh/movierecengine/main/img/demo.gif"
@@ -50,6 +50,15 @@ export const projectsData: Project[] = [
         demoUrl: "https://hritsh.github.io/jpeg98/",
         technologies: ["Svelte", "Vite", "TypeScript", "98.css(css)"],
         imageUrl: "https://raw.githubusercontent.com/hritsh/jpeg98/main/screenshots/demo.gif"
+    },
+    {
+        name: "Garmin G-Shock",
+        title: "Garmin G-Shock Watch Face",
+        url: "https://github.com/hritsh/garmin-gshock",
+        icon: "https://github.com/hritsh/garmin-gshock/raw/main/screenshots/watchface.png",
+        description: "A digital watch face for the Garmin forerunner 255 that mimics the classic Casio G-Shock design.",
+        technologies: ["Garmin SDK(garmin)", "Monkey C(c++)", "Figma"],
+        imageUrl: "https://i.ibb.co/Ld1KdgrS/image.png"
     },
     {
         name: "nonsense",

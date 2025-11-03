@@ -7,7 +7,7 @@ export interface Props {
 	showStatus?: boolean;
 }
 
-const { id, showStatus = true } = Astro.props;
+const { id, showStatus = false } = Astro.props;
 ---
 
 <Window title="Profile" id={id}>
