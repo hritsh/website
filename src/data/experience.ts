@@ -18,12 +18,12 @@ export const experienceData: ExperienceItem[] = [
         location: "Nice, France (Remote)",
         period: "Jun 2025 - Present",
         icon: "/png/circum.png",
-        description: "Building **PrediSens**, a smart catheter & sepsis monitoring system to help detect sepsis early & reduce ICU infections using machine learning.",
+        description: "Building **PrediSens**, a smart central venous catheter & patch system to help monitor and detect sepsis early in ICU patients.",
         tech: ["Python", "PyTorch", "React Native(react)", "Supabase", "FastAPI", "Docker"],
         bullets: [
-            "Training sepsis prediction models on **200,000+ ICU patient records** with >90% accuracy using Random Forest and Neural Networks.",
-            "Building real-time data pipelines that process biosensor data (SpO₂, ECG, WBC) from **Arduino-based smart patches**.",
-            "Developing a **React Native mobile app** for clinicians to monitor patient vitals and receive early sepsis alerts.",
+            "Trained sepsis prediction models on **200,000+ ICU patient records** with >90% accuracy using Random Forest and Neural Networks.",
+            "Building real-time data pipelines that process biosensor data (SpO₂, ECG, WBC) from the CVC & patch via microcontrollers.",
+            "Developing a **React Native mobile app** for clinicians to monitor patient vitals and receive alerts in real-time.",
             "Creating automated ML workflows for feature engineering and model retraining on new clinical data.",
             "Collaborating with R&D teams on smart patch hardware prototyping to reduce ICU-acquired infections."
         ]

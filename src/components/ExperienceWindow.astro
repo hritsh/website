@@ -9,7 +9,7 @@ function parseDescription(desc: string) {
 		.map((line) => {
 			// Replace **text** with <strong>text</strong>
 			const bolded = line.replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>");
-			return `<i>${bolded}</i>`;
+			return `${bolded}`;
 		})
 		.join("<br>");
 }
@@ -50,7 +50,7 @@ function parseBullets(bullets: string[]) {
 						</div>
 						<div class="experience-details" style="display: none;">
 							{exp.description && <div class="exp-description" set:html={parseDescription(exp.description)} />}{" "}
-							{exp.bullets && <ul class="exp-bullets" set:html={parseBullets(exp.bullets)} />}
+							{/* {exp.bullets && <ul class="exp-bullets" set:html={parseBullets(exp.bullets)} />} */}
 						</div>
 					</div>
 					{index < experienceData.length - 1 && <hr />}

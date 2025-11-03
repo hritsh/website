@@ -42,6 +42,15 @@ export const projectsData: Project[] = [
         imageUrl: "https://raw.githubusercontent.com/hritsh/movierecengine/main/img/demo.gif"
     },
     {
+        name: "PyleraApp",
+        title: "Pylera Medication Tracker & Reminder",
+        url: "https://github.com/hritsh/pylera-app",
+        icon: "/projects/pylera_app.png",
+        description: "A Flutter mobile app that helps patients follow their Pylera dosage schedule with timely reminders and tracking. Built for Neubridge Pharmaceuticals.",
+        technologies: ["Flutter", "Dart", "Material UI(google)", "i18n(globus)"],
+        imageUrl: "https://i.ibb.co/JRQbKbPv/neubridge.png"
+    },
+    {
         name: "jpeg98",
         title: "Retro Win98 JPEG Compressor",
         url: "https://github.com/hritsh/jpeg98",
@@ -61,25 +70,6 @@ export const projectsData: Project[] = [
         imageUrl: "https://i.ibb.co/Ld1KdgrS/image.png"
     },
     {
-        name: "nonsense",
-        title: "Nonsense Linkedin Post Generator",
-        url: "https://github.com/hritsh/nonsense",
-        icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/LinkedIn_icon.svg/144px-LinkedIn_icon.svg.png",
-        description: "stupid website that generates nonsensical linkedin posts.",
-        demoUrl: "https://hritsh.github.io/nonsense/",
-        technologies: ["HTML5", "CSS", "JavaScript", "Github Pages"],
-        imageUrl: "https://github.com/user-attachments/assets/088aa1f0-4409-447b-8ca9-fd228770f664"
-    },
-    {
-        name: "PyleraApp",
-        title: "Pylera Medication Tracker & Reminder",
-        url: "https://github.com/hritsh/pylera-app",
-        icon: "/projects/pylera_app.png",
-        description: "A Flutter mobile app that helps patients follow their Pylera dosage schedule with timely reminders and tracking. Built for Neubridge Pharmaceuticals.",
-        technologies: ["Flutter", "Dart", "Material UI(google)", "i18n(globus)"],
-        imageUrl: "https://i.ibb.co/JRQbKbPv/neubridge.png"
-    },
-    {
         name: "Minima",
         title: "Post Apocalyptic RPG",
         url: "https://github.com/hritsh/minima",
@@ -90,14 +80,14 @@ export const projectsData: Project[] = [
         imageUrl: "https://i.ibb.co/G4SSPjF6/Clean-Shot-2025-09-03-at-02-19-14.gif"
     },
     {
-        name: "Spotistats",
-        title: "Spotify Listening Insights & Charts",
-        url: "https://github.com/hritsh/spotistats",
-        icon: "/projects/spotistats.svg",
-        description: "A React-powered dashboard that visualizes your Spotify listening habits with interactive charts, trends, and artist breakdowns.",
-        demoUrl: "https://hritsh.github.io/spotistats/",
-        technologies: ["React", "JavaScript", "Spotify API(spotify)", "Chart.js", "Github Pages"],
-        imageUrl: "https://user-images.githubusercontent.com/65954042/219965780-45872d3a-ab97-4af3-82ed-4477e0f01646.png"
+        name: "nonsense",
+        title: "Nonsense Linkedin Post Generator",
+        url: "https://github.com/hritsh/nonsense",
+        icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/LinkedIn_icon.svg/144px-LinkedIn_icon.svg.png",
+        description: "stupid website that generates nonsensical linkedin posts.",
+        demoUrl: "https://hritsh.github.io/nonsense/",
+        technologies: ["HTML5", "CSS", "JavaScript", "Github Pages"],
+        imageUrl: "https://github.com/user-attachments/assets/088aa1f0-4409-447b-8ca9-fd228770f664"
     },
     {
         name: "DiscordAutosend",
@@ -107,6 +97,16 @@ export const projectsData: Project[] = [
         description: "A Python + Selenium GUI tool that sends automated messages to Discord channels (totally not built for spam)",
         technologies: ["Python", "Selenium", "PyQt5(qt)"],
         imageUrl: "https://user-images.githubusercontent.com/65954042/119881628-8b3f6f80-bf3e-11eb-86f5-834c16880904.png"
+    },
+    {
+        name: "Spotistats",
+        title: "Spotify Listening Insights & Charts",
+        url: "https://github.com/hritsh/spotistats",
+        icon: "/projects/spotistats.svg",
+        description: "A React-powered dashboard that visualizes your Spotify listening habits with interactive charts, trends, and artist breakdowns.",
+        demoUrl: "https://hritsh.github.io/spotistats/",
+        technologies: ["React", "JavaScript", "Spotify API(spotify)", "Chart.js", "Github Pages"],
+        imageUrl: "https://user-images.githubusercontent.com/65954042/219965780-45872d3a-ab97-4af3-82ed-4477e0f01646.png"
     },
     {
         name: "Calorify",
