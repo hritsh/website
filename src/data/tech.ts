@@ -96,3 +96,14 @@ export const techData: TechCategory[] = [
         ]
     }
 ];
+
+export const mainTechStack: TechSkill[] = [
+    { name: "Python", devicon: "python" },
+    { name: "TypeScript", devicon: "typescript" },
+    { name: "React Native", devicon: "reactnative" },
+    { name: "PyTorch", devicon: "pytorch" },
+    { name: "PostgreSQL", devicon: "postgresql" },
+    { name: "Next.js", devicon: "nextjs" },
+    { name: "Matplotlib", devicon: "matplotlib" },
+    { name: "Pandas", devicon: "pandas" }
+];

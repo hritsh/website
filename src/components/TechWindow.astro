@@ -1,0 +1,95 @@
+---
+import Window from "./Window.astro";
+import { mainTechStack } from "../data/tech";
+
+export interface Props {
+	id?: string;
+}
+
+const { id } = Astro.props;
+---
+
+<Window title="Main Tech Stack" id={id} showCloseBtn={true} closeBtnLink="/tech" closeBtnText="All">
+	<div class="tech-finder">
+		{
+			mainTechStack.map((skill) => {
+				let iconPath;
+				if (skill.devicon === "amazonwebservices") {
+					iconPath = "amazonwebservices/amazonwebservices-original-wordmark.svg";
+				} else {
+					iconPath = `${skill.devicon}/${skill.devicon}-original.svg`;
+				}
+				return (
+					<div class="tech-item">
+						<img
+							class="tech-icon"
+							src={`https://cdn.jsdelivr.net/gh/devicons/devicon/icons/${iconPath}`}
+							alt={skill.name}
+							title={skill.name}
+							loading="lazy"
+						/>
+						<span class="tech-name">{skill.name}</span>
+					</div>
+				);
+			})
+		}
+	</div>
+</Window>
+
+<style>
+	.tech-finder {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+		gap: 12px;
+		justify-items: center;
+		align-items: start;
+		padding: var(--project-padding);
+	}
+
+	.tech-item {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+		padding: 6px;
+		border-radius: 4px;
+		transition: background 0.12s;
+	}
+
+	.tech-item:hover {
+		background: none;
+		outline: 1.5px solid #000;
+		outline-offset: -2px;
+		text-decoration: none;
+		cursor: default;
+	}
+
+	.tech-icon {
+		width: 32px;
+		height: 32px;
+		margin-bottom: 4px;
+		image-rendering: pixelated;
+		image-rendering: crisp-edges;
+		object-fit: contain;
+		border: none;
+		border-radius: 4px;
+		filter: none;
+		background: none;
+		box-shadow: none;
+		display: block;
+		pointer-events: none;
+	}
+
+	.tech-name {
+		font-size: var(--font-size-small);
+		font-family: var(--font-main);
+		margin-top: 2px;
+		font-weight: bold;
+		letter-spacing: 0.5px;
+		text-align: center;
+	}
+
+	.tech-item:hover .tech-name {
+		text-decoration: underline;
+	}
+</style>
