@@ -63,15 +63,13 @@ function parseBullets(bullets: string[]) {
 <script>
 	document.addEventListener("DOMContentLoaded", () => {
 		const items = document.querySelectorAll(".experience-item");
-		const toggles = document.querySelectorAll(".exp-toggle");
 
-		toggles.forEach((btn) => {
-			btn.addEventListener("click", (e) => {
-				const idx = btn.getAttribute("data-index");
-				items.forEach((item, i) => {
-					const details = item.querySelector(".experience-details") as HTMLElement | null;
-					const arrow = item.querySelector(".exp-arrow") as HTMLElement | null;
-					if (String(i) === idx) {
+		items.forEach((item, i) => {
+			item.addEventListener("click", (e) => {
+				items.forEach((otherItem, j) => {
+					const details = otherItem.querySelector(".experience-details") as HTMLElement;
+					const arrow = otherItem.querySelector(".exp-arrow") as HTMLElement;
+					if (i === j) {
 						const isOpen = details?.style.display === "block";
 						if (details) details.style.display = isOpen ? "none" : "block";
 						if (arrow) arrow.style.transform = isOpen ? "rotate(0deg)" : "rotate(180deg)";
@@ -86,6 +84,9 @@ function parseBullets(bullets: string[]) {
 </script>
 
 <style>
+	.experience-item {
+		cursor: pointer;
+	}
 	.exp-toggle {
 		background: none;
 		border: none;

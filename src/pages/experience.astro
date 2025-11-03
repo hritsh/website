@@ -40,9 +40,31 @@ function formatText(text: string): string {
 							</div>
 							<div class="experience-description">
 								{exp.description && <p class="experience-summary" set:html={formatText(exp.description)} />}
+								{exp.tech && exp.tech.length > 0 && (
+									<div class="tech-badges">
+										{exp.tech.map((tech) => {
+											let label = tech;
+											let logo = tech;
+											const match = tech.match(/^(.*)\((.*)\)$/);
+											if (match) {
+												label = match[1].trim();
+												logo = match[2].trim();
+											}
+											return (
+												<img
+													src={`https://img.shields.io/badge/${encodeURIComponent(label)}-22223b?style=flat-square&logo=${encodeURIComponent(logo)}`}
+													alt={label}
+													class="tech-badge"
+													height="20"
+													style="margin-right:4px;margin-bottom:4px;"
+												/>
+											);
+										})}
+									</div>
+								)}
 
 								{exp.bullets && exp.bullets.length > 0 && (
-									<div class="key-achievements">
+									<div class={`key-achievements color-${experienceData.indexOf(exp) % 4}`}>
 										<h4>Key achievements:</h4>
 										<ul>
 											{exp.bullets.map((bullet) => (
@@ -128,11 +150,33 @@ function formatText(text: string): string {
 		line-height: 1.4;
 	}
 
+	.tech-badges {
+		position: relative;
+		display: flex;
+		flex-wrap: wrap;
+		gap: 4px;
+		justify-content: center;
+		padding: 1rem;
+	}
+	.tech-badge {
+		border: var(--img-border);
+		box-shadow: var(--img-shadow);
+		height: 1.3em;
+	}
+	.tech-badges-label {
+		position: absolute;
+		top: -0.7em;
+		left: 0.5em;
+		font-family: var(--font-main);
+		font-size: 1em;
+		color: #22223b;
+		background: #fff;
+		padding: 0px 6px;
+	}
+
 	.experience-summary {
-		margin: 0 0 20px 0;
+		margin: 0;
 		padding: 0;
-		font-style: italic;
-		color: #555;
 	}
 
 	.experience-summary a {
@@ -142,6 +186,26 @@ function formatText(text: string): string {
 
 	.experience-summary a:hover {
 		text-decoration: underline;
+	}
+
+	.key-achievements {
+		border: var(--img-border);
+		box-shadow: var(--img-shadow);
+		padding: 1rem;
+		background-color: #fef49c;
+	}
+
+	.key-achievements.color-0 {
+		background-color: #fef49c;
+	}
+	.key-achievements.color-1 {
+		background-color: #adf4ff;
+	}
+	.key-achievements.color-2 {
+		background-color: #b2ffa1;
+	}
+	.key-achievements.color-3 {
+		background-color: #b6caff;
 	}
 
 	.key-achievements h4 {

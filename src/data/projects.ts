@@ -53,10 +53,10 @@ export const projectsData: Project[] = [
     },
     {
         name: "Garmin G-Shock",
-        title: "Garmin G-Shock Watch Face",
+        title: "G-Shock Watch Face for Garmin",
         url: "https://github.com/hritsh/garmin-gshock",
         icon: "https://github.com/hritsh/garmin-gshock/raw/main/screenshots/watchface.png",
-        description: "A digital watch face for the Garmin forerunner 255 that mimics the classic Casio G-Shock design.",
+        description: "Digital watch faces for the Garmin forerunner 255 that mimic the classic Casio G-Shock design.",
         technologies: ["Garmin SDK(garmin)", "Monkey C(c++)", "Figma"],
         imageUrl: "https://i.ibb.co/Ld1KdgrS/image.png"
     },
