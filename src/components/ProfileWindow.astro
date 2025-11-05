@@ -14,9 +14,9 @@ const { id, showStatus = false } = Astro.props;
 	<div class="profile-picture-container">
 		<img class="profile-pic" src="/img/pfp_compressed.jpeg" alt="Profile Picture" />
 		<div class="profile-info">
-			<div>{profileData.name}</div>
-			<div>{profileData.age} years old</div>
-			<div>{profileData.location}</div>
+			<div class="name">{profileData.name}</div>
+			<div>&gt; {profileData.age} years old &lt;</div>
+			<div>&gt; {profileData.location} &lt;</div>
 			{
 				showStatus && (
 					<div>
@@ -25,7 +25,17 @@ const { id, showStatus = false } = Astro.props;
 					</div>
 				)
 			}
-			{!showStatus && <div>{profileData.status}</div>}
+			{!showStatus && <div>&gt; {profileData.status} &lt;</div>}
 		</div>
 	</div>
 </Window>
+
+<style>
+	.profile-info div {
+		font-size: 15pt !important;
+	}
+	.name {
+		font-weight: bold;
+		margin-bottom: 0.2em;
+	}
+</style>

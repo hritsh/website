@@ -110,7 +110,7 @@ main {
 
 .profile-info {
     flex: 1;
-    font-size: var(--font-size-main);
+    font-family: var(--font-main);
     margin-top: 0.5em;
     text-align: center;
 }
