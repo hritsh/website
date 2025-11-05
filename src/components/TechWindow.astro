@@ -9,7 +9,7 @@ export interface Props {
 const { id } = Astro.props;
 ---
 
-<Window title="Main Tech Stack" id={id} showCloseBtn={true} closeBtnLink="/tech" closeBtnText="All">
+<Window title="Current Tech Stack" id={id} showCloseBtn={true} closeBtnLink="/tech" closeBtnText="All">
 	<div class="tech-finder">
 		{
 			mainTechStack.map((skill) => {

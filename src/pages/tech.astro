@@ -8,7 +8,6 @@ import { techData } from "../data/tech";
 <Layout title="Tech - Hritish Mahajan">
 	<div class="master-container">
 		<Navbar pageTitle="Tech Stack" />
-
 		<div class="tech-full-width">
 			{
 				techData.map(({ category, skills }) => (
@@ -39,6 +38,7 @@ import { techData } from "../data/tech";
 				))
 			}
 		</div>
+		<div class="standard-dialog">p.s. this is a collection of tech that i've worked with at some point in the last ~5 years.</div>
 	</div>
 </Layout>
 
@@ -49,6 +49,10 @@ import { techData } from "../data/tech";
 		gap: 5px;
 		margin: 10px 0;
 		width: 100%;
+	}
+
+	.standard-dialog {
+		/* font-family: "Courier New", Courier, monospace; */
 	}
 
 	.tech-category-window {

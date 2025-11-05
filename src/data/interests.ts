@@ -1,5 +1,5 @@
 export const interestsData = [
-    ["Music", "Experimental Art"],
+    ["Music Production", "Experimental Art"],
     ["Linux", "Machine Learning"],
     ["Photography", "Film"],
     ["Formula One", "Retro Tech"],
