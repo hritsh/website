@@ -192,7 +192,7 @@
   name: "Circum Medtech",
   location: "Nice, France (Remote)",
   date: "Jun 2025 - Present",
-  [Leading development on *Predisens*, a patented smart catheter system that uses ML to detect sepsis early in ICUs.],
+  [Leading development on *Predisens*, a smart catheter & patch system that uses ML to detect sepsis early in ICUs.],
   [Achieved >90% sepsis prediction accuracy by deploying PyTorch models trained on 200,000+ patient ICU records.],
   [Engineering real-time data pipelines integrating microcontroller connected biosensors (SpO₂, ECG, WBC) with ML models, streaming 300+ data points/sec to ICU monitors with \~200 ms latency.],
   [Developing clinician-facing mobile app with React Native enabling patient vitals & alert monitoring in real-time.],
