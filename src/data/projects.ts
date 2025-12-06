@@ -43,7 +43,7 @@ export const projectsData: Project[] = [
             "React",
             "TypeScript",
             "Flask(python)",
-            "Tailwind CSS",
+            "Shadcn(tailwindcss)",
             "Gemini API(googlegemini)",
             "Render.com(googlecloud)",
             "Vercel"
