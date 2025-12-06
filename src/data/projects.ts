@@ -32,6 +32,25 @@ export const projectsData: Project[] = [
         imageUrl: "https://raw.githubusercontent.com/hritsh/clanker-fm/main/public/screenshots/scanning_3.gif"
     },
     {
+        name: "Polaris Lite",
+        title: "Multi-Agent Safety AI Nurse Chatbot",
+        url: "https://github.com/hritsh/polaris-lite",
+        icon: "https://github.com/hritsh/polaris-lite/raw/main/frontend/public/constellation.svg",
+        description: "A multi-agent safety AI chatbot system for healthcare that uses multiple specialized auditors to verify and correct responses before they reach users.",
+        demoUrl: "https://polaris-lite.vercel.app/",
+        technologies: [
+            "Next.js",
+            "React",
+            "TypeScript",
+            "Flask(python)",
+            "Tailwind CSS",
+            "Gemini API(googlegemini)",
+            "Render.com(googlecloud)",
+            "Vercel"
+        ],
+        imageUrl: "https://raw.githubusercontent.com/hritsh/polaris-lite/main/frontend/public/screenshot.jpeg"
+    },
+    {
         name: "RCM Denial Copilot",
         title: "AI-Powered Medical Claim Denial Assistant",
         url: "https://github.com/hritsh/rcm-denial-copilot",
@@ -159,83 +178,3 @@ export const projectsData: Project[] = [
 ];
 
 
-// # RCM Denial Copilot
-
-// a tool that uses generative ai to assist medical billers in automating and streamlining the process of analyzing and addressing medical claim denials.
-// hosted on [vercel](https://rcm-denial-copilot.vercel.app/)
-
-// ## stuff used
-
-// - [this dataset](https://www.kaggle.com/datasets/abuthahir1998/synthetic-healthcare-claims-dataset) i found on kaggle that had synthetic medical claim data with denial info which was super helpful to populate the database cause i didnt have to make up my own
-
-//   | Column Name          | Description                                                                         |
-//   | -------------------- | ----------------------------------------------------------------------------------- |
-//   | Claim ID             | Unique identifier for each claim.                                                   |
-//   | Provider ID          | Unique identifier for the healthcare provider submitting the claim.                 |
-//   | Patient ID           | Unique identifier for the patient (randomly generated).                             |
-//   | Date of Service      | The date when the healthcare service was provided.                                  |
-//   | Procedure Code       | The code representing the medical procedure or service rendered.                    |
-//   | Diagnosis Code       | International Classification of Diseases code representing the patient’s diagnosis. |
-//   | Charge Amount        | The total amount billed for the service by the provider.                            |
-//   | Paid Amount          | The amount paid by the insurer or patient for the claim.                            |
-//   | Insurance Type       | The type of insurance coverage (e.g., Private, Medicare, Medicaid).                 |
-//   | Claim Status         | The current status of the claim (e.g., Paid, Denied, Partially Paid).               |
-//   | Reason Code          | Code representing the reason for claim denial or payment adjustment.                |
-//   | Follow-up Required   | Indicates whether follow-up actions are required to resolve the claim.              |
-//   | AR Status            | Accounts Receivable status for the claim (e.g., Open, Closed).                      |
-//   | Outcome              | Final outcome of the claim (e.g., Paid, Denied, Partial).                           |
-
-// - [fastapi](https://fastapi.tiangolo.com/) for the backend api that serves claim data and makes calls to the gemini api
-// - [uvicorn](https://www.uvicorn.org/) for running the fastapi server
-// - [gemini api](https://developers.generativeai.google/products/gemini) for analyzing claim denials and translating medical codes
-// - [react + vite + typescript](https://vitejs.dev/guide/) for the frontend
-// - [shadcn/ui](https://shadcn.com/ui) with tailwind for some prebuilt react components to build the frontend quickly
-// - [tanstack table](https://tanstack.com/table/v8) for building the claim data table with sorting and filtering
-// - [render.com](https://render.com/) for hosting the backend api and [vercel](https://vercel.com/) for hosting the frontend app
-
-// ## features
-
-// - view all claim data in a table with all fields layed out
-// - sort and filter claims by different columns
-// - translate procedure and diagnosis codes to human readable names using gemini api
-// - manually analyze claim denials with ai assistance in a modal view
-//   - recommends root cause, immediate fix, and prevention plan for each denial
-//   - shows recommended team to send the fix to (eg coding, billing, etc)
-//   - shows a call script to use when contacting the payer
-// - an autonomous mode where the app steps through all denied claims one by one, analyzes them using the gemini api, and presents the biller with ai generated immediate fixes to approve or skip
-//   - allows billers to quickly process large volumes of denied claims with ai assistance
-//   - helps reduce manual effort and speeds up denial resolution
-//   - future steps could include auto-submitting approved fixes back to the payer system
-
-// ## screenshots
-
-// 1. claim table view with sorting and filtering
-// <img width="1512" height="950" alt="image" src="https://github.com/user-attachments/assets/fc85f7d9-c5c0-4c3f-9a3f-57ad2207d9c3" />
-// <img width="1512" height="950" alt="image" src="https://github.com/user-attachments/assets/c338ecc6-1484-48c3-800d-d9463cd36e04" />
-// 2. claim denial analysis modal with ai recommendations
-// <img width="1512" height="950" alt="image" src="https://github.com/user-attachments/assets/56c34132-bf13-4c06-8127-994b549dba08" />
-// <img width="1512" height="950" alt="image" src="https://github.com/user-attachments/assets/e0caefc2-0164-4a81-908a-15faada40a1d" />
-// 3. autonomous mode for bulk denial processing
-// <img width="1512" height="950" alt="image" src="https://github.com/user-attachments/assets/0d369f75-023c-4afa-944c-849e15b00a0a" />
-// <img width="1512" height="950" alt="image" src="https://github.com/user-attachments/assets/14dbe833-4e9a-403f-adcc-47170dadf590" />
-
-// ## setup instructions
-
-// ### backend
-
-// 1. cd into the `backend` folder
-// 2. create a virtual environment (i used uv): `uv venv venv`
-// 3. activate the virtual environment:
-//    - on mac/linux: `source venv/bin/activate`
-//    - on windows: `venv\Scripts\activate`
-// 4. install dependencies: `pip install -r requirements.txt`
-// 5. copy the `.env.example` file to `.env` and add your gemini api key
-// 6. run the backend server: `uv run main.py`
-// 7. the backend api will be running at `http://0.0.0.0:8000`
-
-// ### frontend
-
-// 1. cd into the `frontend` folder
-// 2. install dependencies: `npm install`
-// 3. run the frontend dev server: `npm run dev`
-// 4. the frontend app will be running at `http://localhost:5173`
