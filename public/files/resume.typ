@@ -49,7 +49,8 @@
     #box(height: 0.9em, baseline: 20%, image("svg/email.svg")) #link("mailto:" + email)[#email] |
     #box(height: 0.9em, baseline: 20%, image("svg/linkedin.svg")) #link("https://" + linkedin)[in/hritishm] |
     #box(height: 0.9em, baseline: 20%, image("svg/myspace.svg")) #link("https://" + site)[#site] |
-    #box(height: 0.9em, baseline: 20%, image("svg/location.svg")) San Diego, CA
+    // #box(height: 0.9em, baseline: 20%, image("svg/location.svg")) San Diego, CA
+    US Citizen
   ])
   v(-0.4em)
 }
@@ -190,13 +191,12 @@
 #exp_item(
   role: "Machine Learning Engineer",
   name: "Circum Medtech",
-  location: "Nice, France (Remote)",
+  location: "Remote",
   date: "Jun 2025 - Present",
-  [Leading development on *Predisens*, a smart catheter & patch system that uses ML to detect sepsis early in ICUs.],
-  [Achieved >90% sepsis prediction accuracy by deploying PyTorch models trained on 200,000+ patient ICU records.],
-  [Engineering real-time data pipelines integrating microcontroller connected biosensors (SpO₂, ECG, WBC) with ML models, streaming 300+ data points/sec to ICU monitors with \~200 ms latency.],
-  [Developing clinician-facing mobile app with React Native enabling patient vitals & alert monitoring in real-time.],
-  [Collaborating with Medical Experts & Regulatory teams to ensure compliance with ISO 13485 & HIPAA standards.],
+  [Architecting the software stack for *Predisens*, an ML powered real-time sepsis detection device for ICUs.],
+  [Engineered a real-time inference pipeline using *FastAPI* and *PyTorch*, processing 300Hz biosensor streams (ECG, SpO₂, etc.) with \<200ms latency.],
+  [Trained and validated early-sepsis detection models on *200k+ patient records* (MIMIC-IV, eICU), achieving strong performance (AUROC ~0.89) on Sepsis-3 labels.],
+  [Building clinician-facing *React Native* mobile application for real-time patient monitoring & alerts, adhering to HIPAA & ISO-13485 device compliance standards while storing data using *PostgreSQL*.],
 )
 
 
@@ -205,7 +205,7 @@
   name: "Global Payments",
   location: "Atlanta, GA",
   date: "Jun 2024 - Aug 2024",
-  [Built new features to automate utility charge calculations across 10K+ rental units on Zego's property management software, using .NET, PHP and SQL Server.],
+  [Built new features to automate utility charge calculations across *10K+* rental units on Zego's property management software, using *.NET, PHP & SQL Server*.],
   [Helped refactor billing and utility management workflows, used  CI/CD tools (Jenkins) to deploy changes.],
   [Led a team of 3 interns in building a mobile app to drive community engagement among Gen Z residents.],
 )
@@ -223,48 +223,56 @@
 #resume_heading("PROJECTS")
 
 #project_item(
+  name: "Medical RCM Copilot",
+  skills: "React, FastAPI, Gemini API, Python, SQLite",
+  date: "Nov 2025",
+  github: "https://github.com/hritsh/rcm-denial-copilot",
+  demo: "https://rcm-denial-copilot.vercel.app/",
+  [Built an autonomous agent for Revenue Cycle Management that parses insurance claim denials and generates actionable resolution steps for medical billers.],
+  [Engineered an 'Autonomous Mode' that batch-processes denial queues using LLMs to identify root causes (coding errors, prior auth) with 95% classification success.],
+)
+
+#project_item(
   name: "Clanker FM",
-  skills: "Next.js, React, OpenAI API, Spotify API, Tailwind CSS, Framer Motion, Typescript, Supabase, PostgreSQL",
-  date: "Aug 2025 - Present",
+  skills: "Next.js, React, OpenAI API, Spotify API, Tailwind CSS, Typescript, Supabase, PostgreSQL",
+  date: "Aug 2025",
   github: "https://github.com/hritsh/clanker-fm",
   demo: "https://clanker-fm.hritish.com",
   [Designed and shipped an AI-powered bot & platform that interactively roasts your Spotify listening habits.],
   [Engineered “Neighbours” social discovery using weighted Jaccard similarity + Supabase/PostgreSQL to connect users with similar tastes, deployed on Vercel with edge-cached APIs (\<100 ms).],
   [Optimized OpenAI prompt chains to cut token usage & cost per roast by \~40% while preserving context & tone.],
-  [Built a terminal-style UI with Framer Motion animations, local caching, and exportable roast cards for social media.],
 )
 
-#project_item(
-  name: "Movie Rec Engine",
-  skills: "Python, Streamlit, NLTK, Pandas, Scikit-learn, NumPy",
-  date: "Aug 2024 - Oct 2024",
-  github: "https://github.com/hritsh/movierecengine",
-  demo: "https://movierecengine.streamlit.app",
-  [Built an interactive NLP-powered movie recommendation engine; find similar titles by genre, cast, plot, or keywords.],
-  [Processed the top 5,000+ TMDB titles, normalised metadata & reviews, and applied cosine similarity over bag-of-words vectors for fast, explainable recommendations in \<4 seconds.],
-  [Deployed on Streamlit Cloud with responsive UI and instant search & browse features.],
-)
-
+// #project_item(
+//   name: "Polaris Lite - Safety-First Medical AI",
+//   skills: "Next.js, Flask, Python, Gemini API, Asyncio",
+//   date: "Dec 2025",
+//   github: "https://github.com/hritsh/polaris-lite",
+//   demo: "https://polaris-lite.vercel.app",
+//   [Implemented a specialized multi-agent "Constellation" architecture to prevent hallucinations in medical AI.],
+//   [Built specialized "Medical", "Legal" & "Pediatric" auditor agents that review LLM outputs for safety and accuracy.],
+//   [Used conditional routing logic using asyncio to run relevant safety checks in parallel, reducing audit latency by 40%],
+// )
 
 #resume_heading("TECHNICAL SKILLS")
 
 #skill_item(
   category: "Languages",
-  skills: "Python, JavaScript, TypeScript, C#, Dart, Swift, Java, HTML, CSS, SQL, Bash",
+  skills: "Python, TypeScript, JavaScript, C#, Dart, Java, HTML, CSS, SQL, Bash",
 )
 #skill_item(
-  category: "Framworks",
-  skills: "Next.js, .NET, React, Flutter, Angular, Svelte, Node.js, Spring Boot, Flask, Express.js, React Native",
+  category: "Frameworks",
+  skills: "Next.js, .NET, React, Flutter, Angular, Svelte, Node.js, Spring Boot, Flask, FastAPI, React Native",
 )
 #skill_item(
   category: "Machine Learning",
-  skills: "PyTorch, Scikit Learn, Tensorflow, NLTK, NumPy, Matplotlib, Pandas, Jupyter Notebook",
+  skills: "PyTorch, Scikit Learn, Tensorflow, NLTK, NumPy, Pandas",
 )
 #skill_item(
   category: "Databases",
-  skills: "MySQL, PostgreSQL, Oracle, MongoDB, SQL Server",
+  skills: "MySQL, PostgreSQL, Chroma, Oracle, MongoDB, SQL Server",
 )
 #skill_item(
-  category: "Other Tools",
-  skills: "Git, REST, GraphQL, AWS, Google Cloud, Figma, Docker, Kubernetes, Firebase, Supabase, Vercel",
+  category: "Other",
+  skills: "Git, REST, GraphQL, Langchain, RAG, AWS, Google Cloud, Figma, Docker, Kubernetes, Firebase, Supabase",
 )
