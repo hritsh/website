@@ -36,6 +36,7 @@ export const techData: TechCategory[] = [
             { name: "Node.js", devicon: "nodejs" },
             { name: "Astro", devicon: "astro" },
             { name: "Spring Boot", devicon: "spring" },
+            { name: "FastAPI", devicon: "fastapi" },
             { name: "Flask", devicon: "flask" },
             { name: "Express.js", devicon: "express" },
             { name: "Tailwind CSS", devicon: "tailwindcss" }, // fallback
@@ -47,13 +48,31 @@ export const techData: TechCategory[] = [
         category: "Machine Learning",
         skills: [
             { name: "PyTorch", devicon: "pytorch" },
+            { name: "TensorFlow", devicon: "tensorflow" },
             { name: "Scikit Learn", devicon: "scikitlearn" },
+            { name: "XGBoost", devicon: "python" }, // fallback
             { name: "Jupyter Notebook", devicon: "jupyter" },
             { name: "NLTK", devicon: "python" }, // fallback
             { name: "NumPy", devicon: "numpy" },
             { name: "Matplotlib", devicon: "matplotlib" },
             { name: "Pandas", devicon: "pandas" },
             { name: "OpenCV", devicon: "opencv" }
+        ]
+    },
+    {
+        category: "AI & LLMs",
+        skills: [
+            { name: "Vertex AI", devicon: "googlecloud" },
+            { name: "Gemini", devicon: "google" },
+            { name: "Qwen", devicon: "python" }, // fallback
+            { name: "HuggingFace", devicon: "python" }, // fallback
+            { name: "LangChain", devicon: "python" }, // fallback
+            { name: "RAG", devicon: "python" }, // fallback
+            { name: "LoRA Fine-tuning", devicon: "pytorch" }, // fallback
+            { name: "MCP", devicon: "typescript" }, // fallback
+            { name: "OpenClaw", devicon: "typescript" }, // fallback
+            { name: "Claude Code", devicon: "bash" }, // fallback
+            { name: "Cursor", devicon: "vscode" } // fallback
         ]
     },
     {
@@ -100,10 +119,10 @@ export const techData: TechCategory[] = [
 export const mainTechStack: TechSkill[] = [
     { name: "Python", devicon: "python" },
     { name: "TypeScript", devicon: "typescript" },
-    { name: "Next.js", devicon: "nextjs" },
     { name: "PyTorch", devicon: "pytorch" },
-    { name: "React Native", devicon: "reactnative" },
+    { name: "React", devicon: "react" },
+    { name: "Next.js", devicon: "nextjs" },
     { name: "FastAPI", devicon: "fastapi" },
-    { name: "Pandas", devicon: "pandas" },
-    { name: "Supabase", devicon: "supabase" }
+    { name: "Google Cloud", devicon: "googlecloud" },
+    { name: "PostgreSQL", devicon: "postgresql" }
 ];

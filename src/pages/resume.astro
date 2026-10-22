@@ -1,7 +1,7 @@
 ---
-
+import { profileData } from "../data/profile";
 ---
 
-<script>
-	window.location.href = "/files/resume.pdf";
+<script define:vars={{ resumePath: profileData.resumePath }}>
+	window.location.href = resumePath;
 </script>

@@ -11,6 +11,7 @@ import ExperienceWindow from "../components/ExperienceWindow.astro";
 import ProjectsWindow from "../components/ProjectsWindow.astro";
 import AboutModal from "../components/AboutModal.astro";
 import TechWindow from "@/components/TechWindow.astro";
+import { siteData } from "../data/site";
 ---
 
 <Layout title="Hritish Mahajan">
@@ -34,7 +35,7 @@ import TechWindow from "@/components/TechWindow.astro";
 				<LinksWindow id="links-main" />
 
 				<!-- Extended Network -->
-				<div class="standard-dialog">Hritish is in your extended network</div>
+				<div class="standard-dialog">{siteData.networkStatus}</div>
 
 				<AboutWindow />
 				<ExperienceWindow />
@@ -44,7 +45,7 @@ import TechWindow from "@/components/TechWindow.astro";
 
 		<!-- Footer -->
 		<footer class="standard-dialog footer">
-			<p class="dialog-text">©1998 hritish.com. All Rights Reserved.</p>
+			<p class="dialog-text">{siteData.footer}</p>
 		</footer>
 	</div>
 

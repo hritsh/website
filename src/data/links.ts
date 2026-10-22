@@ -1,3 +1,5 @@
+import { profileData } from "./profile";
+
 export interface LinkItem {
     label: string;
     url: string;
@@ -8,25 +10,25 @@ export interface LinkItem {
 export const primaryLinks: LinkItem[] = [
     {
         label: "Email",
-        url: "mailto:hritish.mahajan@gmail.com",
+        url: `mailto:${profileData.email}`,
         icon: "/svg/email.svg",
         target: "_blank"
     },
     {
         label: "LinkedIn",
-        url: "https://linkedin.com/in/hritishm",
+        url: `https://linkedin.com/in/${profileData.linkedin}`,
         icon: "/svg/linkedin.svg",
         target: "_blank"
     },
     {
         label: "GitHub",
-        url: "https://github.com/hritsh/",
+        url: `https://github.com/${profileData.github}/`,
         icon: "/svg/github.svg",
         target: "_blank"
     },
     {
         label: "Resume",
-        url: "/files/resume.pdf",
+        url: profileData.resumePath,
         icon: "/svg/resume.svg",
         target: "_blank"
     }
@@ -35,7 +37,7 @@ export const primaryLinks: LinkItem[] = [
 export const socialLinks: LinkItem[] = [
     {
         label: "Last.fm",
-        url: "https://www.last.fm/user/hritish",
+        url: `https://www.last.fm/user/${profileData.lastfmUser}`,
         icon: "/png/lastfm.png",
         target: "_blank"
     },

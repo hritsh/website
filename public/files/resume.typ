@@ -1,37 +1,22 @@
-// Resume template functions - these define reusable components for the resume
 #let blue = rgb("#001a62")
-
-// Main resume function that sets up the document styling
 #let resume(body) = {
-  // Configure list styling - indent and slightly smaller text
   set list(indent: 1em, marker: [●])
-  show list: set text(size: 0.92em)
-  set list(tight: true) // Reduce spacing between list items and above content
-
-  // Style all links with underlines
+  show list: set text(size: 0.93em)
+  set list(tight: true)
   show link: underline
   show link: set underline(offset: 3pt)
-
-  // Set page layout and margins
-  set page(paper: "us-letter", margin: (x: 0.5in, y: 0.5in))
-
-  // Set default font and size for the entire document
+  set page(paper: "a4", margin: (x: 0.55in, y: 0.55in))
   set text(
-    size: 10.5pt,
+    size: 10pt,
     font: "Georgia",
   )
-
   body
 }
-
-// Function to create the name header with title
 #let name_header(name) = {
   set text(size: 1.75em)
-  [*#name |* Software Engineer]
-  v(-1.4em)
+  [*#name*]
+  v(-1.2em)
 }
-
-// Header function with contact information
 #let header(
   name: "Name",
   phone: "phone",
@@ -40,43 +25,35 @@
   github: "github",
   site: "site",
 ) = {
-  // Center-align the entire header block
   align(center, block[
     #name_header(name) \
-    #set text(size: 0.9em) // Make contact info smaller
+    #set text(size: 0.9em)
     #box(height: 0.9em, baseline: 20%, image("svg/phone.svg")) #phone |
     #box(height: 0.9em, baseline: 20%, image("svg/github.svg")) #link("https://" + github)[#github] |
     #box(height: 0.9em, baseline: 20%, image("svg/email.svg")) #link("mailto:" + email)[#email] |
     #box(height: 0.9em, baseline: 20%, image("svg/linkedin.svg")) #link("https://" + linkedin)[in/hritishm] |
     #box(height: 0.9em, baseline: 20%, image("svg/myspace.svg")) #link("https://" + site)[#site] |
-    // #box(height: 0.9em, baseline: 20%, image("svg/location.svg")) San Diego, CA
-    US Citizen
+    #box(height: 0.9em, baseline: 20%) US Citizen
   ])
   v(-0.4em)
 }
-
-// Function to create section headings with underlines
 #let resume_heading(txt) = {
   show heading: set text(size: 0.92em, weight: "regular")
-
   block[
     #v(0.5em)
-    = #smallcaps(txt) // Use small caps for section titles
-    #v(-4pt) // Reduce space before line
-    #line(length: 100%, stroke: 1pt + black) // Draw horizontal line
+    = #smallcaps(txt)
+    #v(-4pt)
+    #line(length: 100%, stroke: 1pt + black)
   ]
 }
-
-// Education item function - creates a two-column layout
 #let edu_item(
   name: "University",
   degree: "Degree",
   date: "Date Range",
   location: "Location",
-  ..points, // Add variadic parameter for bullet points
+  ..points,
 ) = {
-  set block(above: 0.7em, below: 0.3em) // Reduce bottom margin
-  // Use grid for two-column layout with more flexible proportions
+  set block(above: 0.7em, below: 0.3em)
   pad(left: 1em, right: 0.5em, [
     #grid(
       columns: (2.45fr, 1.2fr),
@@ -90,41 +67,42 @@
         _#location _
       ],
     )
-    // Add bullet points if provided
     #if points.pos().len() > 0 {
       list(tight: true, ..points)
       v(0.5em)
     }
   ])
 }
-
-// Work experience item with bullet points
 #let exp_item(
-  name: "Company",
+  name: "",
   role: "Role",
   date: "Date Range",
-  location: "Location",
-  ..points, // Variadic parameter to accept multiple bullet points
+  location: "",
+  description: "",
+  ..points,
 ) = {
-  set block(above: 0.7em, below: 1em)
+  set block(above: 1em, below: 1.2em)
   pad(left: 1em, right: 0.5em, box[
     #grid(
       columns: (3fr, 1fr),
       align(left)[
         *#role* \
-        _#name _
+        #if name != "" [#name ]
       ],
       align(right)[
         *#date* \
-        _#location _
+        #if location != "" [#location ]
       ],
     )
-    #v(-0.2em) // Reduce space before bullets
-    #list(tight: true, ..points) // Use tight spacing and spread operator
+    #if description != "" [
+      #v(-0.2em)
+      #set text(size: 0.85em, style: "italic")
+      // #description
+    ]
+    #v(0.2em)
+    #list(tight: true, ..points)
   ])
 }
-
-// Project item function
 #let project_item(
   name: "Project Name",
   skills: "Technologies Used",
@@ -135,7 +113,6 @@
 ) = {
   set block(above: 0.7em, below: 1em)
   pad(left: 1em, right: 0.5em, box[
-    // Project title, links, and date on one line
     *#name* |
     #if github != "" {
       box(height: 0.9em, baseline: 15%, image("svg/github.svg"))
@@ -152,7 +129,7 @@
     #v(0.2em)
     #list(tight: true, ..points)
   ])
-}// Skills category function
+}
 #let skill_item(
   category: "Category",
   skills: "Skill list",
@@ -161,11 +138,7 @@
   set text(size: 0.91em)
   pad(left: 1em, right: 0.5em, block[*#category*: #skills])
 }
-
-// Apply the resume template to the document
 #show: resume
-
-// Header with personal information
 #header(
   name: "Hritish Mahajan",
   phone: "+1 (585) 360-6184",
@@ -177,37 +150,62 @@
 
 #resume_heading[EDUCATION]
 #edu_item(
+  name: "University of Illinois Urbana-Champaign",
+  degree: "Master of Computer Science",
+  location: "Urbana, IL",
+  date: "Aug 2026 - Dec 2027",
+  [*Coursework:* Applied Machine Learning, Deep Learning for Healthcare, Database Systems],
+)
+#edu_item(
   name: "Rochester Institute of Technology",
   degree: "Bachelor of Science in Computing & Information Technologies",
   location: "Rochester, NY",
   date: "Aug 2021 - May 2025",
-  [*GPA:* 3.80/4.00, Summa Cum Laude],
-  [*Clubs:* Tech Director - RIT Student Government |  Tech Lead - GDG \@ RIT |  Vice President - RIT Chess Club],
+  [*GPA:* 3.80/4.00, Summa Cum Laude, Dean's List All Semesters],
+  [*Leadership:* Tech Director - RIT Student Government | Tech Lead - GDG \@ RIT | Vice President - RIT Chess Club],
 )
-
 
 #resume_heading[EXPERIENCE]
 
 #exp_item(
-  role: "Machine Learning Engineer",
-  name: "Circum Medtech",
-  location: "Remote",
-  date: "Jun 2025 - Present",
-  [Architecting the software stack for *Predisens*, an ML powered real-time sepsis detection device for ICUs.],
-  [Engineered a real-time inference pipeline using *FastAPI* and *PyTorch*, processing 300Hz biosensor streams (ECG, SpO₂, etc.) with \<200ms latency.],
-  [Trained and validated early-sepsis detection models on *200k+ patient records* (MIMIC-IV, eICU), achieving strong performance (AUROC ~0.89) on Sepsis-3 labels.],
-  [Building clinician-facing *React Native* mobile application for real-time patient monitoring & alerts, adhering to HIPAA & ISO-13485 device compliance standards while storing data using *PostgreSQL*.],
+  role: "AI Engineer",
+  name: "Deriv",
+  location: "Dubai, UAE",
+  date: "Feb 2026 - Jul 2026",
+  [Built and shipped two *company-wide AI platforms* on *GCP* for the Finance team, handling *3,000+* requests and invoices/month across *\$3M+* in volume.],
+  [Worked closely with the *Procurement* and *AP* teams to automate their full lifecycle, from vendor sourcing and outreach to PO tracking, invoice validation & payment tracking, cutting processing time by *40%* and saving *\$150K+/year*.],
+  [Automated approvals, vendor risk checks, and invoice *OCR* with *Gemini* and *Vertex AI*, cutting inference costs by \~*60%*.],
+  // [Built fraud detection models (*XGBoost*, *Isolation Forest*) and an *LLM triage* pipeline for the *Anti-Fraud team*, flagging *500+* money laundering and wash trading cases/month and cutting review time by \~*80%*.],
 )
 
+#exp_item(
+  role: "Software Engineer (Part-time)",
+  name: "Virufy",
+  location: "San Francisco, CA (Remote)",
+  date: "Dec 2025 - Apr 2026",
+  [Built and shipped a clinician-facing *React* app *deployed in 2 hospitals* for audio collection and patient annotation, handling PHI/PII for *5,000+* cough, voice, and breath samples for respiratory disease screening.],
+  [Designed a serverless *AWS* ingestion pipeline (*Lambda, S3, DynamoDB, SageMaker, Cognito*) feeding multi-hospital data into *TensorFlow* models for pneumonia, asthma, and COVID-19 detection.],
+  // [Helped develop audio ML models for respiratory disease detection using *Librosa* and *TensorFlow* on *5,000+* globally collected cough, voice, and breath samples.],
+)
+
+#exp_item(
+  role: "Machine Learning Engineer",
+  name: "Circum Life Sciences",
+  location: "Nice, France (Remote)",
+  date: "Jun 2025 - Nov 2025",
+  [Architected the full software stack for *Predisens*, a ML-powered sepsis detection device (IV catheter + wearable patch) for ICUs.],
+  [Trained early-sepsis prediction models on *200k+* ICU patient records (MIMIC-IV, eICU), reaching *AUROC \~0.89* for Sepsis-3 onset within 24 hrs.],
+  [Built a real-time inference pipeline (*FastAPI*, *PyTorch*) streaming ESP32 biosensor data to a *React Native* app with *\<200ms* latency, designed for *HIPAA* and *ISO 13485* compliance.],
+)
 
 #exp_item(
   role: "Software Engineer Intern",
-  name: "Global Payments",
+  name: "Global Payments Inc.",
   location: "Atlanta, GA",
   date: "Jun 2024 - Aug 2024",
-  [Built new features to automate utility charge calculations across *10K+* rental units on Zego's property management software, using *.NET, PHP & SQL Server*.],
-  [Helped refactor billing and utility management workflows, used  CI/CD tools (Jenkins) to deploy changes.],
-  [Led a team of 3 interns in building a mobile app to drive community engagement among Gen Z residents.],
+  [Automated utility charge calculations across *10K+* units using *C\#*, *.NET*, PHP, and SQL Server, replacing manual billing work for property managers.],
+  [Refactored billing and utility management workflows and shipped changes through *Jenkins* CI/CD pipelines.],
+  [Led a team of *3 interns* to build a mobile app driving community engagement among Gen Z residents.],
 )
 
 #exp_item(
@@ -215,64 +213,30 @@
   name: "Unity Infotech",
   location: "Dubai, UAE",
   date: "May 2023 - Aug 2023",
-  [Built mobile banking app features using Flutter, .NET Core & SQL Server for a major private bank in Dubai.],
-  [Integrated Google Cloud APIs to implement geotagging and live delivery routing in a local grocery app.],
-  [Helped port mobile app to Flutter Web and refactored client & UI logic, reducing app load time by \~40%.],
+  [Cut app load time by \~*40%* by porting a mobile app to *Flutter Web* and refactoring client and UI logic.],
+  [Built account management features for a corporate banking app using *Flutter*, *.NET Core*, and SQL Server.],
+  [Implemented geotagging and live delivery routing for a grocery app using *Google Cloud* APIs.],
 )
-
-#resume_heading("PROJECTS")
-
-#project_item(
-  name: "Medical RCM Copilot",
-  skills: "React, FastAPI, Gemini API, Python, SQLite",
-  date: "Nov 2025",
-  github: "https://github.com/hritsh/rcm-denial-copilot",
-  demo: "https://rcm-denial-copilot.vercel.app/",
-  [Built an autonomous agent for Revenue Cycle Management that parses insurance claim denials and generates actionable resolution steps for medical billers.],
-  [Engineered an 'Autonomous Mode' that batch-processes denial queues using LLMs to identify root causes (coding errors, prior auth) with 95% classification success.],
-)
-
-#project_item(
-  name: "Clanker FM",
-  skills: "Next.js, React, OpenAI API, Spotify API, Tailwind CSS, Typescript, Supabase, PostgreSQL",
-  date: "Aug 2025",
-  github: "https://github.com/hritsh/clanker-fm",
-  demo: "https://clanker-fm.hritish.com",
-  [Designed and shipped an AI-powered bot & platform that interactively roasts your Spotify listening habits.],
-  [Engineered “Neighbours” social discovery using weighted Jaccard similarity + Supabase/PostgreSQL to connect users with similar tastes, deployed on Vercel with edge-cached APIs (\<100 ms).],
-  [Optimized OpenAI prompt chains to cut token usage & cost per roast by \~40% while preserving context & tone.],
-)
-
-// #project_item(
-//   name: "Polaris Lite - Safety-First Medical AI",
-//   skills: "Next.js, Flask, Python, Gemini API, Asyncio",
-//   date: "Dec 2025",
-//   github: "https://github.com/hritsh/polaris-lite",
-//   demo: "https://polaris-lite.vercel.app",
-//   [Implemented a specialized multi-agent "Constellation" architecture to prevent hallucinations in medical AI.],
-//   [Built specialized "Medical", "Legal" & "Pediatric" auditor agents that review LLM outputs for safety and accuracy.],
-//   [Used conditional routing logic using asyncio to run relevant safety checks in parallel, reducing audit latency by 40%],
-// )
 
 #resume_heading("TECHNICAL SKILLS")
 
 #skill_item(
   category: "Languages",
-  skills: "Python, TypeScript, JavaScript, C#, Dart, Java, HTML, CSS, SQL, Bash",
+  skills: "Python, TypeScript, JavaScript, C#, SQL, Java, Dart, Bash",
 )
 #skill_item(
   category: "Frameworks",
-  skills: "Next.js, .NET, React, Flutter, Angular, Svelte, Node.js, Spring Boot, Flask, FastAPI, React Native",
+  skills: "React, React Native, Next.js, Node.js, FastAPI, Flask, .NET, Flutter",
 )
 #skill_item(
   category: "Machine Learning",
-  skills: "PyTorch, Scikit Learn, Tensorflow, NLTK, NumPy, Pandas",
+  skills: "PyTorch, TensorFlow, scikit-learn, XGBoost, HuggingFace, pandas, NumPy",
 )
 #skill_item(
-  category: "Databases",
-  skills: "MySQL, PostgreSQL, Chroma, Oracle, MongoDB, SQL Server",
+  category: "LLMs & Agents",
+  skills: "RAG, Tool Calling, LangChain, MCP, Agent Workflows, OpenClaw, Claude Code, Cursor, LoRA Fine-tuning, Vector DBs",
 )
 #skill_item(
-  category: "Other",
-  skills: "Git, REST, GraphQL, Langchain, RAG, AWS, Google Cloud, Figma, Docker, Kubernetes, Firebase, Supabase",
+  category: "Cloud & DevOps",
+  skills: "Docker, GCP (Vertex AI, Cloud SQL), AWS, PostgreSQL, MongoDB, CI/CD",
 )

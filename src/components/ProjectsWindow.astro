@@ -1,8 +1,9 @@
 ---
 import Window from "./Window.astro";
 import { projectsData } from "../data/projects";
+import { siteData } from "../data/site";
 
-const details = [projectsData.length + " items", "2,340K in disk", '<a href="/projects">View All</a>'];
+const details = [projectsData.length + " items", siteData.projectsDisk, '<a href="/projects">View All</a>'];
 ---
 
 <Window title="Projects" id="projects" showDetailsBar={true} details={details}>

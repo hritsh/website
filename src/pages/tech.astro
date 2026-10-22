@@ -3,6 +3,7 @@ import Layout from "../layouts/Layout.astro";
 import Navbar from "../components/Navbar.astro";
 import Window from "../components/Window.astro";
 import { techData } from "../data/tech";
+import { siteData } from "../data/site";
 ---
 
 <Layout title="Tech - Hritish Mahajan">
@@ -38,7 +39,7 @@ import { techData } from "../data/tech";
 				))
 			}
 		</div>
-		<div class="standard-dialog">p.s. this is a collection of tech that i've worked with at some point in the last ~5 years.</div>
+		<div class="standard-dialog">{siteData.techNote}</div>
 	</div>
 </Layout>
 
@@ -106,11 +107,11 @@ import { techData } from "../data/tech";
 	/* Responsive: Mobile */
 	@media screen and (max-width: 768px) {
 		.tech-full-width {
-			width: 80vw;
+			width: 100%;
 			display: block;
 		}
 		.tech-category-window {
-			width: 80vw;
+			width: 100%;
 		}
 
 		.tech-finder {

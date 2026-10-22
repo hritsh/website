@@ -1,5 +1,7 @@
+import { profileData } from "../data/profile";
+
 document.addEventListener("DOMContentLoaded", function () {
-	fetch("https://www.ballix.net/whatsplaying/now?user=hritish")
+	fetch(`https://www.ballix.net/whatsplaying/now?user=${encodeURIComponent(profileData.lastfmUser)}`)
 		.then((r) => r.json())
 		.then((data) => {
 			const img = document.getElementById("lastfm-album-img");

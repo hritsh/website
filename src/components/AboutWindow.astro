@@ -1,26 +1,23 @@
 ---
 import Window from "./Window.astro";
+import { aboutData } from "../data/about";
+
+function formatText(text: string): string {
+	return text
+		.replace(/\*\*(.*?)\*\*/g, "<b>$1</b>")
+		.replace(/\[(.*?)\]\((.*?)\)/g, '<a href="$2" target="_blank">$1</a>');
+}
 ---
 
 <Window title="About" id="about">
-	<p>
-		Hello! I'm Hritish & I like to build stuff at the intersection of <b>software engineering</b>, <b>machine learning</b>, & <b
-			>medical technology</b
-		>.
-	</p>
-
-	<div class="separator"></div>
-	<p>
-		I'm currently working at <b><a href="https://www.circummedtechpharma.com" target="_blank">Circum Medtech</a></b> as a Machine Learning
-		Engineer, where I'm building a smart catheter & patch system that uses Machine Learning to detect sepsis early in ICU patients.
-	</p>
-	<p>
-		My work involves pre-processing & training models on large healthcare datasets, developing real-time data pipelines with ICU
-		systems, and building clinician-facing apps for monitoring patient vitals.
-	</p>
-	<div class="separator"></div>
-	<p>
-		Outside of work I'm either ricing my desktop into a war crime, lowballing thinkpad & ipod listings, or spending hours writing
-		scripts that solve problems I invented.
-	</p>
+	{
+		aboutData.sections.map((section, index) => (
+			<>
+				{index > 0 && <div class="separator" />}
+				{section.map((paragraph) => (
+					<p set:html={formatText(paragraph)} />
+				))}
+			</>
+		))
+	}
 </Window>

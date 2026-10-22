@@ -1,4 +1,7 @@
 ---
+import { profileData } from "../data/profile";
+import { siteData } from "../data/site";
+
 export interface Props {
 	pageTitle?: string;
 }
@@ -22,7 +25,7 @@ const { pageTitle } = Astro.props;
 				) : (
 					<>
 						<object data="/svg/myspace.svg" class="myspace-logo" width="24" height="24" />
-						hritish.com
+						{siteData.name}
 					</>
 				)
 			}
@@ -65,7 +68,7 @@ const { pageTitle } = Astro.props;
 			</li>
 			<li role="menuitem" tabindex="5" aria-haspopup="false">
 				<a
-					href="/files/resume.pdf"
+					href={profileData.resumePath}
 					target="_blank"
 					onclick="if(window.goatcounter){goatcounter.count({path:'/navbar/resume', title:'Navbar Resume'});}">Resume</a
 				>

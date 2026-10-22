@@ -1,5 +1,8 @@
 ---
+import { profileData } from "../data/profile";
+import { siteData } from "../data/site";
 
+const { aboutModal } = siteData;
 ---
 
 <div id="about-modal" class="modal">
@@ -12,18 +15,18 @@
 				<div class="window-pane">
 					<img src="/svg/myspace.svg" alt="Logo" class="modal-logo" />
 					<div class="about">
-						<strong>Hritish Mahajan's Portfolio</strong><br />
-						Version 2025.08<br />
-						<strong>Last Update: </strong><span data-last-update>Loading…</span><br />
-						Built with <a href="https://github.com/sakofchit/system.css" target="_blank">system.css</a>
+						<strong>{aboutModal.product}</strong><br />
+						Version <span data-version>Loading…</span><br />
+						<strong>Last Update: </strong><span data-last-update data-repo={profileData.githubRepo}>Loading…</span><br />
+						Built with <a href={aboutModal.builtWithUrl} target="_blank">{aboutModal.builtWithLabel}</a>
 					</div>
 					<div class="technologies">
 						<strong>Technologies:</strong><br />
-						Astro, HTML, CSS, JavaScript, system.css, GitHub Pages
+						{aboutModal.technologies}
 					</div>
 					<div>
 						<strong>Contact:</strong><br />
-						<a href="mailto:hritish.mahajan@gmail.com">hritish.mahajan@gmail.com</a>
+						<a href={`mailto:${profileData.email}`}>{profileData.email}</a>
 					</div>
 				</div>
 				<section class="field-row">

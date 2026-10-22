@@ -101,8 +101,11 @@ function formatText(text: string): string {
 	}
 
 	.company-icon-large {
-		width: 64px;
 		height: 64px;
+		width: auto;
+		max-width: 96px;
+		margin-top: 4px;
+		object-fit: contain;
 		border: none;
 		box-shadow: none;
 		flex-shrink: 0;
@@ -235,12 +238,12 @@ function formatText(text: string): string {
 	/* Responsive: Mobile */
 	@media screen and (max-width: 768px) {
 		.full-width-grid {
-			width: 80vw;
+			width: 100%;
 			display: block;
 		}
 
 		.experience-detail-window {
-			width: 80vw;
+			width: 100%;
 		}
 
 		.experience-detail {
@@ -255,8 +258,9 @@ function formatText(text: string): string {
 		}
 
 		.company-icon-large {
-			width: 48px;
 			height: 48px;
+			width: auto;
+			max-width: 72px;
 		}
 
 		.experience-info h2,
