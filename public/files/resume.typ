@@ -189,7 +189,7 @@
 )
 
 #exp_item(
-  role: "Machine Learning Engineer",
+  role: "Machine Learning Engineer (Contract)",
   name: "Circum Life Sciences",
   location: "Nice, France (Remote)",
   date: "Jun 2025 - Nov 2025",

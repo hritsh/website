@@ -55,7 +55,7 @@ export const experienceData: ExperienceItem[] = [
     },
     {
         company: "Circum Medtech",
-        role: "Machine Learning Engineer",
+        role: "Machine Learning Engineer (Contract)",
         website: "https://www.circummedtechpharma.com",
         location: "Nice, France (Remote)",
         period: "Jun 2025 - Nov 2025",
