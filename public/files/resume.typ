@@ -5,7 +5,7 @@
   set list(tight: true)
   show link: underline
   show link: set underline(offset: 3pt)
-  set page(paper: "a4", margin: (x: 0.5in, y: 0.4in))
+  set page(paper: "a4", margin: (x: 0.55in, y: 0.55in))
   set text(
     size: 10pt,
     font: "Georgia",
@@ -81,7 +81,7 @@
   description: "",
   ..points,
 ) = {
-  set block(above: 1em, below: 1.2em)
+  set block(above: 0.7em, below: 1em)
   pad(left: 1em, right: 0.5em, box[
     #grid(
       columns: (3fr, 1fr),
@@ -99,7 +99,6 @@
       #set text(size: 0.85em, style: "italic")
       // #description
     ]
-    #v(0.2em)
     #list(tight: true, ..points)
   ])
 }
@@ -134,7 +133,7 @@
   category: "Category",
   skills: "Skill list",
 ) = {
-  set block(above: 0.35em)
+  set block(above: 0.7em)
   set text(size: 0.91em)
   pad(left: 1em, right: 0.5em, block[*#category*: #skills])
 }
