@@ -29,7 +29,7 @@ export const experienceData: ExperienceItem[] = [
         role: "AI Engineer",
         website: "https://deriv.com",
         location: "Dubai, UAE",
-        period: "Feb 2026 - Jul 2026",
+        period: "Feb 2026 - Aug 2026",
         icon: "/png/deriv.png",
         description: "Built internal AI tools for the **Finance team** at one of the world's largest online trading platforms, automating the procurement & accounts payable lifecycle across the company.",
         tech: ["Python", "TypeScript", "Google Cloud(googlecloud)", "Gemini(googlegemini)", "PostgreSQL", "scikit-learn(scikitlearn)", "Claude(claude)"],

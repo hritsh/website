@@ -171,7 +171,7 @@
   role: "AI Engineer",
   name: "Deriv",
   location: "Dubai, UAE",
-  date: "Feb 2026 - Jul 2026",
+  date: "Feb 2026 - Aug 2026",
   [Built and shipped two *company-wide AI platforms* on *GCP* for the Finance team, handling *3,000+* requests and invoices/month across *\$3M+* in volume.],
   [Worked closely with the *Procurement* and *AP* teams to automate their full lifecycle, from vendor sourcing and outreach to PO tracking, invoice validation & payment tracking, cutting processing time by *40%* and saving *\$150K+/year*.],
   [Automated approvals, vendor risk checks, and invoice *OCR* with *Gemini* and *Vertex AI*, cutting inference costs by \~*60%*.],
